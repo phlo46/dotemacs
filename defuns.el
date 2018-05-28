@@ -38,15 +38,6 @@
 
 (global-set-key (kbd "C-'") 'terminal)
 
-
-(defun esb (buffer-name)
-  "Start a eshell and name it"
-  (interactive "sEShell name: ")
-  (eshell)
-  (rename-buffer buffer-name t))
-
-(global-set-key (kbd "C-,") 'esb)
-
 ;; ssh
 (defun vicare-nightly ()
   (interactive)
