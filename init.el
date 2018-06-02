@@ -28,7 +28,6 @@
 (setq setting-file (expand-file-name "settings.el" user-emacs-directory))
 (load setting-file)
 
-
 ;; ===========================
 ;; ====== * END INIT * =======
 ;; ===========================
@@ -86,9 +85,10 @@
   (add-hook 'after-init-hook x))
 
 ;; register files
-(set-register ?e '(file . "~/.emacs.d/init.el"))
+(set-register ?i '(file . "~/.emacs.d/init.el"))
 (set-register ?z '(file . "~/.zshrc"))
 (set-register ?o '(file . "~/Dropbox/org-mode/notebook.org"))
+(set-register ?h '(file . "~/emacs-utils/home.http"))
 
 ;; term
 (add-hook 'term-mode-hook (lambda ()
@@ -171,6 +171,11 @@
   :init
   (eyebrowse-mode t)
   :config
+  (define-key eyebrowse-mode-map (kbd "M-1") 'eyebrowse-switch-to-window-config-1)
+  (define-key eyebrowse-mode-map (kbd "M-2") 'eyebrowse-switch-to-window-config-2)
+  (define-key eyebrowse-mode-map (kbd "M-3") 'eyebrowse-switch-to-window-config-3)
+  (define-key eyebrowse-mode-map (kbd "M-4") 'eyebrowse-switch-to-window-config-4)
+
   (add-hook 'persp-activated-functions #'load-eyebrowse-for-perspective)
   (add-hook 'persp-before-switch-functions #'update-eyebrowse-for-perspective)
   (add-hook 'eyebrowse-post-window-switch-hook #'save-eyebrowse-for-perspective))
