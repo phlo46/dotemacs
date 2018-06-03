@@ -65,6 +65,11 @@
                           (interactive)
                           (popup-menu 'yank-menu)))
 
+;; org-mode
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+
 ;; move forward/backward paragraph
 (global-set-key (kbd "M-]") 'forward-paragraph)
 (global-set-key (kbd "M-[") 'backward-paragraph)
@@ -88,6 +93,7 @@
 (set-register ?i '(file . "~/.emacs.d/init.el"))
 (set-register ?z '(file . "~/.zshrc"))
 (set-register ?o '(file . "~/Dropbox/org-mode/notebook.org"))
+(set-register ?t '(file . "~/Dropbox/org-mode/todo.org"))
 (set-register ?h '(file . "~/emacs-utils/home.http"))
 
 ;; term
@@ -107,6 +113,9 @@
 
 ;; desktop library
 ;;(desktop-save-mode 1)
+
+;; org-mode
+(setq org-log-done 'time)
 
 ;; ==============================
 ;; ==== * END SYSTEM CONFIG * ===

@@ -15,6 +15,7 @@
  '(gnus-thread-sort-functions (quote (gnus-thread-sort-by-most-recent-date)))
  '(httpd-port 8100)
  '(js2-include-node-externs t)
+ '(org-agenda-files (quote ("~/Dropbox/org-mode/todo.org")))
  '(package-selected-packages
    (quote
     (swift-mode dumb-jump eyebrowse rjsx-mode clj-refactor yasnippet-snippets intero haskell-mode indium diminish zenburn-theme magit nodejs-repl origami mode-icons ag sql-indent tern-auto-complete sly tide sly-mode es-mode highlight-chars projectile company-restclient restclient persp-mode ace-window restart-emacs use-package counsel racket-mode geiser yaml-mode web-mode utop undo-tree tuareg python-environment py-autopep8 paredit neotree multiple-cursors markdown-mode json-mode inflections go-mode flycheck-ocaml flycheck-elm exec-path-from-shell epc emmet-mode elpy company-tern auto-complete)))
