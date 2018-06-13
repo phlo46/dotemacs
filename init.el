@@ -173,6 +173,7 @@
 ;; highlight thing
 (use-package highlight-thing
   :ensure t
+  :diminish
   :config
   (diminish 'hi-lock-mode)
   (global-highlight-thing-mode)
