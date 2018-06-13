@@ -369,7 +369,7 @@
 (use-package company
   :ensure t
   :config
-  (dolist (b '(company-tern company-restclient merlin-company-backend company-go))
+  (dolist (b '(company-restclient merlin-company-backend company-go))
     (add-to-list 'company-backends b))
   (dolist (h '(cider-repl-mode-hook cider-mode-hook haskell-mode-hook merlin-mode-hook))
     (add-hook h #'company-mode)))
@@ -399,20 +399,23 @@
 ;; tern-mode
 (use-package tern
   :ensure t
-  :defer t
   :config
-  (add-to-list 'load-path "/usr/local/lib/node_modules/tern/emacs/")
-  (autoload 'tern-mode "tern.el" nil t)
-  (add-hook 'js-mode-hook (lambda () (tern-mode t))))
+  (use-package company-tern
+    :ensure t
+    :config
+    (add-to-list 'company-backends 'company-tern))
 
-(use-package company-tern
-  :ensure t
-  :defer t)
+  (let* ((node-path (shell-command-to-string "echo $NODE_PATH"))
+         (path-list (split-string node-path ":")))
+    (dolist (p path-list)
+      (when p
+        (add-to-list 'load-path p))))
+  (autoload 'tern-mode "tern/emacs/tern.el" nil t)
+  (add-hook 'js-mode-hook (lambda () (tern-mode t))))
 
 ;; js2-mode
 (use-package js2-mode
   :ensure t
-  :defer t
   :config
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
   (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
