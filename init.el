@@ -40,6 +40,9 @@
 
 (load-theme 'zenburn t)
 
+(eval-after-load "hi-lock"
+  '(diminish 'hi-lock-mode))
+
 (require 'dired-x)
 
 (setq js-indent-level 8)
@@ -52,10 +55,6 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-
-(eval-after-load "hi-lock"
-  '(diminish 'hi-lock-mode))
-
 
 ;; place auto-save file to $TMPDIR
 (setq backup-directory-alist
