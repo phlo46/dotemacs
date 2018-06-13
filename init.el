@@ -170,6 +170,15 @@
   (mode-icons-mode)
   (setq mode-icons-change-mode-name nil))
 
+;; highlight thing
+(use-package highlight-thing
+  :ensure t
+  :diminish
+  :config
+  (global-highlight-thing-mode)
+  (setq highlight-thing-case-sensitive-p t)
+  (setq highlight-thing-exclude-thing-under-point t)
+  (setq highlight-thing-limit-to-defun t))
 
 ;; persp-mode
 (use-package persp-mode
@@ -394,7 +403,7 @@
   :config
   (add-to-list 'load-path "/usr/local/lib/node_modules/tern/emacs/")
   (autoload 'tern-mode "tern.el" nil t)
-  (add-hook 'js-mode-hook (lambda () (tern-mode t))))
+  (add-hook 'js-mode-hook (lambda () (tern-mode t))))
 
 (use-package company-tern
   :ensure t
