@@ -53,6 +53,10 @@
 (menu-bar-mode -1)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+(eval-after-load "hi-lock"
+  '(diminish 'hi-lock-mode))
+
+
 ;; place auto-save file to $TMPDIR
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
@@ -175,7 +179,6 @@
   :ensure t
   :diminish
   :config
-  (diminish 'hi-lock-mode)
   (global-highlight-thing-mode)
   (setq highlight-thing-case-sensitive-p t)
   (setq highlight-thing-exclude-thing-under-point t)
