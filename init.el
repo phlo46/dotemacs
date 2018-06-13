@@ -437,9 +437,7 @@
   :config
   (elpy-enable)
   (setq python-shell-interpreter "python3")
-  (setq elpy-rpc-backend "jedi")
-  (defalias 'workon 'pyvenv-workon)
-  (defalias 'workoff 'pyvenv-deactivate))
+  (setq elpy-rpc-backend "jedi"))
 
 (use-package python
   :diminish
