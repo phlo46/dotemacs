@@ -173,8 +173,8 @@
 ;; highlight thing
 (use-package highlight-thing
   :ensure t
-  :diminish
   :config
+  (diminish 'hi-lock-mode)
   (global-highlight-thing-mode)
   (setq highlight-thing-case-sensitive-p t)
   (setq highlight-thing-exclude-thing-under-point t)
