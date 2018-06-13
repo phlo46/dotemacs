@@ -224,10 +224,9 @@
 ;; racket
 (use-package racket-mode
   :ensure t
-  :defer t
+  :mode "\\.rkt\\'"
   :config
-  (setq tab-always-indent 'complete)
-  (add-to-list 'auto-mode-alist '("\\.rkt\\'" . racket-mode)))
+  (setq tab-always-indent 'complete))
 
 ;; ag
 (use-package ag
@@ -366,7 +365,7 @@
   :config
   (ac-config-default)
   (global-auto-complete-mode t)
-  (dolist (m '(erlang-mode rust-mode racket-mode))
+  (dolist (m '(erlang-mode rust-mode))
     (add-to-list 'ac-modes m)))
 
 ;; company mode
