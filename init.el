@@ -458,7 +458,7 @@
   :ensure t
   :diminish
   :config
-  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc racket)))
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc emacs-lisp)))
 
 ;; =================================
 ;; ==== * END DECLARE PACKAGE * ====
