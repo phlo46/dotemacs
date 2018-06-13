@@ -393,9 +393,7 @@
 
 ;; elasticsearch mode
 (use-package es-mode
-  :defer t
-  :config
-  (add-to-list 'auto-mode-alist '("\\.es$" . es-mode)))
+  :mode "\\.es$")
 
 ;; tern-mode
 (use-package tern
