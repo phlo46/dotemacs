@@ -40,14 +40,17 @@
 
 (load-theme 'zenburn t)
 
+(require 'dired-x)
+
 (setq js-indent-level 8)
 (setq tags-add-tables nil)
 (setq ansi-color-for-comint-mode t)
 (setq-default indent-tabs-mode nil)
+(setq ring-bell-function 'ignore)
+
 (prefer-coding-system 'utf-8)
 (tool-bar-mode -1)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-(setq ring-bell-function 'ignore)
 
 ;; place auto-save file to $TMPDIR
 (setq backup-directory-alist
@@ -166,6 +169,7 @@
   (mode-icons-mode)
   (setq mode-icons-change-mode-name nil))
 
+
 ;; persp-mode
 (use-package persp-mode
   :ensure t
@@ -200,7 +204,8 @@
   :ensure t
   :if (memq window-system '(mac ns))
   :config
-  (exec-path-from-shell-initialize))
+  (exec-path-from-shell-initialize)
+  (exec-path-from-shell-copy-env "GOPATH"))
 
 ;; racket
 (use-package racket-mode
@@ -354,9 +359,9 @@
 (use-package company
   :ensure t
   :config
-  (dolist (b '(company-tern company-restclient))
+  (dolist (b '(company-tern company-restclient merlin-company-backend company-go))
     (add-to-list 'company-backends b))
-  (dolist (h '(cider-repl-mode-hook cider-mode-hook haskell-mode-hook))
+  (dolist (h '(cider-repl-mode-hook cider-mode-hook haskell-mode-hook merlin-mode-hook))
     (add-hook h #'company-mode)))
 
 ;; restclient
@@ -430,6 +435,18 @@
   :diminish
   :mode ("\\.py\\'" . python-mode)
   :interpreter ("python" . python-mode))
+
+;; go
+(use-package go-mode
+  :ensure t
+  :bind (("C-c C-g" . godoc-at-point))
+  :config
+  (use-package go-guru
+    :ensure t)
+  (add-hook 'before-save-hook #'gofmt-before-save))
+
+(use-package company-go
+  :ensure t)
 
 ;; flycheck
 (use-package flycheck
