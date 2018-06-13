@@ -369,7 +369,7 @@
 (use-package company
   :ensure t
   :config
-  (dolist (b '(company-restclient merlin-company-backend company-go))
+  (dolist (b '(company-restclient merlin-company-backend))
     (add-to-list 'company-backends b))
   (dolist (h '(cider-repl-mode-hook cider-mode-hook haskell-mode-hook merlin-mode-hook))
     (add-hook h #'company-mode)))
@@ -449,12 +449,9 @@
   :ensure t
   :bind (("C-c C-g" . godoc-at-point))
   :config
-  (use-package go-guru
-    :ensure t)
+  (use-package go-guru :ensure t)
+  (use-package company-go :ensure t)
   (add-hook 'before-save-hook #'gofmt-before-save))
-
-(use-package company-go
-  :ensure t)
 
 ;; flycheck
 (use-package flycheck
