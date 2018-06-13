@@ -33,7 +33,7 @@
 (defun terminal (buffer-name)
   "Start a terminal and rename buffer."
   (interactive "sShell name: ")
-  (ansi-term "/usr/local/bin/zsh")
+  (ansi-term "zsh")
   (rename-buffer buffer-name t))
 
 (global-set-key (kbd "C-'") 'terminal)

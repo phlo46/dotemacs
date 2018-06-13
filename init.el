@@ -50,6 +50,7 @@
 
 (prefer-coding-system 'utf-8)
 (tool-bar-mode -1)
+(menu-bar-mode -1)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; place auto-save file to $TMPDIR
@@ -202,7 +203,7 @@
 ;; exec-path-from-file mac os x
 (use-package exec-path-from-shell
   :ensure t
-  :if (memq window-system '(mac ns))
+  :if (memq window-system '(mac ns x))
   :config
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-env "GOPATH"))
@@ -382,6 +383,7 @@
 
 ;; elasticsearch mode
 (use-package es-mode
+  :defer t
   :config
   (add-to-list 'auto-mode-alist '("\\.es$" . es-mode)))
 
@@ -392,11 +394,7 @@
   :config
   (add-to-list 'load-path "/usr/local/lib/node_modules/tern/emacs/")
   (autoload 'tern-mode "tern.el" nil t)
-  (eval-after-load 'tern
-    '(progn
-       (require 'tern-auto-complete)
-       (tern-ac-setup)))
-  (add-hook 'js-mode-hook (lambda () (tern-mode t))))
+  (add-hook 'js-mode-hook (lambda () (tern-mode t))))
 
 (use-package company-tern
   :ensure t
