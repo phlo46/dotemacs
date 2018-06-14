@@ -420,7 +420,8 @@
 ;; go
 (use-package go-mode
   :ensure t
-  :bind (("C-c C-g" . godoc-at-point))
+  :bind (:map go-mode-map
+         ("C-c C-g" . godoc-at-point))
   :config
   (use-package go-guru :ensure t)
   (use-package company-go :ensure t)
