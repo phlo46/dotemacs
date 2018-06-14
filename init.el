@@ -9,6 +9,13 @@
 ;; ===========================
 ;; ======== * INIT * =========
 ;; ===========================
+(or (file-exists-p package-user-dir)
+    (package-refresh-contents))
+
+(let ((required-packages (list 'use-package 'zenburn-theme)))
+  (dolist (p required-packages)
+    (unless (package-installed-p p)
+      (package-install p))))
 
 (eval-when-compile
   (require 'use-package))
