@@ -344,16 +344,6 @@
                   racket-mode-hook tuareg-jbuild-mode-hook))
     (add-hook hook #'enable-paredit-mode)))
 
-;; Auto-complete mode
-(use-package auto-complete
-  :ensure t
-  :diminish
-  :config
-  (ac-config-default)
-  (global-auto-complete-mode t)
-  (dolist (m '(erlang-mode rust-mode))
-    (add-to-list 'ac-modes m)))
-
 ;; company mode
 (use-package company
   :ensure t
