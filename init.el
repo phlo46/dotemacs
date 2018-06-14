@@ -124,6 +124,14 @@
 ;; org-mode
 (setq org-log-done 'time)
 
+;; cperl
+(defalias 'perl-mode 'cperl-mode)
+
+;; midnight
+(require 'midnight)
+(midnight-delay-set 'midnight-delay "6:00pm")
+(setq clean-buffer-list-delay-general 1)
+
 ;; ==============================
 ;; ==== * END SYSTEM CONFIG * ===
 ;; ==============================
@@ -144,16 +152,7 @@
 
 ;; sql
 (use-package sql-indent
-  :ensure t
-  :defer t)
-
-;; midnight
-(require 'midnight)
-(midnight-delay-set 'midnight-delay "6:00pm")
-(setq clean-buffer-list-delay-general 1)
-
-;; cperl
-(defalias 'perl-mode 'cperl-mode)
+  :ensure t)
 
 ;; undo tree
 (use-package undo-tree
@@ -209,7 +208,6 @@
 ;; yasnippet
 (use-package yasnippet-snippets
   :ensure t
-  :defer t
   :diminish yasnippet-snippets-mode)
 
 ;; exec-path-from-file mac os x
@@ -230,7 +228,6 @@
 ;; ag
 (use-package ag
   :ensure t
-  :defer t
   :config
   (setq ag-highlight-search t))
 
@@ -263,8 +260,7 @@
          ("C-c o" . ivy-occur)))
 
 (use-package counsel
-  :ensure t
-  :defer t)
+  :ensure t)
 
 ;; avy
 (use-package avy
@@ -315,7 +311,6 @@
 ;;Web-mode
 (use-package web-mode
   :ensure t
-  :defer t
   :config
   (dolist (l (list '("\\.phtml\\'" . web-mode)
                    '("\\.mustache\\'" . web-mode)
@@ -331,7 +326,6 @@
 (use-package sly
   :ensure t
   :diminish
-  :defer t
   :config
   (setq inferior-lisp-program "ros -Q run"))
 
@@ -339,7 +333,6 @@
 (use-package clj-refactor
   :ensure t
   :diminish
-  :defer t
   :config
   (add-hook 'clojure-mode-hook (lambda ()
                                  (clj-refactor-mode 1)
