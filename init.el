@@ -371,7 +371,7 @@
 (use-package company
   :ensure t
   :config
-  (dolist (b '(company-restclient merlin-company-backend))
+  (dolist (b '(merlin-company-backend))
     (add-to-list 'company-backends b))
   (dolist (h '(cider-repl-mode-hook cider-mode-hook haskell-mode-hook merlin-mode-hook))
     (add-hook h #'company-mode)))
@@ -379,13 +379,13 @@
 ;; restclient
 (use-package restclient
   :ensure t
-  :defer t
-  :init
-  (add-to-list 'auto-mode-alist '("\\.http\\'" . restclient-mode)))
-
-(use-package company-restclient
-  :ensure t
-  :defer t)
+  :mode ("\\.http\\'" . restclient-mode)
+  :config
+  (use-package company-restclient
+    :ensure t
+    :config
+    (with-eval-after-load 'company
+      (add-to-list 'company-backends 'company-restclient))))
 
 ;; yaml-mode
 (use-package yaml-mode
