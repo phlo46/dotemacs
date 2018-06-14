@@ -311,15 +311,9 @@
 ;;Web-mode
 (use-package web-mode
   :ensure t
+  :mode ("\\.phtml\\'" "\\.mustache\\'" "\\.handlebars\\'" "\\.hbs\\'"
+         "\\.djhtml\\'" "\\.html?\\'" "\\.vue\\'")
   :config
-  (dolist (l (list '("\\.phtml\\'" . web-mode)
-                   '("\\.mustache\\'" . web-mode)
-                   '("\\.handlebars\\'" . web-mode)
-                   '("\\.hbs\\'" . web-mode)
-                   '("\\.djhtml\\'" . web-mode)
-                   '("\\.html?\\'" . web-mode)
-                   '("\\.vue\\'" . web-mode)))
-    (add-to-list 'auto-mode-alist l))
   (electric-indent-mode 1))
 
 ;; Sly IDE Common Lisp
