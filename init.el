@@ -375,7 +375,8 @@
   (use-package company-tern
     :ensure t
     :config
-    (add-to-list 'company-backends 'company-tern))
+    (with-eval-after-load 'company
+      (add-to-list 'company-backends 'company-tern)))
 
   (let* ((node-path (shell-command-to-string "echo $NODE_PATH"))
          (path-list (split-string node-path ":")))
