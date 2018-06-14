@@ -346,12 +346,7 @@
 
 ;; company mode
 (use-package company
-  :ensure t
-  :config
-  (dolist (b '(merlin-company-backend))
-    (add-to-list 'company-backends b))
-  (dolist (h '(cider-repl-mode-hook cider-mode-hook haskell-mode-hook merlin-mode-hook))
-    (add-hook h #'company-mode)))
+  :ensure t)
 
 ;; restclient
 (use-package restclient
