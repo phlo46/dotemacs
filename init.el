@@ -428,10 +428,16 @@
 (use-package go-mode
   :ensure t
   :bind (:map go-mode-map
-         ("C-c C-g" . godoc-at-point))
+              ("C-c C-g" . godoc-at-point)
+              ("M-." . godef-jump))
   :config
   (use-package go-guru :ensure t)
-  (use-package company-go :ensure t)
+  (use-package company-go
+    :ensure t
+    :config
+    (with-eval-after-load 'company
+      (add-to-list 'company-backends 'company-go)))
+  (setq gofmt-command "goimports")
   (add-hook 'before-save-hook #'gofmt-before-save))
 
 ;; flycheck
