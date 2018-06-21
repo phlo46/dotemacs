@@ -449,6 +449,15 @@
   (add-hook 'before-save-hook #'gofmt-before-save))
 
 ;; C/C++
+(use-package clang-format
+  :ensure t
+  :after cc-mode
+  :config
+  (defun my-c-hook ()
+    (add-hook 'before-save-hook 'clang-format-buffer nil t))
+  (add-hook 'c++-mode-hook 'my-c-hook)
+  (add-hook 'c-mode-hook 'my-c-hook))
+
 (use-package irony
   :ensure t
   :config
