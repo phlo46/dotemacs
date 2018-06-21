@@ -441,6 +441,31 @@
   (setq gofmt-command "goimports")
   (add-hook 'before-save-hook #'gofmt-before-save))
 
+;; C/C++
+(use-package irony
+  :ensure t
+  :config
+  (use-package company-irony
+    :ensure t
+    :config
+    (with-eval-after-load 'company
+      (add-to-list 'company-backends 'company-irony)))
+
+  (use-package flycheck-irony
+    :ensure t
+    :config
+    (with-eval-after-load 'flycheck
+      (add-hook 'flycheck-mode-hook #'flycheck-irony-setup)))
+
+  (use-package irony-eldoc
+    :ensure t
+    :config
+    (add-hook 'irony-mode-hook #'irony-eldoc))
+
+  (add-hook 'c++-mode-hook 'irony-mode)
+  (add-hook 'c-mode-hook 'irony-mode)
+  (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
+
 ;; flycheck
 (use-package flycheck
   :ensure t
