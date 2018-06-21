@@ -461,11 +461,18 @@
 (use-package irony
   :ensure t
   :config
+
+  ;;; helper packages
   (use-package company-irony
     :ensure t
+    :after company
     :config
-    (with-eval-after-load 'company
-      (add-to-list 'company-backends 'company-irony)))
+    (add-to-list 'company-backends 'company-irony)
+
+    (use-package company-c-headers
+      :ensure t
+      :config
+      (add-to-list 'company-backends 'company-c-headers)))
 
   (use-package flycheck-irony
     :ensure t
@@ -478,6 +485,7 @@
     :config
     (add-hook 'irony-mode-hook #'irony-eldoc))
 
+  ;;; mode config
   (add-hook 'c++-mode-hook 'irony-mode)
   (add-hook 'c-mode-hook 'irony-mode)
   (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
