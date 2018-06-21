@@ -458,6 +458,9 @@
   (add-hook 'c++-mode-hook 'my-c-hook)
   (add-hook 'c-mode-hook 'my-c-hook))
 
+(use-package cmake-mode
+  :mode ("CMakeLists\\.txt\\'" "\\.cmake\\'"))
+
 (use-package irony
   :ensure t
   :config
