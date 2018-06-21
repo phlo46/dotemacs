@@ -238,6 +238,13 @@
   :config
   (setq ag-highlight-search t))
 
+;; dumb-jump
+(use-package dumb-jump
+  :ensure t
+  :config
+  (dumb-jump-mode)
+  (setq dumb-jump-selector 'ivy))
+
 ;; ivy-mode
 (use-package ivy
   :ensure t
