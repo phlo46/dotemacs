@@ -336,7 +336,7 @@
   :ensure t
   :diminish
   :config
-  (setq inferior-lisp-program "ros -Q run"))
+  (setq inferior-lisp-program "ros -L sbcl -Q -l ~/.sbclrc run"))
 
 ;; clojure cider
 (use-package clj-refactor
