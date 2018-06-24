@@ -361,7 +361,16 @@
 
 ;; company mode
 (use-package company
-  :ensure t)
+  :ensure t
+  :bind (:map company-active-map
+              ("C-c h" . #'company-quickhelp-manual-begin))
+  :config
+  (use-package company-quickhelp
+    :ensure t
+    :config
+    (company-quickhelp-mode)
+    (setq company-quickhelp-delay nil)))
+
 
 ;; restclient
 (use-package restclient
