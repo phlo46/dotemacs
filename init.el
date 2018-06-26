@@ -106,7 +106,6 @@
 
 ;; start-up functions
 (dolist (x (list #'(lambda () (persp-mode 1))
-                 #'(lambda () (yas-global-mode 1))
                  #'global-flycheck-mode
                  'global-company-mode))
   (add-hook 'after-init-hook x))
@@ -172,8 +171,10 @@
 ;; undo tree
 (use-package undo-tree
   :ensure t
+  :defer 3
   :diminish
-  :config (global-undo-tree-mode))
+  :config
+  (global-undo-tree-mode))
 
 ;; ibuffer
 (use-package ibuffer
@@ -183,6 +184,7 @@
 ;; mode icons
 (use-package mode-icons
   :ensure t
+  :defer 3
   :config
   (mode-icons-mode)
   (setq mode-icons-change-mode-name nil))
@@ -208,9 +210,10 @@
 ;; eyebrowse
 (use-package eyebrowse
   :ensure t
-  :init
-  (eyebrowse-mode t)
+  :defer 2
   :config
+  (eyebrowse-mode t)
+
   (define-key eyebrowse-mode-map (kbd "M-1") 'eyebrowse-switch-to-window-config-1)
   (define-key eyebrowse-mode-map (kbd "M-2") 'eyebrowse-switch-to-window-config-2)
   (define-key eyebrowse-mode-map (kbd "M-3") 'eyebrowse-switch-to-window-config-3)
@@ -223,7 +226,10 @@
 ;; yasnippet
 (use-package yasnippet-snippets
   :ensure t
-  :diminish yasnippet-snippets-mode)
+  :defer 3
+  :diminish yasnippet-snippets-mode
+  :config
+  (yas-global-mode 1))
 
 ;; exec-path-from-file mac os x
 (use-package exec-path-from-shell
