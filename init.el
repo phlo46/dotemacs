@@ -418,20 +418,23 @@
 ;; tern-mode
 (use-package tern
   :ensure t
+  :defer t
+  :init
+  (add-hook 'js-mode-hook (lambda () (tern-mode t)))
   :config
   (use-package company-tern
     :ensure t
+    :after company
     :config
-    (with-eval-after-load 'company
-      (add-to-list 'company-backends 'company-tern)))
+    (add-to-list 'company-backends 'company-tern))
 
   (let* ((node-path (shell-command-to-string "echo $NODE_PATH"))
          (path-list (split-string node-path ":")))
     (dolist (p path-list)
       (when p
         (add-to-list 'load-path p))))
-  (autoload 'tern-mode "tern/emacs/tern.el" nil t)
-  (add-hook 'js-mode-hook (lambda () (tern-mode t))))
+
+  (autoload 'tern-mode "tern/emacs/tern.el" nil t))
 
 ;; js2-mode
 (use-package js2-mode
