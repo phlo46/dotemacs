@@ -105,8 +105,7 @@
 (electric-pair-mode 1)
 
 ;; start-up functions
-(dolist (x (list #'(lambda () (persp-mode 1))
-                 'global-company-mode))
+(dolist (x (list 'global-company-mode))
   (add-hook 'after-init-hook x))
 
 ;; register files
@@ -201,6 +200,8 @@
 ;; persp-mode
 (use-package persp-mode
   :ensure t
+  :init
+  (persp-mode 1)
   :config
   (setq persp-auto-resume-time -1.0 persp-auto-save-opt 0)
   (setq wg-morph-on nil)
