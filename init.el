@@ -363,8 +363,9 @@
 ;; clojure cider
 (use-package clj-refactor
   :ensure t
+  :defer t
   :diminish
-  :config
+  :init
   (add-hook 'clojure-mode-hook (lambda ()
                                  (clj-refactor-mode 1)
                                  (yas-minor-mode 1)
