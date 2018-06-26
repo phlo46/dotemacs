@@ -79,6 +79,9 @@
 (global-set-key "\C-cy"'(lambda ()
                           (interactive)
                           (popup-menu 'yank-menu)))
+
+(global-set-key (kbd "C-c C-u") 'use-package-report)
+
 ;;; look up man-page
 (global-set-key (kbd "C-c m") (lambda ()
                                 (interactive)
