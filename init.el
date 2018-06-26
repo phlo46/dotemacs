@@ -452,7 +452,11 @@
 ;; python
 (use-package elpy
   :ensure t
+  :after python
+  :defer t
   :diminish
+  :init
+  (add-hook 'python-mode-hook 'elpy-mode)
   :config
   (elpy-enable)
   (setq python-shell-interpreter "python3")
