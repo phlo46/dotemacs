@@ -338,9 +338,26 @@
 ;; Sly IDE Common Lisp
 (use-package sly
   :ensure t
+  :defer t
   :diminish
   :config
-  (setq inferior-lisp-program "ros -L sbcl -Q -l ~/.sbclrc run"))
+  (setq inferior-lisp-program "ros -L sbcl -Q -l ~/.sbclrc run")
+
+  ;;; setup for looking up Hyperspec
+  ;;; need to install https://www.hexstreamsoft.com/libraries/clhs/
+  (let* ((ros-quicklisp-dir (expand-file-name ".roswell/lisp/quicklisp" "~/"))
+         (clhs-local (expand-file-name "clhs-use-local.el" ros-quicklisp-dir)))
+    (when (file-exists-p clhs-local)
+      ;;; look up Hyperspec local
+      (when (load clhs-local t)
+
+        ;;; look up Hyperspec inside emacs
+        (defun sly-hyperspec-lookup-eww ()
+          (interactive)
+          (let ((browse-url-browser-function 'eww-browse-url))
+            (call-interactively sly-documentation-lookup-function)))
+
+        (define-key sly-doc-map (kbd "l") 'sly-hyperspec-lookup-eww)))))
 
 ;; clojure cider
 (use-package clj-refactor
