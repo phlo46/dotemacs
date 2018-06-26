@@ -106,7 +106,6 @@
 
 ;; start-up functions
 (dolist (x (list #'(lambda () (persp-mode 1))
-                 #'global-flycheck-mode
                  'global-company-mode))
   (add-hook 'after-init-hook x))
 
@@ -544,8 +543,10 @@
 ;; flycheck
 (use-package flycheck
   :ensure t
+  :defer 2
   :diminish
   :config
+  (global-flycheck-mode)
   (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc emacs-lisp)))
 
 ;; =================================
