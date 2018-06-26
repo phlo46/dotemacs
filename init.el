@@ -225,6 +225,7 @@
 ;; exec-path-from-file mac os x
 (use-package exec-path-from-shell
   :ensure t
+  :defer 3
   :if (memq window-system '(mac ns x))
   :config
   (exec-path-from-shell-initialize)
