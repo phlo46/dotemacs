@@ -483,7 +483,13 @@
   :mode "\\.js\\'"
   :interpreter "node"
   :config
-  (setq-default js2-basic-offset 4))
+  (setq-default js2-basic-offset 4)
+  (defadvice js-jsx-indent-line (after js-jsx-indent-line-after-hack activate)
+    "Workaround sgml-mode and follow airbnb component style."
+    (save-excursion
+      (beginning-of-line)
+      (if (looking-at-p "^ +\/?> *$")
+          (delete-char sgml-basic-offset)))))
 
 ;; markdown mode
 (use-package markdown-mode

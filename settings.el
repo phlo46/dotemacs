@@ -1,12 +1,3 @@
-;; Javascript
-(defadvice js-jsx-indent-line (after js-jsx-indent-line-after-hack activate)
-  "Workaround sgml-mode and follow airbnb component style."
-  (save-excursion
-    (beginning-of-line)
-    (if (looking-at-p "^ +\/?> *$")
-        (delete-char sgml-basic-offset))))
-
-
 ;; ocaml
 (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
   (when (and opam-share (file-directory-p opam-share))
