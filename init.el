@@ -499,7 +499,6 @@
 
 ;; C/C++
 (use-package clang-format
-  :ensure t
   :after cc-mode
   :config
   (defun my-c-hook ()
@@ -511,36 +510,36 @@
   :mode ("CMakeLists\\.txt\\'" "\\.cmake\\'"))
 
 (use-package irony
-  :ensure t
-  :config
+  :defer t
+  :init
+  (add-hook 'c++-mode-hook 'irony-mode)
+  (add-hook 'c-mode-hook 'irony-mode)
+  (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
+  :config
   ;;; helper packages
   (use-package company-irony
     :ensure t
     :after company
     :config
-    (add-to-list 'company-backends 'company-irony)
+    (add-to-list 'company-backends 'company-irony))
 
-    (use-package company-c-headers
-      :ensure t
-      :config
-      (add-to-list 'company-backends 'company-c-headers)))
+  (use-package company-c-headers
+    :ensure t
+    :after company
+    :config
+    (add-to-list 'company-backends 'company-c-headers))
 
   (use-package flycheck-irony
     :ensure t
+    :after flycheck
     :config
-    (with-eval-after-load 'flycheck
-      (add-hook 'flycheck-mode-hook #'flycheck-irony-setup)))
+    (add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 
   (use-package irony-eldoc
     :ensure t
     :config
-    (add-hook 'irony-mode-hook #'irony-eldoc))
-
-  ;;; mode config
-  (add-hook 'c++-mode-hook 'irony-mode)
-  (add-hook 'c-mode-hook 'irony-mode)
-  (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
+    (add-hook 'irony-mode-hook #'irony-eldoc)))
 
 ;; flycheck
 (use-package flycheck
