@@ -82,6 +82,8 @@
 
 (global-set-key (kbd "C-c C-u") 'use-package-report)
 
+(global-set-key (kbd "C-c C-p m") 'pp-macroexpand-last-sexp)
+
 ;;; look up man-page
 (global-set-key (kbd "C-c m") (lambda ()
                                 (interactive)
