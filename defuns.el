@@ -38,95 +38,6 @@
 
 (global-set-key (kbd "C-'") 'terminal)
 
-;; ssh
-(defun vicare-nightly ()
-  (interactive)
-  (dired "/ubuntu@nightly.vicare.vn:/home/ubuntu/meddy"))
-
-(defun xander-nightly ()
-  (interactive)
-  (dired "/ubuntu@nightly.xanderp.vicare.vn:/home/ubuntu/xanderp_server"))
-
-(defun vicare-staging ()
-  (interactive)
-  (dired "/ubuntu@staging.vicare.vn:/home/ubuntu/meddy"))
-
-;; sql db
-(setq sql-connection-alist
-      '((xander_local (sql-product 'postgres)
-                      (sql-port 5400)
-                      (sql-server "localhost")
-                      (sql-user "super_user")
-                      (sql-password "super_hard_to_guess")
-                      (sql-database "xanderp"))
-        (xander_nightly (sql-product 'postgres)
-                        (sql-port 5410)
-                        (sql-user "super_user")
-                        (sql-server "localhost")
-                        (sql-database "xanderp"))
-        (vicare_nightly (sql-product 'postgres)
-                        (sql-port 5415)
-                        (sql-user "projectf_dev")
-                        (sql-server "localhost")
-                        (sql-database "meddy"))
-        (vicare_local (sql-product 'postgres)
-                      (sql-port 5432)
-                      (sql-server "localhost")
-                      (sql-user "projectf_dev")
-                      (sql-database "meddy"))
-        (local (sql-product 'postgres)
-               (sql-port 5432)
-               (sql-server "localhost")
-               (sql-user "admin")
-               (sql-database "book"))))
-
-(defun xander-local-db ()
-  (interactive)
-  (my-sql-connect 'postgres 'xander_local))
-
-(defun xander-nightly-db ()
-  (interactive)
-  (my-sql-connect 'postgres 'xander_nightly))
-
-(defun vicare-nightly-db ()
-  (interactive)
-  (my-sql-connect 'postgres 'vicare_nightly))
-
-(defun vicare-local-db ()
-  (interactive)
-  (my-sql-connect 'postgres 'vicare_local))
-
-(defun local-db ()
-  (interactive)
-  (my-sql-connect 'postgres 'local))
-
-(defun my-sql-connect (product connection)
-  (setq sql-product product)
-  (sql-connect connection))
-
-
-
-;; helper functions for work.
-(defun fire-up-meddy ()
-  (interactive)
-  (let ((meddy-term-buffers (list "sv" "web" "shell")))
-    (dolist (buff-name meddy-term-buffers)
-      (let ((b (or (get-buffer buff-name)
-                   (get-buffer (format "*%s*" buff-name)))))
-        (cond
-         ((null b)
-          (setq b (ansi-term "/usr/local/bin/zsh" buff-name)))
-         ((not (eq 'term-mode (buffer-local-value 'major-mode b)))
-          (kill-buffer b)
-          (setq b (ansi-term "/usr/local/bin/zsh" buff-name)))
-         (t nil))
-        (process-send-string b "cd ~/work/meddy\n")
-        (sleep-for 1)
-        (process-send-string b "vs\n")
-        (sleep-for 2.5)
-        (process-send-string b "vagrant\n")))))
-
-
 
 ;; Eyebrowse - allow perspective-local workspaces
 (defun get-persp-workspace (&optional persp frame)
@@ -202,8 +113,6 @@ FRAME defaults to the current frame."
                              (eyebrowse--get 'last-slot frame))
                        (get-frame-persp frame)
                        frame))
-
-
 
 ;; (defun load-eyebrowse-for-perspective (&optional frame)
 ;;   "Load an eyebrowse workspace according to a perspective's parameters.
