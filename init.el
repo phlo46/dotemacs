@@ -361,7 +361,8 @@
 ;;Emmet mode
 (use-package emmet-mode
   :ensure t
-  :config
+  :defer t
+  :init
   (dolist (hook '(sgml-mode-hook css-mode-hook web-mode-hook nxml-mode-hook))
     (add-hook hook 'emmet-mode)))
 
