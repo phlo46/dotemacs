@@ -78,6 +78,10 @@
 (global-set-key "\C-cy"'(lambda ()
                           (interactive)
                           (popup-menu 'yank-menu)))
+;;; look up man-page
+(global-set-key (kbd "C-c m") (lambda ()
+                                (interactive)
+                                (manual-entry (current-word))))
 
 ;; org-mode
 (global-set-key "\C-cl" 'org-store-link)
