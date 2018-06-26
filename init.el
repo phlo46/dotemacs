@@ -18,7 +18,8 @@
       (package-install p))))
 
 (eval-when-compile
-  (require 'use-package))
+  (require 'use-package)
+  (setq use-package-compute-statistics t))
 
 (require 'bind-key)
 
