@@ -384,11 +384,12 @@
 ;; Paredit
 (use-package paredit
   :ensure t
+  :defer t
   :diminish
-  :config
+  :init
   (dolist (hook '(emacs-lisp-mode-hook
                   eval-expression-minibuffer-setup-hook ielm-mode-hook
-                  lisp-mode-hook lisp-interaction-mode-hook
+                  lisp-mode-hook lisp-interaction-mode-hook sly-mode-hook
                   scheme-mode-hook clojure-mode-hook cider-repl-mode-hook
                   racket-mode-hook tuareg-jbuild-mode-hook))
     (add-hook hook #'enable-paredit-mode)))
