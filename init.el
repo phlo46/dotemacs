@@ -104,10 +104,6 @@
 ;; electric-pair
 (electric-pair-mode 1)
 
-;; start-up functions
-(dolist (x (list 'global-company-mode))
-  (add-hook 'after-init-hook x))
-
 ;; register files
 (set-register ?i '(file . "~/.emacs.d/init.el"))
 (set-register ?z '(file . "~/.zshrc"))
@@ -395,9 +391,11 @@
 ;; company mode
 (use-package company
   :ensure t
+  :defer 3
   :bind (:map company-active-map
               ("C-c h" . #'company-quickhelp-manual-begin))
   :config
+  (global-company-mode)
   (use-package company-quickhelp
     :ensure t
     :config
@@ -412,9 +410,9 @@
   :config
   (use-package company-restclient
     :ensure t
+    :after company
     :config
-    (with-eval-after-load 'company
-      (add-to-list 'company-backends 'company-restclient))))
+    (add-to-list 'company-backends 'company-restclient)))
 
 ;; yaml-mode
 (use-package yaml-mode
@@ -491,9 +489,10 @@
   (use-package go-guru :ensure t)
   (use-package company-go
     :ensure t
+    :after company
     :config
-    (with-eval-after-load 'company
-      (add-to-list 'company-backends 'company-go)))
+    (add-to-list 'company-backends 'company-go))
+
   (setq gofmt-command "goimports")
   (add-hook 'before-save-hook #'gofmt-before-save))
 
