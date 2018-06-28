@@ -218,6 +218,14 @@
   (setq highlight-thing-exclude-thing-under-point t)
   (setq highlight-thing-limit-to-defun t))
 
+;; buffer move
+(use-package buffer-move
+  :ensure t
+  :bind (("<M-s-up>" . buf-move-up)
+         ("<M-s-down>" . buf-move-down)
+         ("<M-s-left>" . buf-move-left)
+         ("<M-s-right>" . buf-move-right)))
+
 ;; persp-mode
 (use-package persp-mode
   :ensure t
