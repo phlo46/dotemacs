@@ -267,6 +267,20 @@
   :config
   (setq tab-always-indent 'complete))
 
+;; scheme geiser
+(use-package scheme
+  :mode ("\\.scm\\'" . scheme-mode)
+  :config
+  (use-package geiser
+    :ensure t
+    :config
+    (setq geiser-mode-smart-tab-p t)
+
+    (with-eval-after-load 'geiser-mode
+      (define-key geiser-mode-map (kbd "C-.") nil))
+    (with-eval-after-load 'geiser-repl
+      (define-key geiser-repl-mode-map (kbd "C-.") nil))))
+
 ;; ag
 (use-package ag
   :ensure t
