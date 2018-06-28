@@ -301,12 +301,6 @@
 (use-package ivy
   :ensure t
   :diminish
-
-  :config
-  (ivy-mode 1)
-  (setq ivy-use-virtual-buffers nil)
-  (setq enable-recursive-minibuffers t)
-
   :bind (("C-s" . swiper)
          ("C-r" . swiper)
          ("C-c C-r" . ivy-resume)
@@ -323,7 +317,11 @@
          :map read-expression-map
          ("C-r" . counsel-expression-history)
          :map ivy-minibuffer-map
-         ("C-c o" . ivy-occur)))
+         ("C-c o" . ivy-occur))
+  :config
+  (ivy-mode 1)
+  (setq ivy-use-virtual-buffers nil)
+  (setq enable-recursive-minibuffers t))
 
 (use-package counsel
   :ensure t)
@@ -331,11 +329,10 @@
 ;; avy
 (use-package avy
   :ensure t
-  :config
-  (avy-setup-default)
-
   :bind (("M-g f" . avy-goto-word-1-below)
-         ("M-g b" . avy-goto-word-1-above)))
+         ("M-g b" . avy-goto-word-1-above))
+  :config
+  (avy-setup-default))
 
 ;; which-key
 (use-package which-key
@@ -353,14 +350,13 @@
   (projectile-mode)
   (setq projectile-completion-system 'ivy))
 
-;; magit mode
+;; magit
 (use-package magit
   :ensure t
-  :config
-  (setq magit-completing-read-function 'ivy-completing-read)
-
   :bind (("C-x g" . magit-status)
-         ("C-c b" . magit-blame)))
+         ("C-c b" . magit-blame))
+  :config
+  (setq magit-completing-read-function 'ivy-completing-read))
 
 ;; ace-window
 (use-package ace-window
