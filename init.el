@@ -157,15 +157,16 @@
   :diminish)
 
 ;; sql
-(use-package sql-indent
-  :after sql
-  :bind ("C-M-]" . sql-indent-buffer))
-
 (use-package sql
   :bind (:map sql-mode-map
          ("C-c p" . sql-postgres)
          ("C-c b" . sql-set-sqli-buffer))
   :config
+  (use-package sql-indent
+    :ensure t
+    :bind (:map sql-mode-map
+                ("C-c <M-tab>" . sql-indent-buffer)))
+
   (add-hook 'sql-interactive-mode-hook
             (lambda ()
               (toggle-truncate-lines t)
