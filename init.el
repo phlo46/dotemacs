@@ -337,6 +337,14 @@
   :bind (("M-g f" . avy-goto-word-1-below)
          ("M-g b" . avy-goto-word-1-above)))
 
+;; which-key
+(use-package which-key
+  :ensure t
+  :diminish
+  :bind ("C-c M-=" . which-key-show-major-mode)
+  :config
+  (which-key-mode))
+
 ;; projectile-mode
 (use-package projectile
   :ensure t
