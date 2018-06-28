@@ -258,7 +258,7 @@
   :if (memq window-system '(mac ns x))
   :config
   (exec-path-from-shell-initialize)
-  (exec-path-from-shell-copy-env "GOPATH"))
+  (exec-path-from-shell-copy-envs (list "LANG" "GOPATH")))
 
 ;; racket
 (use-package racket-mode
