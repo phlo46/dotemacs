@@ -593,10 +593,6 @@
       ;; ocp-indent
       (load "ocp-indent")
 
-      ;; helpers
-      (load "tuareg-site-file")
-      (load "ocamldebug")
-
       ;; utop
       (autoload 'utop "utop" "Toplevel for OCaml" t)
       (setq utop-command "opam config exec -- utop -emacs")
