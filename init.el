@@ -388,7 +388,8 @@
   :diminish
   :config
   (global-flycheck-mode)
-  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc emacs-lisp)))
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc emacs-lisp))
+  (setq flycheck-check-syntax-automatically (list 'save)))
 
 
 
