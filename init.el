@@ -263,7 +263,8 @@
          ("M-g x" . dumb-jump-go-prefer-external)
          ("M-g z" . dumb-jump-go-prefer-external-other-window))
   :config
-  (setq dumb-jump-selector 'ivy))
+  (setq dumb-jump-selector 'ivy)
+  (setq dumb-jump-force-searcher 'ag))
 
 ;; ivy-mode
 (use-package ivy
