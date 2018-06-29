@@ -12,10 +12,9 @@
 (or (file-exists-p package-user-dir)
     (package-refresh-contents))
 
-(let ((required-packages (list 'use-package 'zenburn-theme)))
-  (dolist (p required-packages)
-    (unless (package-installed-p p)
-      (package-install p))))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
 (eval-when-compile
   (require 'use-package)
@@ -41,8 +40,6 @@
 ;; ===========================
 ;; ==== * SYSTEM CONFIG * ====
 ;; ===========================
-
-(load-theme 'zenburn t)
 
 (eval-after-load "hi-lock"
   '(diminish 'hi-lock-mode))
@@ -150,6 +147,12 @@
 
 ;; I, EDIT HELPERS
 ;; ###############
+
+;; zenburn theme
+(use-package zenburn-theme
+  :ensure t
+  :config
+  (load-theme 'zenburn t))
 
 ;; diminish
 (use-package diminish
