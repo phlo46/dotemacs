@@ -341,7 +341,7 @@
   :ensure t
   :bind ("C-." . ace-window))
 
-;;Multiple-cursors
+;; multiple cursors
 (use-package multiple-cursors
   :ensure t
   :bind (("C-S-c C-S-c" . mc/edit-lines)
@@ -349,6 +349,11 @@
          ("C-<" . mc/mark-previous-like-this)
          ("C-c C-<" . mc/mark-all-like-this)
          ("C-c C-s" . mc/mark-all-symbols-like-this-in-defun)))
+
+;; go to last change
+(use-package goto-last-change
+  :ensure t
+  :bind ("C-c C-\\" . goto-last-change))
 
 ;;Emmet mode
 (use-package emmet-mode
