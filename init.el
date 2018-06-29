@@ -183,6 +183,15 @@
   (mode-icons-mode)
   (setq mode-icons-change-mode-name nil))
 
+;; helpful
+(use-package helpful
+  :ensure t
+  :bind (("C-c C-d" . helpful-at-point)
+         ("C-h v" . helpful-variable)
+         ("C-h k" . helpful-key)
+         ("C-h f" . helpful-callable)
+         ("C-h C" . helpful-command)))
+
 ;; highlight thing
 (use-package highlight-thing
   :ensure t
