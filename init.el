@@ -238,27 +238,6 @@
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-envs (list "LANG" "GOPATH")))
 
-;; racket
-(use-package racket-mode
-  :ensure t
-  :mode "\\.rkt\\'"
-  :config
-  (setq tab-always-indent 'complete))
-
-;; scheme geiser
-(use-package scheme
-  :mode ("\\.scm\\'" . scheme-mode)
-  :config
-  (use-package geiser
-    :ensure t
-    :config
-    (setq geiser-mode-smart-tab-p t)
-
-    (with-eval-after-load 'geiser-mode
-      (define-key geiser-mode-map (kbd "C-.") nil))
-    (with-eval-after-load 'geiser-repl
-      (define-key geiser-repl-mode-map (kbd "C-.") nil))))
-
 ;; ag
 (use-package ag
   :ensure t
@@ -355,7 +334,7 @@
   :ensure t
   :bind ("C-c C-\\" . goto-last-change))
 
-;;Emmet mode
+;; emmet mode
 (use-package emmet-mode
   :ensure t
   :defer t
@@ -363,13 +342,34 @@
   (dolist (hook '(sgml-mode-hook css-mode-hook web-mode-hook nxml-mode-hook))
     (add-hook hook 'emmet-mode)))
 
-;;Web-mode
+;; web-mode
 (use-package web-mode
   :ensure t
   :mode ("\\.phtml\\'" "\\.mustache\\'" "\\.handlebars\\'" "\\.hbs\\'"
          "\\.djhtml\\'" "\\.html?\\'" "\\.vue\\'")
   :config
   (electric-indent-mode 1))
+
+;; racket
+(use-package racket-mode
+  :ensure t
+  :mode "\\.rkt\\'"
+  :config
+  (setq tab-always-indent 'complete))
+
+;; scheme geiser
+(use-package scheme
+  :mode ("\\.scm\\'" . scheme-mode)
+  :config
+  (use-package geiser
+    :ensure t
+    :config
+    (setq geiser-mode-smart-tab-p t)
+
+    (with-eval-after-load 'geiser-mode
+      (define-key geiser-mode-map (kbd "C-.") nil))
+    (with-eval-after-load 'geiser-repl
+      (define-key geiser-repl-mode-map (kbd "C-.") nil))))
 
 ;; Sly IDE Common Lisp
 (use-package sly
