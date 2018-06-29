@@ -148,6 +148,9 @@
 ;; ==== * DECLARE PACKAGE * ====
 ;; =============================
 
+;; I, EDIT HELPERS
+;; ###############
+
 ;; diminish
 (use-package diminish
   :ensure t)
@@ -334,6 +337,47 @@
   :ensure t
   :bind ("C-c C-\\" . goto-last-change))
 
+;; paredit
+(use-package paredit
+  :ensure t
+  :defer t
+  :diminish
+  :init
+  (dolist (hook '(emacs-lisp-mode-hook
+                  eval-expression-minibuffer-setup-hook ielm-mode-hook
+                  lisp-mode-hook lisp-interaction-mode-hook sly-mode-hook
+                  scheme-mode-hook clojure-mode-hook cider-repl-mode-hook
+                  racket-mode-hook tuareg-jbuild-mode-hook))
+    (add-hook hook #'enable-paredit-mode)))
+
+;; company mode
+(use-package company
+  :ensure t
+  :defer 3
+  :bind (:map company-active-map
+              ("C-c h" . #'company-quickhelp-manual-begin))
+  :config
+  (global-company-mode)
+  (use-package company-quickhelp
+    :ensure t
+    :config
+    (company-quickhelp-mode)
+    (setq company-quickhelp-delay nil)))
+
+;; flycheck
+(use-package flycheck
+  :ensure t
+  :defer 2
+  :diminish
+  :config
+  (global-flycheck-mode)
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc emacs-lisp)))
+
+
+
+;; II, PROGRAMMING MODE
+;; ####################
+
 ;; emmet mode
 (use-package emmet-mode
   :ensure t
@@ -405,32 +449,6 @@
                                  (clj-refactor-mode 1)
                                  (yas-minor-mode 1)
                                  (cljr-add-keybindings-with-prefix "C-c C-m"))))
-;; Paredit
-(use-package paredit
-  :ensure t
-  :defer t
-  :diminish
-  :init
-  (dolist (hook '(emacs-lisp-mode-hook
-                  eval-expression-minibuffer-setup-hook ielm-mode-hook
-                  lisp-mode-hook lisp-interaction-mode-hook sly-mode-hook
-                  scheme-mode-hook clojure-mode-hook cider-repl-mode-hook
-                  racket-mode-hook tuareg-jbuild-mode-hook))
-    (add-hook hook #'enable-paredit-mode)))
-
-;; company mode
-(use-package company
-  :ensure t
-  :defer 3
-  :bind (:map company-active-map
-              ("C-c h" . #'company-quickhelp-manual-begin))
-  :config
-  (global-company-mode)
-  (use-package company-quickhelp
-    :ensure t
-    :config
-    (company-quickhelp-mode)
-    (setq company-quickhelp-delay nil)))
 
 
 ;; restclient
@@ -634,15 +652,6 @@
     "position of last prompt when added recording started")
   (make-variable-buffer-local 'sql-last-prompt-pos)
   (put 'sql-last-prompt-pos 'permanent-local t))
-
-;; flycheck
-(use-package flycheck
-  :ensure t
-  :defer 2
-  :diminish
-  :config
-  (global-flycheck-mode)
-  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc emacs-lisp)))
 
 ;; =================================
 ;; ==== * END DECLARE PACKAGE * ====
