@@ -413,7 +413,6 @@
 
 ;; racket
 (use-package racket-mode
-  :ensure t
   :mode "\\.rkt\\'"
   :config
   (setq tab-always-indent 'complete))
@@ -458,7 +457,6 @@
 
 ;; clojure cider
 (use-package clj-refactor
-  :ensure t
   :defer t
   :diminish
   :init
@@ -481,7 +479,6 @@
 
 ;; yaml-mode
 (use-package yaml-mode
-  :ensure t
   :mode "\\.yml\\'")
 
 ;; elasticsearch mode
@@ -552,7 +549,6 @@
 
 ;; go
 (use-package go-mode
-  :ensure t
   :bind (:map go-mode-map
               ("C-c C-g" . godoc-at-point)
               ("M-." . godef-jump))
