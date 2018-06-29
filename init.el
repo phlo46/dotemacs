@@ -336,6 +336,14 @@
   :ensure t
   :bind ("C-c C-\\" . goto-last-change))
 
+;; expand-region
+(use-package expand-region
+  :ensure t
+  :bind (("C-= r" . er/expand-region)
+         ("C-= d" . er/mark-defun)
+         ("C-= s" . er/mark-symbol)
+         ("C-= w" . er/mark-word)))
+
 ;; paredit
 (use-package paredit
   :ensure t
