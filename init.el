@@ -432,9 +432,8 @@
     (with-eval-after-load 'geiser-repl
       (define-key geiser-repl-mode-map (kbd "C-.") nil))))
 
-;; Sly IDE Common Lisp
+;; common Lisp
 (use-package sly
-  :ensure t
   :defer t
   :diminish
   :config
