@@ -40,7 +40,6 @@
 ;; ===========================
 ;; ==== * SYSTEM CONFIG * ====
 ;; ===========================
-
 (eval-after-load "hi-lock"
   '(diminish 'hi-lock-mode))
 
@@ -223,10 +222,12 @@
 ;; eyebrowse
 (use-package eyebrowse
   :ensure t
-  :defer 2
+  :bind (("M-1" . eyebrowse-switch-to-window-config-1)
+         ("M-2" . eyebrowse-switch-to-window-config-2)
+         ("M-3" . eyebrowse-switch-to-window-config-3)
+         ("M-4" . eyebrowse-switch-to-window-config-4))
   :config
   (eyebrowse-mode t)
-  (eyebrowse-setup-opinionated-keys)
 
   (add-hook 'persp-activated-functions #'load-eyebrowse-for-perspective)
   (add-hook 'persp-before-switch-functions #'update-eyebrowse-for-perspective)
