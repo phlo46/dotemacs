@@ -399,7 +399,6 @@
 
 ;; emmet mode
 (use-package emmet-mode
-  :ensure t
   :defer t
   :init
   (dolist (hook '(sgml-mode-hook css-mode-hook web-mode-hook nxml-mode-hook))
@@ -407,7 +406,6 @@
 
 ;; web-mode
 (use-package web-mode
-  :ensure t
   :mode ("\\.phtml\\'" "\\.mustache\\'" "\\.handlebars\\'" "\\.hbs\\'"
          "\\.djhtml\\'" "\\.html?\\'" "\\.vue\\'")
   :config
@@ -466,10 +464,8 @@
                                  (yas-minor-mode 1)
                                  (cljr-add-keybindings-with-prefix "C-c C-m"))))
 
-
 ;; restclient
 (use-package restclient
-  :ensure t
   :mode ("\\.http\\'" . restclient-mode)
   :config
   (use-package company-restclient
@@ -488,7 +484,6 @@
 
 ;; tern-mode
 (use-package tern
-  :ensure t
   :defer t
   :init
   (add-hook 'js-mode-hook (lambda () (tern-mode t)))
@@ -523,12 +518,12 @@
 
 ;; markdown mode
 (use-package markdown-mode
-  :ensure t
   :commands (markdown-mode gfm-mode)
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode))
-  :config (setq markdown-command "multimarkdown"))
+  :config
+  (setq markdown-command "multimarkdown"))
 
 ;; python
 (use-package python
