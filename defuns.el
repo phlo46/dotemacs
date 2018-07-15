@@ -36,7 +36,7 @@
   (ansi-term "zsh")
   (rename-buffer buffer-name t))
 
-(global-set-key (kbd "C-,") 'terminal)
+(global-set-key (kbd "C-'") 'terminal)
 
 
 ;; Eyebrowse - allow perspective-local workspaces
