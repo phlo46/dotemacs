@@ -558,10 +558,11 @@
 
 ;; C/C++
 (use-package clang-format
-  :after cc-mode
-  :config
+  :defer t
+  :init
   (defun my-c-hook ()
     (add-hook 'before-save-hook 'clang-format-buffer nil t))
+
   (add-hook 'c++-mode-hook 'my-c-hook)
   (add-hook 'c-mode-hook 'my-c-hook))
 
