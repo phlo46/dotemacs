@@ -392,6 +392,9 @@
   (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc emacs-lisp))
   (setq flycheck-check-syntax-automatically (list 'save)))
 
+;; epub
+(use-package nov
+  :mode ("\\.epub\\'" . nov-mode))
 
 
 ;; II, PROGRAMMING MODE
