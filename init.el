@@ -112,11 +112,6 @@
 ;; Config emacs env
 (setenv "PYTHONUNBUFFERED" "x")
 
-;;Set path for Leiningen
-(add-to-list 'exec-path "/usr/local/bin")
-(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
-(setq exec-path (append exec-path '("/usr/local/bin")))
-
 ;;highlight parentheses
 (show-paren-mode 1)
 
