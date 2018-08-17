@@ -391,6 +391,14 @@
 (use-package nov
   :mode ("\\.epub\\'" . nov-mode))
 
+;; gitlab ci
+(use-package gitlab-ci-mode
+  :mode "\\.gitlab-ci.yml\\'"
+  :config
+  (use-package gitlab-ci-mode-flycheck
+    :ensure t
+    :hook (gitlab-ci-mode . gitlab-ci-mode-flycheck-enable)))
+
 
 ;; II, PROGRAMMING MODE
 ;; ####################
