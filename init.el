@@ -549,6 +549,31 @@
     (setq elpy-rpc-python-command "python3")
     (setq elpy-rpc-backend "jedi")))
 
+;; ruby
+(use-package ruby-mode
+  :mode "\\.rb\\'"
+  :interpreter "ruby"
+  :config
+  (use-package robe
+    :ensure t
+    :diminish
+    :config
+    (add-hook 'ruby-mode-hook 'robe-mode)
+    (with-eval-after-load 'company
+      (add-to-list 'company-backends 'company-robe)))
+
+  (use-package ruby-tools
+    :ensure t
+    :diminish ruby-tools-mode)
+
+  (use-package yari
+    :ensure t)
+
+  (use-package rinari
+    :diminish rinari-minor-mode
+    :config
+    (global-rinari-mode)))
+
 ;; go
 (use-package go-mode
   :bind (:map go-mode-map
