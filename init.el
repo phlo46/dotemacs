@@ -433,8 +433,11 @@
 (use-package sly
   :defer t
   :diminish
+  :bind (:map sly-mode-map
+              ("C-c p" . sly-pprint-eval-last-expression))
   :config
   (setq inferior-lisp-program "ros -L sbcl -Q -l ~/.sbclrc run")
+
 
   ;;; setup for looking up Hyperspec
   ;;; need to install https://www.hexstreamsoft.com/libraries/clhs/
