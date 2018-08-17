@@ -487,6 +487,10 @@
 (use-package yaml-mode
   :mode "\\.yml\\'")
 
+;; terraform
+(use-package terraform-mode
+  :mode "\\.tf\\'")
+
 ;; elasticsearch mode
 (use-package es-mode
   :mode "\\.es$")
