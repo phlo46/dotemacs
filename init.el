@@ -313,7 +313,8 @@
   :diminish
   :config
   (projectile-mode)
-  (setq projectile-completion-system 'ivy))
+  (setq projectile-completion-system 'ivy)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
 
 ;; magit
 (use-package magit
