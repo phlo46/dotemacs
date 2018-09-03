@@ -217,10 +217,10 @@
 ;; eyebrowse
 (use-package eyebrowse
   :ensure t
-  :bind (("M-1" . eyebrowse-switch-to-window-config-1)
-         ("M-2" . eyebrowse-switch-to-window-config-2)
-         ("M-3" . eyebrowse-switch-to-window-config-3)
-         ("M-4" . eyebrowse-switch-to-window-config-4))
+  :bind (("s-1" . eyebrowse-switch-to-window-config-1)
+         ("s-2" . eyebrowse-switch-to-window-config-2)
+         ("s-3" . eyebrowse-switch-to-window-config-3)
+         ("s-4" . eyebrowse-switch-to-window-config-4))
   :config
   (eyebrowse-mode t)
 
