@@ -398,8 +398,9 @@
   :config
   (use-package gitlab-ci-mode-flycheck
     :ensure t
-    :hook (gitlab-ci-mode . gitlab-ci-mode-flycheck-enable)))
-
+    :after flycheck
+    :init
+    (gitlab-ci-mode-flycheck-enable)))
 
 ;; II, PROGRAMMING MODE
 ;; ####################
