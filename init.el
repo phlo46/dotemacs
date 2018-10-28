@@ -233,6 +233,7 @@
   :ensure t
   :defer 3
   :diminish yasnippet-snippets-mode
+  :diminish yas-minor-mode
   :config
   (yas-global-mode 1))
 
@@ -370,6 +371,7 @@
 (use-package company
   :ensure t
   :defer 3
+  :diminish
   :bind (:map company-active-map
               ("C-c h" . #'company-quickhelp-manual-begin))
   :config
