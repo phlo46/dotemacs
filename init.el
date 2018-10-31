@@ -591,11 +591,21 @@
               ("M-." . godef-jump))
   :config
   (use-package go-guru :ensure t)
+
+  ;; when using with `dep`, need to run: `gocode install ./vendor/...`
+  ;; ref: https://github.com/nsf/gocode/issues/491
   (use-package company-go
     :ensure t
     :after company
     :config
+    (add-hook 'go-mode-hook (lambda ()
+                              (set (make-local-variable 'company-backends) '(company-go))
+                              (company-mode)))
     (add-to-list 'company-backends 'company-go))
+  (use-package go-eldoc
+    :ensure t
+    :config
+    (add-hook 'go-mode-hook 'go-eldoc-setup))
 
   (setq gofmt-command "goimports")
   (add-hook 'before-save-hook #'gofmt-before-save))
