@@ -686,13 +686,21 @@
 ;; sql
 (use-package sql
   :bind (:map sql-mode-map
-         ("C-c p" . sql-postgres)
-         ("C-c b" . sql-set-sqli-buffer))
+              ("C-c p" . sql-postgres)
+              ("C-c b" . sql-set-sqli-buffer))
   :config
   (use-package sql-indent
     :ensure t
     :bind (:map sql-mode-map
                 ("C-c <M-tab>" . sql-indent-buffer)))
+
+  (use-package sqlup-mode
+    :ensure t
+    :config
+    ;; Capitalize keywords in SQL mode
+    (add-hook 'sql-mode-hook 'sqlup-mode)
+    ;; Capitalize keywords in an interactive session (e.g. psql)
+    (add-hook 'sql-interactive-mode-hook 'sqlup-mode))
 
   (add-hook 'sql-interactive-mode-hook
             (lambda ()
