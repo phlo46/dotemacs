@@ -251,6 +251,12 @@
   :config
   (setq ag-highlight-search t))
 
+;; rgrep
+(use-package deadgrep
+  :ensure t
+  :config
+  (global-set-key (kbd "<f5>") #'deadgrep))
+
 ;; dumb-jump
 (use-package dumb-jump
   :ensure t
