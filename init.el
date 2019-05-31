@@ -349,7 +349,7 @@
 ;; go to last change
 (use-package goto-last-change
   :ensure t
-  :bind ("C-c C-\\" . goto-last-change))
+  :bind ("C-c s-\\" . goto-last-change))
 
 ;; expand-region
 (use-package expand-region
