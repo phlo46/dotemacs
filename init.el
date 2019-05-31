@@ -316,6 +316,7 @@
 ;; projectile-mode
 (use-package projectile
   :ensure t
+  :pin melpa-stable
   :diminish
   :config
   (projectile-mode)
