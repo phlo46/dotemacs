@@ -504,6 +504,14 @@
   ;; prevent this key-binding shadowing projectile prefix'
   (define-key sly-mode-map (kbd "C-c p") nil)
 
+  ;; add color support for Sly REPL
+  (use-package sly-repl-ansi-color
+    :ensure t
+    :config
+    (push 'sly-repl-ansi-color sly-contribs))
+
+  (use-package sly-macrostep
+    :ensure t)
   ;;; setup for looking up Hyperspec
   ;;; need to install https://www.hexstreamsoft.com/libraries/clhs/
   (let* ((ros-quicklisp-dir (expand-file-name ".roswell/lisp/quicklisp" "~/"))
