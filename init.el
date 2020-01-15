@@ -497,7 +497,9 @@
          :map sly-mrepl-mode-map
          ("C-r" . isearch-backward))
   :config
-  (setq inferior-lisp-program "ros -L sbcl -Q -l ~/.sbclrc run")
+  (setq sly-lisp-implementations
+        '((sbcl ("ros" "-L" "sbcl" "-Q" "-l" "~/.sbclrc" "run"))
+          (ccl ("ros -L ccl-bin -Q run"))))
 
 
   ;;; setup for looking up Hyperspec
