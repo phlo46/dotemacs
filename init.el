@@ -664,6 +664,7 @@
     :ensure t)
 
   (use-package rinari
+    :no-require t
     :diminish rinari-minor-mode
     :config
     (global-rinari-mode)))
