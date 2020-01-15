@@ -501,6 +501,8 @@
         '((sbcl ("ros" "-L" "sbcl" "-Q" "-l" "~/.sbclrc" "run"))
           (ccl ("ros -L ccl-bin -Q run"))))
 
+  ;; prevent this key-binding shadowing projectile prefix'
+  (define-key sly-mode-map (kbd "C-c p") nil)
 
   ;;; setup for looking up Hyperspec
   ;;; need to install https://www.hexstreamsoft.com/libraries/clhs/
