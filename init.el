@@ -281,6 +281,7 @@
          ("C-r" . swiper)
          ("C-c C-r" . ivy-resume)
          ("M-x" . counsel-M-x)
+         ("M-y" . counsel-yank-pop)
          ("C-x C-f" . counsel-find-file)
          ("C-c f" . counsel-describe-function)
          ("C-c v" . counsel-describe-variable)
