@@ -310,6 +310,12 @@
   :config
   (which-key-mode))
 
+;; popup window manager
+(use-package popwin
+  :config
+  (popwin-mode 1)
+  (global-set-key (kbd "C-z") popwin:keymap))
+
 ;; projectile-mode
 (use-package projectile
   :ensure t
