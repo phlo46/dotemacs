@@ -667,7 +667,11 @@
     :no-require t
     :diminish rinari-minor-mode
     :config
-    (global-rinari-mode)))
+    (global-rinari-mode))
+
+  (use-package ruby-end
+    :ensure t
+    :diminish ruby-end-mode))
 
 ;; go
 (use-package go-mode
