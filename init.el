@@ -362,7 +362,11 @@
   :bind (("C-= r" . er/expand-region)
          ("C-= d" . er/mark-defun)
          ("C-= s" . er/mark-symbol)
-         ("C-= w" . er/mark-word)))
+         ("C-= w" . er/mark-word)
+         ("C-= '" . er/mark-inside-quotes)
+         ("C-= S" . er/mark-sentence)
+         ("C-= p" . er/mark-inside-pairs)
+         ("C-= u" . er/mark-url))
 
 ;; paredit
 (use-package paredit
