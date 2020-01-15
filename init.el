@@ -224,7 +224,13 @@
   :bind (("s-1" . eyebrowse-switch-to-window-config-1)
          ("s-2" . eyebrowse-switch-to-window-config-2)
          ("s-3" . eyebrowse-switch-to-window-config-3)
-         ("s-4" . eyebrowse-switch-to-window-config-4))
+         ("s-4" . eyebrowse-switch-to-window-config-4)
+         ("s-5" . eyebrowse-switch-to-window-config-5)
+         ("s-6" . eyebrowse-switch-to-window-config-6)
+         ("s-7" . eyebrowse-switch-to-window-config-7)
+         ("s-8" . eyebrowse-switch-to-window-config-8)
+         ("s-9" . eyebrowse-switch-to-window-config-9)
+         ("s-\"" . eyebrowse-last-window-config))
   :config
   (eyebrowse-mode t)
 
