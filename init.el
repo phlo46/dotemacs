@@ -120,6 +120,10 @@
 ;; org-mode
 (setq org-log-done 'time)
 
+;; makefile
+(add-to-list 'auto-mode-alist '("[Mm]akefile" . makefile-gmake-mode))
+(add-to-list 'auto-mode-alist '("\\.mk$" . makefile-gmake-mode))
+
 ;; cperl
 (defalias 'perl-mode 'cperl-mode)
 
