@@ -406,6 +406,11 @@
 (use-package nov
   :mode ("\\.epub\\'" . nov-mode))
 
+;; pdf
+(use-package pdf-tools
+  :mode (("\\.pdf\\'" . pdf-view-mode))
+  :config
+  (pdf-tools-install))
 ;; gitlab ci
 (use-package gitlab-ci-mode
   :mode "\\.gitlab-ci.yml\\'"
