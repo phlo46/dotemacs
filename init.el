@@ -562,6 +562,12 @@
 (use-package json-mode
   :mode "\\.json\\'")
 
+;; jq-mode
+(use-package jq-mode
+  :mode "\\.jq$"
+  :config
+  (with-eval-after-load "json-mode"
+    (define-key json-mode-map (kbd "C-c C-j") #'jq-interactively)))
 ;; markdown mode
 (use-package markdown-mode
   :commands (markdown-mode gfm-mode)
