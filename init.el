@@ -252,7 +252,9 @@
 (use-package deadgrep
   :ensure t
   :config
-  (global-set-key (kbd "<f5>") #'deadgrep))
+  (global-set-key (kbd "<f5>") #'deadgrep)
+  (setq deadgrep-executable "rg")
+  (setq deadgrep-max-buffers 20))
 
 ;; wgrep
 (use-package wgrep
