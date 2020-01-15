@@ -367,6 +367,11 @@
          ("C-= S" . er/mark-sentence)
          ("C-= p" . er/mark-inside-pairs)
          ("C-= u" . er/mark-url))
+  :config
+  ;; add/change/delete pairs based on expand-region
+  (use-package embrace
+    :ensure t
+    :bind ("C-," . embrace-commander)))
 
 ;; paredit
 (use-package paredit
