@@ -208,16 +208,6 @@
          ("<M-s-left>" . buf-move-left)
          ("<M-s-right>" . buf-move-right)))
 
-;; persp-mode
-(use-package persp-mode
-  :ensure t
-  :init
-  (persp-mode 1)
-  :config
-  (setq persp-auto-resume-time -1.0 persp-auto-save-opt 0)
-  (setq wg-morph-on nil)
-  (setq persp-autokill-buffer-on-remove 'kill-weak))
-
 ;; eyebrowse
 (use-package eyebrowse
   :ensure t
@@ -232,11 +222,7 @@
          ("s-9" . eyebrowse-switch-to-window-config-9)
          ("s-\"" . eyebrowse-last-window-config))
   :config
-  (eyebrowse-mode t)
-
-  (add-hook 'persp-activated-functions #'load-eyebrowse-for-perspective)
-  (add-hook 'persp-before-switch-functions #'update-eyebrowse-for-perspective)
-  (add-hook 'eyebrowse-post-window-switch-hook #'save-eyebrowse-for-perspective))
+  (eyebrowse-mode t))
 
 ;; yasnippet
 (use-package yasnippet-snippets
