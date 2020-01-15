@@ -121,6 +121,15 @@
 ;; org-mode
 (setq org-log-done 'time)
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((sql . t)
+   (shell . t)))
+
+(setq org-confirm-babel-evaluate
+      (lambda (lang body)
+        (not (member lang (list "sql" "shell" "bash")))))
+
 ;; makefile
 (add-to-list 'auto-mode-alist '("[Mm]akefile" . makefile-gmake-mode))
 (add-to-list 'auto-mode-alist '("\\.mk$" . makefile-gmake-mode))
