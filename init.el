@@ -657,6 +657,8 @@
   :mode "\\.rb\\'"
   :interpreter "ruby"
   :config
+  (setq ruby-insert-encoding-magic-comment nil)
+
   (use-package robe
     :ensure t
     :diminish
