@@ -131,7 +131,7 @@
 ;; midnight
 (require 'midnight)
 (midnight-delay-set 'midnight-delay "6:00pm")
-(setq clean-buffer-list-delay-general 1)
+(setq clean-buffer-list-delay-general 7)
 
 ;; ==============================
 ;; ==== * END SYSTEM CONFIG * ===
