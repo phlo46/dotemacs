@@ -491,8 +491,11 @@
 (use-package sly
   :defer t
   :diminish
-  :bind (:map sly-mode-map
-              ("C-c p" . sly-pprint-eval-last-expression))
+  :bind (()
+         :map sly-mode-map
+         ("C-c M-p" . sly-pprint-eval-last-expression)
+         :map sly-mrepl-mode-map
+         ("C-r" . isearch-backward))
   :config
   (setq inferior-lisp-program "ros -L sbcl -Q -l ~/.sbclrc run")
 
