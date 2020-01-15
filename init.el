@@ -447,7 +447,7 @@
 
 ;; dockerfile mode
 (use-package dockerfile-mode
-  :mode "Dockerfile\\'")
+  :mode "Dockerfile.*\\'")
 
 ;; racket
 (use-package racket-mode
