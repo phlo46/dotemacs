@@ -411,6 +411,9 @@
   :mode (("\\.pdf\\'" . pdf-view-mode))
   :config
   (pdf-tools-install))
+;; ledger
+(use-package ledger-mode)
+
 ;; gitlab ci
 (use-package gitlab-ci-mode
   :mode "\\.gitlab-ci.yml\\'"
