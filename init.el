@@ -305,8 +305,11 @@
 ;; avy
 (use-package avy
   :ensure t
-  :bind (("M-g f" . avy-goto-word-1-below)
-         ("M-g b" . avy-goto-word-1-above))
+  :bind (("M-g f" . avy-goto-char-2-below)
+         ("M-g b" . avy-goto-char-2-above)
+         ("C-c C-j" . avy-resume)
+         ("M-g l" . avy-goto-line)
+         ("M-g C-l" . avy-goto-char-in-line))
   :config
   (avy-setup-default))
 
