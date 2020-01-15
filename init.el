@@ -254,6 +254,12 @@
   :config
   (global-set-key (kbd "<f5>") #'deadgrep))
 
+;; wgrep
+(use-package wgrep
+  :config
+  (setq wgrep-auto-save-buffer t)
+  (setq wgrep-change-readonly-file t))
+
 ;; dumb-jump
 (use-package dumb-jump
   :ensure t
