@@ -558,6 +558,10 @@
       (if (looking-at-p "^ +\/?> *$")
           (delete-char sgml-basic-offset)))))
 
+;; json-mode
+(use-package json-mode
+  :mode "\\.json\\'")
+
 ;; markdown mode
 (use-package markdown-mode
   :commands (markdown-mode gfm-mode)
