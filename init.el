@@ -373,6 +373,15 @@
     :ensure t
     :bind ("C-," . embrace-commander)))
 
+;; smart-hungry-delete
+(use-package smart-hungry-delete
+  :ensure t
+  :defer nil ;; dont defer so we can add our functions to hooks
+  :bind (:map prog-mode-map
+         ("<s-backspace>" . smart-hungry-delete-backward-char)
+         ("C-d" . smart-hungry-delete-forward-char))
+  :config
+  (smart-hungry-delete-add-default-hooks))
 ;; paredit
 (use-package paredit
   :ensure t
