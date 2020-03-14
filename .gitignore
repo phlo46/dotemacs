@@ -19,6 +19,7 @@ url/
 .mc-lists.el
 .org-id-locations
 bookmarks
+custom.el
 forge-database.sqlite
 network-security.data
 nov-places
