@@ -659,14 +659,6 @@
   :config
   (setq ruby-insert-encoding-magic-comment nil)
 
-  (use-package robe
-    :ensure t
-    :diminish
-    :config
-    (add-hook 'ruby-mode-hook 'robe-mode)
-    (with-eval-after-load 'company
-      (add-to-list 'company-backends 'company-robe)))
-
   (use-package ruby-tools
     :ensure t
     :diminish ruby-tools-mode)
