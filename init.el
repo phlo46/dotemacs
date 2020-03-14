@@ -723,38 +723,6 @@
 (use-package cmake-mode
   :mode ("CMakeLists\\.txt\\'" "\\.cmake\\'"))
 
-(use-package irony
-  :defer t
-  :init
-  (add-hook 'c++-mode-hook 'irony-mode)
-  (add-hook 'c-mode-hook 'irony-mode)
-  (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-
-  :config
-  ;;; helper packages
-  (use-package company-irony
-    :ensure t
-    :after company
-    :config
-    (add-to-list 'company-backends 'company-irony))
-
-  (use-package company-c-headers
-    :ensure t
-    :after company
-    :config
-    (add-to-list 'company-backends 'company-c-headers))
-
-  (use-package flycheck-irony
-    :ensure t
-    :after flycheck
-    :config
-    (add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
-
-  (use-package irony-eldoc
-    :ensure t
-    :config
-    (add-hook 'irony-mode-hook #'irony-eldoc)))
-
 ;; ocaml
 (use-package tuareg
   :mode ("\\.ml[ip]?\\'" . tuareg-mode)
