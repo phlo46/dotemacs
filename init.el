@@ -783,45 +783,6 @@
       (autoload 'utop-minor-mode "utop" "Minor mode for utop" t)
       (add-hook 'tuareg-mode-hook 'utop-minor-mode))))
 
-;; sql
-(use-package sql
-  :bind (:map sql-mode-map
-              ("C-c p" . sql-postgres)
-              ("C-c b" . sql-set-sqli-buffer))
-  :config
-  (use-package sql-indent
-    :ensure t
-    :bind (:map sql-mode-map
-                ("C-c <M-tab>" . sql-indent-buffer)))
-
-  (use-package sqlup-mode
-    :ensure t
-    :config
-    ;; Capitalize keywords in SQL mode
-    (add-hook 'sql-mode-hook 'sqlup-mode)
-    ;; Capitalize keywords in an interactive session (e.g. psql)
-    (add-hook 'sql-interactive-mode-hook 'sqlup-mode))
-
-  (add-hook 'sql-interactive-mode-hook
-            (lambda ()
-              (toggle-truncate-lines t)
-              (setq-local show-trailing-whitespace nil)
-              (setq sql-prompt-regexp "^[_[:alpha:]]*[=][#>] ")
-              (setq sql-prompt-cont-regexp "^[_[:alpha:]]*[-][#>] ")))
-
-  (add-hook 'sql-login-hook
-            (lambda ()
-              (when (eq sql-product 'postgres)
-                (let ((proc (get-buffer-process (current-buffer))))
-                  ;; Output each query before executing it. (n.b. this also avoids
-                  ;; the psql prompt breaking the alignment of query results.)
-                  (comint-send-string proc "\\set ECHO queries\n")))))
-
-  (defvar sql-last-prompt-pos 1
-    "position of last prompt when added recording started")
-  (make-variable-buffer-local 'sql-last-prompt-pos)
-  (put 'sql-last-prompt-pos 'permanent-local t))
-
 ;; =================================
 ;; ==== * END DECLARE PACKAGE * ====
 ;; =================================
