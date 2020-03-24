@@ -444,7 +444,8 @@
   (pdf-tools-install))
 
 ;; ledger
-(use-package ledger-mode)
+(use-package ledger-mode
+  :mode "\\.ledger\\'")
 
 ;; gitlab ci
 (use-package gitlab-ci-mode
