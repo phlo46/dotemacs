@@ -262,6 +262,7 @@
 
 ;; wgrep
 (use-package wgrep
+  :defer t
   :config
   (setq wgrep-auto-save-buffer t)
   (setq wgrep-change-readonly-file t))
