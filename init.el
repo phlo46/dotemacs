@@ -328,9 +328,9 @@
 
 ;; popup window manager
 (use-package popwin
+  :bind-keymap ("C-z" . popwin:keymap)
   :config
-  (popwin-mode 1)
-  (global-set-key (kbd "C-z") popwin:keymap))
+  (popwin-mode 1))
 
 ;; projectile-mode
 (use-package projectile
