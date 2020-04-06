@@ -311,7 +311,8 @@
 ;; avy
 (use-package avy
   :straight t
-  :bind (("M-g f" . avy-goto-char-2-below)
+  :bind (("M-g a" . avy-goto-char)
+         ("M-g f" . avy-goto-char-2-below)
          ("M-g b" . avy-goto-char-2-above)
          ("C-c C-j" . avy-resume)
          ("M-g l" . avy-goto-line)
