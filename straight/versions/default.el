@@ -7,7 +7,7 @@
  ("dash.el" . "721436b04da4e2795387cb48a98ac6de37ece0fd")
  ("deadgrep" . "3ec95398d09719a9dbdc3a67d29d22ca224516cf")
  ("diminish.el" . "96b47cf90360e4bd19138fe82dc59bfa86c7bf7d")
- ("dumb-jump" . "e8e9b0c2d1eda594fd40db9c64e93a70b426641b")
+ ("dumb-jump" . "73b2b48fdaf7e8efeffca79b9ec6d5494a4f39c0")
  ("elisp-refs" . "0a254e6a4dc7fa12857f8334fe6eefa72e49d1c9")
  ("elpy" . "b25ab8c195472cf152fed80c212750b33837025e")
  ("emacs-async" . "86aef2c38e7d35e8509b7feeee3e989d825eba91")
