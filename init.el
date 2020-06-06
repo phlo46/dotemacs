@@ -434,11 +434,12 @@
   :straight t
   :defer 3
   :diminish
-  :bind (:map company-active-map
-              ("C-c h" . #'company-quickhelp-manual-begin))
   :config
   (global-company-mode)
   (use-package company-quickhelp
+    :straight t
+    :bind (:map company-active-map
+                ("C-c h" . #'company-quickhelp-manual-begin))
     :config
     (company-quickhelp-mode)
     (setq company-quickhelp-delay nil)))
