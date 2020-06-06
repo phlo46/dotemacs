@@ -363,6 +363,11 @@
   :config
   (setq magit-completing-read-function 'ivy-completing-read))
 
+;; forge
+(use-package forge
+  :straight t
+  :after magit)
+
 ;; ace-window
 (use-package ace-window
   :straight t
