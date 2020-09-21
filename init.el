@@ -340,6 +340,14 @@
   :config
   (which-key-mode))
 
+;; psession
+(use-package psession
+  :straight t
+  :diminish
+  :config
+  (psession-mode 1)
+  (psession-autosave-mode 1))
+
 ;; popup window manager
 (use-package popwin
   :bind-keymap ("C-z" . popwin:keymap)

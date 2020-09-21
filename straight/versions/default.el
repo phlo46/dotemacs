@@ -42,6 +42,7 @@
  ("popup-el" . "80829dd46381754639fb764da11c67235fe63282")
  ("pos-tip" . "179cc126b363f72ca12fab1e0dc462ce0ee79742")
  ("projectile" . "588692ad56395ed4fd072bac496b33992096bfe4")
+ ("psession" . "d2b8f8d8c6acd2f86f3a7774a7079f40b1b75f8e")
  ("pyvenv" . "861998b6d157ae73b829f02a5a6c8a9118310831")
  ("ruby-end.el" . "a136f75abb6d5577ce40d61dfeb778c2e9bb09c0")
  ("ruby-tools.el" . "6b97066b58a4f82eb2ecea6434a0a7e981aa4c18")
