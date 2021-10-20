@@ -6,6 +6,7 @@
 auto-save-list/
 elpa-*/
 elpa/
+elpy/
 eshell/
 games/
 layouts/
@@ -19,9 +20,11 @@ url/
 .emacs.desktop
 .mc-lists.el
 .org-id-locations
+.projectile
 bookmarks
 custom.el
 forge-database.sqlite
+history
 network-security.data
 nov-places
 projectile-bookmarks.eld
