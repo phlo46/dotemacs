@@ -409,12 +409,13 @@
          ("C-= '" . er/mark-inside-quotes)
          ("C-= S" . er/mark-sentence)
          ("C-= p" . er/mark-inside-pairs)
-         ("C-= u" . er/mark-url))
-  :config
-  ;; add/change/delete pairs based on expand-region
-  (use-package embrace
-    :straight t
-    :bind ("C-," . embrace-commander)))
+         ("C-= u" . er/mark-url)))
+
+;; add/change/delete pairs based on expand-region
+(use-package embrace
+  :straight t
+  :after expand-region
+  :bind ("C-," . embrace-commander))
 
 ;; smart-hungry-delete
 (use-package smart-hungry-delete
