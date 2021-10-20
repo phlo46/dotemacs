@@ -523,29 +523,31 @@
 
 ;; common Lisp
 (use-package sly
+  :straight t
   :defer t
   :diminish
   :bind (()
          :map sly-mode-map
          ("C-c M-p" . sly-pprint-eval-last-expression)
-         :map sly-mrepl-mode-map
-         ("C-r" . isearch-backward))
+         ;; prevent this key-binding shadowing projectile prefix'
+         ("C-c p" . nil))
   :config
   (setq sly-lisp-implementations
-        '((sbcl ("ros" "-L" "sbcl" "-Q" "-l" "~/.sbclrc" "run"))
-          (ccl ("ros -L ccl-bin -Q run"))))
-
-  ;; prevent this key-binding shadowing projectile prefix'
-  (define-key sly-mode-map (kbd "C-c p") nil)
+        '((sbcl ("sbcl" "--dynamic-space-size" "2000"))
+          (ccl ("ros -L ccl-bin -Q run")))
+        sly-contribs
+        '(sly-fancy sly-mrepl))
 
   ;; add color support for Sly REPL
   (use-package sly-repl-ansi-color
     :straight t
     :config
-    (push 'sly-repl-ansi-color sly-contribs))
+    (when (not (member 'sly-repl-ansi-color sly-contribs))
+      (push 'sly-repl-ansi-color sly-contribs)))
 
   (use-package sly-macrostep
     :straight t)
+
   ;;; setup for looking up Hyperspec
   ;;; need to install https://www.hexstreamsoft.com/libraries/clhs/
   (let* ((ros-quicklisp-dir (expand-file-name ".roswell/lisp/quicklisp" "~/"))
