@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: Ledger transaction
+# key: ledger
+# binding: C-c M-t
+# --
+
+`(format-time-string "%Y/%m/%d")` * $1
+    ; $2
+    Expenses:$3  $4 VND
+    Assets:$5
+$0
