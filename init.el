@@ -194,6 +194,22 @@
          ("C-h f" . helpful-callable)
          ("C-h C" . helpful-command)))
 
+;; execute actions based on text patterns
+(use-package wand
+  :straight t
+  :bind (("<M-return>" . wand:execute))
+  :config
+  (setq wand:*rules*
+        (list (wand:create-rule :match "\\$ "
+                                :capture :after
+                                :action #'shell-command)
+              (wand:create-rule :match "https?://"
+                                :capture :whole
+                                :action #'browse-url-default-browser)
+              (wand:create-rule :match "/\\(Users\\|home\\)/.*"
+                                :capture :whole
+                                :action #'find-file))))
+
 ;; highlight thing
 (use-package highlight-thing
   :straight t
