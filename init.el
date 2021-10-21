@@ -646,16 +646,17 @@
 (use-package python
   :diminish
   :mode ("\\.py\\'" . python-mode)
-  :interpreter ("python" . python-mode)
+  :interpreter ("python" . python-mode))
+
+(use-package elpy
+  :straight t
+  :after python
+  :diminish
   :config
-  (use-package elpy
-    :straight t
-    :diminish
-    :config
-    (elpy-enable)
-    (setq python-shell-interpreter "python3")
-    (setq elpy-rpc-python-command "python3")
-    (setq elpy-rpc-backend "jedi")))
+  (elpy-enable)
+  (setq python-shell-interpreter "python3"
+        elpy-rpc-python-command "python3"
+        elpy-rpc-backend "jedi"))
 
 ;; ruby
 (use-package ruby-mode
