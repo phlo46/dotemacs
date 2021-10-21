@@ -438,14 +438,16 @@
   :defer 3
   :diminish
   :config
-  (global-company-mode)
-  (use-package company-quickhelp
-    :straight t
-    :bind (:map company-active-map
-                ("C-c h" . #'company-quickhelp-manual-begin))
-    :config
-    (company-quickhelp-mode)
-    (setq company-quickhelp-delay nil)))
+  (global-company-mode))
+
+(use-package company-quickhelp
+  :straight t
+  :after company
+  :bind (:map company-active-map
+              ("C-c h" . #'company-quickhelp-manual-begin))
+  :config
+  (company-quickhelp-mode)
+  (setq company-quickhelp-delay nil))
 
 ;; flycheck
 (use-package flycheck
@@ -463,13 +465,13 @@
 
 ;; gitlab ci
 (use-package gitlab-ci-mode
-  :mode "\\.gitlab-ci.yml\\'"
-  :config
-  (use-package gitlab-ci-mode-flycheck
-    :straight t
-    :after flycheck
-    :init
-    (gitlab-ci-mode-flycheck-enable)))
+  :mode "\\.gitlab-ci.yml\\'")
+
+(use-package gitlab-ci-mode-flycheck
+  :straight t
+  :after (flycheck gitlab-ci-mode)
+  :init
+  (gitlab-ci-mode-flycheck-enable))
 
 ;; II, PROGRAMMING MODE
 ;; ####################
@@ -534,16 +536,6 @@
         sly-contribs
         '(sly-fancy sly-mrepl))
 
-  ;; add color support for Sly REPL
-  (use-package sly-repl-ansi-color
-    :straight t
-    :config
-    (when (not (member 'sly-repl-ansi-color sly-contribs))
-      (push 'sly-repl-ansi-color sly-contribs)))
-
-  (use-package sly-macrostep
-    :straight t)
-
   ;;; setup for looking up Hyperspec
   ;;; need to install https://www.hexstreamsoft.com/libraries/clhs/
   (let* ((ros-quicklisp-dir (expand-file-name ".roswell/lisp/quicklisp" "~/"))
@@ -560,6 +552,17 @@
 
         (define-key sly-doc-map (kbd "l") 'sly-hyperspec-lookup-eww)))))
 
+(use-package sly-repl-ansi-color
+  :straight t
+  :after sly
+  :config
+  (when (not (member 'sly-repl-ansi-color sly-contribs))
+    (push 'sly-repl-ansi-color sly-contribs)))
+
+(use-package sly-macrostep
+  :straight t
+  :after sly)
+
 ;; clojure cider
 (use-package clj-refactor
   :defer t
@@ -572,16 +575,17 @@
 
 ;; restclient
 (use-package restclient
-  :mode ("\\.http\\'" . restclient-mode)
+  :mode ("\\.http\\'" . restclient-mode))
+
+(use-package company-restclient
+  :straight t
+  :after (company restclient)
   :config
-  (use-package company-restclient
-    :straight t
-    :after company
-    :config
-    (add-to-list 'company-backends 'company-restclient)))
+  (add-to-list 'company-backends 'company-restclient))
 
 ;; yaml-mode
 (use-package yaml-mode
+  :straight t
   :mode "\\.yml\\'")
 
 ;; terraform
