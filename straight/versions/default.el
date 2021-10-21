@@ -66,7 +66,6 @@
  ("use-package" . "42db6b3d90ee57d0f5947d3b0bf4b0010bdf7b40")
  ("wand" . "08c3d9156517a31dd98ea64bfc269fae730b643c")
  ("with-editor" . "4fe66d4d55c8eacebda53a13cc38e01d32bdaaa2")
- ("yari.el" . "a2cb9656ee5dfe1fc2ee3854f3079a1c8e85dbe9")
  ("yasnippet" . "3bf9a3b1af37174a004798b7195826af0123fa6a")
  ("yasnippet-snippets" . "d9a9ec282c6eb1156b06dd1362e018404221087d")
  ("zenburn-emacs" . "7dd796840376342426f60018a6cf209228452f3e"))

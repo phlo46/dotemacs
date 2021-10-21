@@ -662,24 +662,17 @@
   :mode "\\.rb\\'"
   :interpreter "ruby"
   :config
-  (setq ruby-insert-encoding-magic-comment nil)
+  (setq ruby-insert-encoding-magic-comment nil))
 
-  (use-package ruby-tools
-    :straight t
-    :diminish ruby-tools-mode)
+(use-package ruby-tools
+  :straight t
+  :after ruby-mode
+  :diminish ruby-tools-mode)
 
-  (use-package yari
-    :straight t)
-
-  (use-package rinari
-    :no-require t
-    :diminish rinari-minor-mode
-    :config
-    (global-rinari-mode))
-
-  (use-package ruby-end
-    :straight t
-    :diminish ruby-end-mode))
+(use-package ruby-end
+  :straight t
+  :diminish ruby-end-mode
+  :after ruby-mode)
 
 ;; perl
 (use-package cperl-mode
