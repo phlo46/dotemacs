@@ -37,11 +37,6 @@
 ;; ===========================
 ;; ==== * SYSTEM CONFIG * ====
 ;; ===========================
-(eval-after-load "hi-lock"
-  '(diminish 'hi-lock-mode))
-
-(require 'dired-x)
-
 (setq js-indent-level 8)
 (setq tags-add-tables nil)
 (setq ansi-color-for-comint-mode t)
@@ -51,7 +46,6 @@
 (prefer-coding-system 'utf-8)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
-(winner-mode 1)
 
 ;; place auto-save file to $TMPDIR
 (setq backup-directory-alist
@@ -89,40 +83,55 @@
 (set-register ?t '(file . "~/Dropbox/org-mode/todo.org"))
 (set-register ?h '(file . "~/emacs-utils/home.http"))
 
-;; term
-(add-hook 'term-mode-hook (lambda ()
-                            (define-key term-raw-map (kbd "C-y") 'term-paste)))
-
 ;; Config emacs env
 (setenv "PYTHONUNBUFFERED" "x")
 
 ;;highlight parentheses
 (show-paren-mode 1)
 
+;; hi-lock
+(use-package hi-lock
+  :diminish)
 
-;; org-mode
-(setq org-log-done 'time)
+;; Dired mode with extra features
+(use-package dired-x
+  :after dired)
 
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((sql . t)
-   (shell . t)))
+;; winner-mode
+(use-package winner
+  :defer 5
+  :config
+  (winner-mode 1))
 
-(setq org-confirm-babel-evaluate
-      (lambda (lang body)
-        (not (member lang (list "sql" "shell" "bash")))))
-
-;; makefile
-(add-to-list 'auto-mode-alist '("[Mm]akefile" . makefile-gmake-mode))
-(add-to-list 'auto-mode-alist '("\\.mk$" . makefile-gmake-mode))
-
-;; cperl
-(defalias 'perl-mode 'cperl-mode)
+;; term
+(use-package term
+  :bind (:map term-raw-map
+              ("C-y" . term-paste)))
 
 ;; midnight
-(require 'midnight)
-(midnight-delay-set 'midnight-delay "6:00pm")
-(setq clean-buffer-list-delay-general 7)
+(use-package midnight
+  :config
+  (midnight-delay-set 'midnight-delay "6:00pm")
+  (setq clean-buffer-list-delay-general 7))
+
+;; org-mode
+(use-package org
+  :config
+  (setq org-log-done 'time)
+
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((sql . t)
+     (shell . t)))
+
+  (setq org-confirm-babel-evaluate
+        (lambda (lang body)
+          (not (member lang (list "sql" "shell" "bash"))))))
+
+;; makefile
+(use-package makefile-mode
+  :mode (("[Mm]akefile" . makefile-gmake-mode)
+         ("\\.mk$" . makefile-gmake-mode)))
 
 ;; ==============================
 ;; ==== * END SYSTEM CONFIG * ===
@@ -670,6 +679,11 @@
   (use-package ruby-end
     :straight t
     :diminish ruby-end-mode))
+
+;; perl
+(use-package cperl-mode
+  :mode "\\.\\([pP][Llm]\\|al\\)\\'"
+  :interpreter "perl")
 
 ;; go
 (use-package go-mode
