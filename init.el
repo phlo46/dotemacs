@@ -52,8 +52,11 @@
 (setq-default indent-tabs-mode nil)
 
 (prefer-coding-system 'utf-8)
+
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+(electric-pair-mode 1)
+(show-paren-mode 1)
 
 ;; emacs trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -75,9 +78,6 @@
 (global-unset-key "\C-x\C-z")
 (global-unset-key "\C-x\C-c")
 
-;; electric-pair
-(electric-pair-mode 1)
-
 ;; register files
 (set-register ?i '(file . "~/.emacs.d/init.el"))
 (set-register ?z '(file . "~/.zshrc"))
@@ -87,9 +87,6 @@
 
 ;; Config emacs env
 (setenv "PYTHONUNBUFFERED" "x")
-
-;;highlight parentheses
-(show-paren-mode 1)
 
 ;; expand abbreviations
 (use-package abbrev
