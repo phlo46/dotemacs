@@ -423,15 +423,12 @@
 ;; paredit
 (use-package paredit
   :straight t
-  :defer t
   :diminish
-  :init
-  (dolist (hook '(emacs-lisp-mode-hook
-                  eval-expression-minibuffer-setup-hook ielm-mode-hook
-                  lisp-mode-hook lisp-interaction-mode-hook sly-mode-hook
-                  scheme-mode-hook clojure-mode-hook cider-repl-mode-hook
-                  racket-mode-hook tuareg-jbuild-mode-hook))
-    (add-hook hook #'enable-paredit-mode)))
+  :hook ((emacs-lisp-mode eval-expression-minibuffer-setup ielm-mode
+          lisp-mode lisp-interaction-mode sly-mode
+          scheme-mode racket-mode
+          clojure-mode cider-repl-mode
+          tuareg-jbuild-mode) . enable-paredit-mode))
 
 ;; company mode
 (use-package company
@@ -477,10 +474,8 @@
 
 ;; emmet mode
 (use-package emmet-mode
-  :defer t
-  :init
-  (dolist (hook '(sgml-mode-hook css-mode-hook web-mode-hook nxml-mode-hook))
-    (add-hook hook 'emmet-mode)))
+  :straight t
+  :hook ((sgml-mode css-mode web-mode nxml-mode) . emmet-mode))
 
 ;; web-mode
 (use-package web-mode

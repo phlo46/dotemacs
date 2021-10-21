@@ -17,6 +17,7 @@
  ("emacsmirror-mirror" . "abb85e2849767a4f2e64d69181d99bc739c6e388")
  ("emacsql" . "a118b6c95af1306f0288a383d274b5dd93efbbda")
  ("embrace.el" . "dd5da196e5bcc5e6d87e1937eca0c21da4334ef2")
+ ("emmet-mode" . "1acb821e0142136344ccf40c1e5fb664d7db2e70")
  ("epl" . "78ab7a85c08222cd15582a298a364774e3282ce6")
  ("exec-path-from-shell" . "d17c4e0b73fc5ffeb2bc28156785c6bdda058654")
  ("expand-region.el" . "ea6b4cbb9985ddae532bd2faf9bb00570c9f2781")
