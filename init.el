@@ -52,7 +52,6 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (winner-mode 1)
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; place auto-save file to $TMPDIR
 (setq backup-directory-alist
@@ -100,8 +99,6 @@
 ;;highlight parentheses
 (show-paren-mode 1)
 
-;; desktop library
-;;(desktop-save-mode 1)
 
 ;; org-mode
 (setq org-log-done 'time)
