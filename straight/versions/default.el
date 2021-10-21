@@ -25,6 +25,7 @@
  ("f.el" . "1814209e2ff43cf2e6d38c4cd476218915f550fb")
  ("flycheck" . "f77c3c0ff0a6399fe03fb6062a43861b94cf8f1e")
  ("forge" . "2e2d26cf428012f0ece53a81cde02179e72648aa")
+ ("geiser" . "0c86289d7b2af07e3653364219e00103c8540edf")
  ("ghub" . "a8bf337534ec583906db77a3d56f7d1b84bda952")
  ("gnu-elpa-mirror" . "bc2110cbf5ae44a167c87b89b113cfca1a6ed3ca")
  ("go-mode.el" . "734d5232455ffde088021ea5908849ac570e890f")

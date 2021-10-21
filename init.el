@@ -501,18 +501,21 @@
   (setq tab-always-indent 'complete))
 
 ;; scheme geiser
-(use-package scheme
-  :mode ("\\.scm\\'" . scheme-mode)
-  :config
-  (use-package geiser
-    :straight t
-    :config
-    (setq geiser-mode-smart-tab-p t)
 
-    (with-eval-after-load 'geiser-mode
-      (define-key geiser-mode-map (kbd "C-.") nil))
-    (with-eval-after-load 'geiser-repl
-      (define-key geiser-repl-mode-map (kbd "C-.") nil))))
+(use-package scheme
+  :mode ("\\.scm\\'" . scheme-mode))
+
+(use-package geiser
+  :straight t
+  :after scheme
+  :commands (run-geiser run-racket run-guile run-chicken)
+  :hook (scheme-mode . geiser-mode)
+  :config
+  (setq geiser-mode-smart-tab-p t)
+  (with-eval-after-load 'geiser-mode
+    (define-key geiser-mode-map (kbd "C-.") nil))
+  (with-eval-after-load 'geiser-repl
+    (define-key geiser-repl-mode-map (kbd "C-.") nil)))
 
 ;; common Lisp
 (use-package sly
