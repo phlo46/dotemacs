@@ -618,10 +618,12 @@
 
 ;; json-mode
 (use-package json-mode
+  :straight t
   :mode "\\.json\\'")
 
 ;; jq-mode
 (use-package jq-mode
+  :straight t
   :mode "\\.jq$"
   :bind (:map json-mode-map
               ("C-c C-j" . jq-interactively)))
