@@ -64,25 +64,12 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; global keys
-(global-set-key (kbd "C-M-l") 'package-list-packages)
 (global-set-key (kbd "C-x j") 'eval-print-last-sexp)
 (global-set-key "\C-cy"'(lambda ()
                           (interactive)
                           (popup-menu 'yank-menu)))
 
-(global-set-key (kbd "C-c C-u") 'use-package-report)
-
 (global-set-key (kbd "C-c C-p m") 'pp-macroexpand-last-sexp)
-
-;;; look up man-page
-(global-set-key (kbd "C-c m") (lambda ()
-                                (interactive)
-                                (manual-entry (current-word))))
-
-;; org-mode
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cc" 'org-capture)
 
 ;; move forward/backward paragraph
 (global-set-key (kbd "M-]") 'forward-paragraph)
