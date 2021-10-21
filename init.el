@@ -469,6 +469,11 @@
   :init
   (gitlab-ci-mode-flycheck-enable))
 
+;; dash-at-point
+(use-package dash-at-point
+  :straight t
+  :bind (("C-~" . dash-at-point)))
+
 ;; II, PROGRAMMING MODE
 ;; ####################
 

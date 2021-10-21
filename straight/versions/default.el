@@ -7,6 +7,7 @@
  ("company-mode" . "811beeade86669e20da35efed5b00de6a5e305ab")
  ("company-quickhelp" . "2dda13403c49221cc98e87b4bbf8168436f27560")
  ("company-restclient" . "e5a3ec54edb44776738c13e13e34c85b3085277b")
+ ("dash-at-point" . "fba1a6f42ea51d05110e12c62bdced664059eb55")
  ("dash.el" . "da167c51e9fd167a48d06c7c0ee8e3ac7abd9718")
  ("deadgrep" . "4ec21e644ef482a913c64f068ec8d602eedac1c6")
  ("diminish.el" . "96b47cf90360e4bd19138fe82dc59bfa86c7bf7d")
