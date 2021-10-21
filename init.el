@@ -353,10 +353,10 @@
 (use-package projectile
   :straight t
   :diminish
+  :bind-keymap ("C-c p" . projectile-command-map)
   :config
   (projectile-mode)
-  (setq projectile-completion-system 'ivy)
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
+  (setq projectile-completion-system 'ivy))
 
 ;; magit
 (use-package magit
@@ -621,9 +621,8 @@
 ;; jq-mode
 (use-package jq-mode
   :mode "\\.jq$"
-  :config
-  (with-eval-after-load "json-mode"
-    (define-key json-mode-map (kbd "C-c C-j") #'jq-interactively)))
+  :bind (:map json-mode-map
+              ("C-c C-j" . jq-interactively)))
 
 ;; markdown mode
 (use-package markdown-mode
