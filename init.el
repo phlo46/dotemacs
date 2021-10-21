@@ -41,21 +41,19 @@
 ;; ===========================
 ;; ==== * SYSTEM CONFIG * ====
 ;; ===========================
-(setq js-indent-level 8)
-(setq tags-add-tables nil)
-(setq ansi-color-for-comint-mode t)
+(setq js-indent-level 8
+      tags-add-tables nil
+      ansi-color-for-comint-mode t
+      ring-bell-function 'ignore
+      ;; place auto-save file to $TMPDIR
+      backup-directory-alist `((".*" . ,temporary-file-directory))
+      auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+
 (setq-default indent-tabs-mode nil)
-(setq ring-bell-function 'ignore)
 
 (prefer-coding-system 'utf-8)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
-
-;; place auto-save file to $TMPDIR
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
 
 ;; emacs trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
