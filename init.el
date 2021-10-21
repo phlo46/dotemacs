@@ -17,7 +17,11 @@
 ;; ===========================
 ;; ======== * INIT * =========
 ;; ===========================
-(require 'bind-key)
+(use-package bind-key
+  :straight t)
+
+(use-package diminish
+  :straight t)
 
 ;; Keep emacs custom-settings in a separate file
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Customizations.html
@@ -89,6 +93,10 @@
 ;;highlight parentheses
 (show-paren-mode 1)
 
+;; expand abbreviations
+(use-package abbrev
+  :diminish abbrev-mode)
+
 ;; hi-lock
 (use-package hi-lock
   :diminish)
@@ -151,12 +159,6 @@
   :straight t
   :config
   (load-theme 'zenburn t))
-
-;; diminish
-(use-package diminish
-  :straight t
-  :config
-  (diminish 'abbrev))
 
 ;; undo tree
 (use-package undo-tree
