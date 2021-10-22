@@ -327,6 +327,7 @@
 
 ;; which-key
 (use-package which-key
+  :straight t
   :diminish
   :bind ("C-c M-=" . which-key-show-major-mode)
   :config
@@ -342,6 +343,7 @@
 
 ;; popup window manager
 (use-package popwin
+  :straight t
   :bind-keymap ("C-z" . popwin:keymap)
   :config
   (popwin-mode 1))
@@ -456,6 +458,7 @@
 
 ;; ledger
 (use-package ledger-mode
+  :straight t
   :mode "\\.ledger\\'")
 
 ;; gitlab ci
