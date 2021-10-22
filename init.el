@@ -586,6 +586,7 @@
 
 ;; terraform
 (use-package terraform-mode
+  :straight t
   :mode "\\.tf\\'")
 
 ;; elasticsearch mode
