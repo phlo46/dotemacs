@@ -78,7 +78,7 @@
  ("with-editor" . "8d52f933e50624c7bca3880f57297ac17ba4ac2d")
  ("yaml-mode" . "34648f2502f52f4744d62758fa381fa35db1da49")
  ("yaml.el" . "84b88c9ed178af16da18b230c1f61c57cefedf28")
- ("yasnippet" . "3bf9a3b1af37174a004798b7195826af0123fa6a")
- ("yasnippet-snippets" . "d9a9ec282c6eb1156b06dd1362e018404221087d")
+ ("yasnippet" . "5cbdbf0d2015540c59ed8ee0fcf4788effdf75b6")
+ ("yasnippet-snippets" . "f50b4c16ca2a73fd04ebd301f0bf2f5ab6107d88")
  ("zenburn-emacs" . "7dd796840376342426f60018a6cf209228452f3e"))
 :alpha
