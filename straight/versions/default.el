@@ -55,7 +55,7 @@
  ("popup-el" . "80829dd46381754639fb764da11c67235fe63282")
  ("popwin" . "d69dca5c9ec4b08f5268ff2d6b5097618d4082d7")
  ("pos-tip" . "179cc126b363f72ca12fab1e0dc462ce0ee79742")
- ("projectile" . "588692ad56395ed4fd072bac496b33992096bfe4")
+ ("projectile" . "7f64570d3e6829d767d340c8584f3e4f3472ee81")
  ("psession" . "d2b8f8d8c6acd2f86f3a7774a7079f40b1b75f8e")
  ("pyvenv" . "861998b6d157ae73b829f02a5a6c8a9118310831")
  ("restclient.el" . "ac8aad6c6b9e9d918062fa3c89c22c2f4ec48bc3")
