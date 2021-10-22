@@ -81,9 +81,7 @@
 ;; register files
 (set-register ?i '(file . "~/.emacs.d/init.el"))
 (set-register ?z '(file . "~/.zshrc"))
-(set-register ?o '(file . "~/Dropbox/org-mode/notebook.org"))
-(set-register ?t '(file . "~/Dropbox/org-mode/todo.org"))
-(set-register ?h '(file . "~/emacs-utils/home.http"))
+(set-register ?n '(file . "~/Dropbox/notes/notebook.org"))
 
 ;; Config emacs env
 (setenv "PYTHONUNBUFFERED" "x")
