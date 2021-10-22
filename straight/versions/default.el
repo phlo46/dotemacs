@@ -50,7 +50,7 @@
  ("markdown-mode" . "7360efc6bcfd4eb01aa5a8330f8073fa7e64805a")
  ("melpa" . "cc3a0ce6c8a4a67b8a8d4b8b2c090694535e6848")
  ("mode-icons" . "f16969f053f43bf706257673d0800de438d4e33b")
- ("multiple-cursors.el" . "b880554d04b8f61165afba7d4de19ac9e39bb7ab")
+ ("multiple-cursors.el" . "588daf8c520f4545323e36b8900f02693ddcf5d3")
  ("paredit" . "814999bb320e6d5aaa9c8ff663b1933157129571")
  ("pkg-info" . "76ba7415480687d05a4353b27fea2ae02b8d9d61")
  ("popup-el" . "cf899f8012f4189e76a009bebb589ff71631b1e9")
