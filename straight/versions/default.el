@@ -68,7 +68,7 @@
  ("sly-repl-ansi-color" . "b9cd52d1cf927bf7e08582d46ab0bcf1d4fb5048")
  ("spinner" . "34905eae12a236753fa88abc831eff1e41e8576e")
  ("straight.el" . "ed54b626b0faec36fdaff30c72351d5fb41a6786")
- ("swiper" . "8fae568daafdc79d4990ad739bac42ee230d3234")
+ ("swiper" . "1c6b3da377a840e898b14020133f59fca9ceea1c")
  ("terraform-mode" . "e560caaa9d9a11b0868adf6d9dcae5ebb5055730")
  ("transient" . "45975c24e1ab08bb32e9bdc06f5c5efe7c256e16")
  ("treepy.el" . "3ac940e97f3d03e48ca9d7fcd74916a9b01c72f3")
