@@ -1,5 +1,5 @@
 (("Highlight-Indentation-for-Emacs" . "d03803f2c06749c430443a3d24e039cbafc9c58f")
- ("ace-window" . "7003c88cd9cad58dc35c7cd13ebc61c355fb5be7")
+ ("ace-window" . "c7cb315c14e36fded5ac4096e158497ae974bec9")
  ("ag.el" . "bd81d68466e44301505629454dfc689b6c17d94b")
  ("avy" . "e92cb37457b43336b765630dbfbea8ba4be601fa")
  ("buffer-move" . "cb517ecf8409b5fdcda472d7190c6021f0c49751")
