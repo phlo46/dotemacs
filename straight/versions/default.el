@@ -1,7 +1,7 @@
 (("Highlight-Indentation-for-Emacs" . "d03803f2c06749c430443a3d24e039cbafc9c58f")
  ("ace-window" . "7003c88cd9cad58dc35c7cd13ebc61c355fb5be7")
  ("ag.el" . "bd81d68466e44301505629454dfc689b6c17d94b")
- ("avy" . "3bf83140fad4c28f2dc4c7107b9d8fef84d17cb9")
+ ("avy" . "e92cb37457b43336b765630dbfbea8ba4be601fa")
  ("buffer-move" . "cb517ecf8409b5fdcda472d7190c6021f0c49751")
  ("closql" . "15f906c393db1a0fb6577afc3cf59466531eafef")
  ("company-mode" . "955f80e6c911a818611887bc35658af9e925ed66")
