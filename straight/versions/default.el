@@ -4,7 +4,7 @@
  ("avy" . "e92cb37457b43336b765630dbfbea8ba4be601fa")
  ("buffer-move" . "cb517ecf8409b5fdcda472d7190c6021f0c49751")
  ("closql" . "15f906c393db1a0fb6577afc3cf59466531eafef")
- ("company-mode" . "955f80e6c911a818611887bc35658af9e925ed66")
+ ("company-mode" . "811beeade86669e20da35efed5b00de6a5e305ab")
  ("company-quickhelp" . "2dda13403c49221cc98e87b4bbf8168436f27560")
  ("company-restclient" . "e5a3ec54edb44776738c13e13e34c85b3085277b")
  ("dash.el" . "da167c51e9fd167a48d06c7c0ee8e3ac7abd9718")
