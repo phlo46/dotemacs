@@ -153,6 +153,10 @@
   :config
   (load-theme 'zenburn t))
 
+;; M-x enhancement
+(use-package smex
+  :straight t)
+
 ;; undo tree
 (use-package undo-tree
   :straight t
@@ -284,6 +288,7 @@
 ;; ivy-mode
 (use-package ivy
   :straight t
+  :after smex
   :diminish
   :bind (("C-s" . swiper)
          ("C-r" . swiper)

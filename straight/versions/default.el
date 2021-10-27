@@ -67,6 +67,7 @@
  ("sly" . "540a8c5b9a04af0a6907e07cb070f1fed8a76f48")
  ("sly-macrostep" . "5113e4e926cd752b1d0bcc1508b3ebad5def5fad")
  ("sly-repl-ansi-color" . "b9cd52d1cf927bf7e08582d46ab0bcf1d4fb5048")
+ ("smex" . "55aaebe3d793c2c990b39a302eb26c184281c42c")
  ("spinner" . "34905eae12a236753fa88abc831eff1e41e8576e")
  ("straight.el" . "ed54b626b0faec36fdaff30c72351d5fb41a6786")
  ("swiper" . "1c6b3da377a840e898b14020133f59fca9ceea1c")
