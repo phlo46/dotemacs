@@ -12,6 +12,7 @@
  ("deadgrep" . "4ec21e644ef482a913c64f068ec8d602eedac1c6")
  ("diminish.el" . "96b47cf90360e4bd19138fe82dc59bfa86c7bf7d")
  ("dumb-jump" . "dbb915441a2b66f2fbb954ff5de2723c5a4771d4")
+ ("el-get" . "b5a5a405d04f61ec9c5fcb19357a50a4b9e36a25")
  ("elisp-refs" . "0a254e6a4dc7fa12857f8334fe6eefa72e49d1c9")
  ("elpy" . "b25ab8c195472cf152fed80c212750b33837025e")
  ("emacs-async" . "86aef2c38e7d35e8509b7feeee3e989d825eba91")
@@ -44,7 +45,7 @@
  ("json-snatcher" . "c4cecc0a5051bd364373aa499c47a1bb7a5ac51c")
  ("know-your-http-well" . "3cc5ab6d2764ab7aacb1b6e026abaccbeb6c37f2")
  ("ledger-mode" . "f8463744191b4feb9fea54190917663f7ba26102")
- ("let-alist" . "caeeae983455079ec89c69b7958a2e5a5b60003c")
+ ("let-alist" . "d2d0cac92851d4480328bc3f41d30c518beb1f99")
  ("loop.el" . "e22807f83a0890dc8a904c51ee0742c34efccc6c")
  ("macrostep" . "424e3734a1ee526a1bd7b5c3cd1d3ef19d184267")
  ("magit" . "aba0a596115b42fbd60347d893bcc319020ce5a2")
@@ -69,7 +70,7 @@
  ("sly-repl-ansi-color" . "b9cd52d1cf927bf7e08582d46ab0bcf1d4fb5048")
  ("smex" . "55aaebe3d793c2c990b39a302eb26c184281c42c")
  ("spinner" . "34905eae12a236753fa88abc831eff1e41e8576e")
- ("straight.el" . "ed54b626b0faec36fdaff30c72351d5fb41a6786")
+ ("straight.el" . "af5437f2afd00936c883124d6d3098721c2d306c")
  ("swiper" . "1c6b3da377a840e898b14020133f59fca9ceea1c")
  ("terraform-mode" . "e560caaa9d9a11b0868adf6d9dcae5ebb5055730")
  ("transient" . "45975c24e1ab08bb32e9bdc06f5c5efe7c256e16")
@@ -83,4 +84,4 @@
  ("yasnippet" . "5cbdbf0d2015540c59ed8ee0fcf4788effdf75b6")
  ("yasnippet-snippets" . "f50b4c16ca2a73fd04ebd301f0bf2f5ab6107d88")
  ("zenburn-emacs" . "7dd796840376342426f60018a6cf209228452f3e"))
-:alpha
+:beta
