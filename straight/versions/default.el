@@ -65,6 +65,7 @@
  ("ruby-end.el" . "a136f75abb6d5577ce40d61dfeb778c2e9bb09c0")
  ("ruby-tools.el" . "6b97066b58a4f82eb2ecea6434a0a7e981aa4c18")
  ("s.el" . "08661efb075d1c6b4fa812184c1e5e90c08795a9")
+ ("shell-pop-el" . "4b4394037940a890a313d715d203d9ead2d156a6")
  ("sly" . "540a8c5b9a04af0a6907e07cb070f1fed8a76f48")
  ("sly-macrostep" . "5113e4e926cd752b1d0bcc1508b3ebad5def5fad")
  ("sly-repl-ansi-color" . "b9cd52d1cf927bf7e08582d46ab0bcf1d4fb5048")

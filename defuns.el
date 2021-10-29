@@ -28,16 +28,6 @@
                          (ido-read-file-name "Find file(as root): ")))
     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
-
-;; shell emacs
-(defun terminal (buffer-name)
-  "Start a terminal and rename buffer."
-  (interactive "sShell name: ")
-  (ansi-term "zsh")
-  (rename-buffer buffer-name t))
-
-(global-set-key (kbd "C-'") 'terminal)
-
 (defun occur-non-ascii ()
   "Find any non-ascii characters in the current buffer."
   (interactive)

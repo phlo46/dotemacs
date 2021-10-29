@@ -246,6 +246,11 @@
   :config
   (yas-global-mode 1))
 
+;; shell-pop
+(use-package shell-pop
+  :straight t
+  :bind ("C-s-t" . shell-pop))
+
 ;; exec-path-from-file mac os x
 (use-package exec-path-from-shell
   :straight t
