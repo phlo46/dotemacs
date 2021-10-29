@@ -557,8 +557,7 @@
   :straight t
   :after sly
   :config
-  (when (not (member 'sly-repl-ansi-color sly-contribs))
-    (push 'sly-repl-ansi-color sly-contribs)))
+  (add-to-list 'sly-contribs 'sly-repl-ansi-color))
 
 (use-package sly-macrostep
   :straight t
