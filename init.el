@@ -187,21 +187,54 @@
          ("C-h f" . helpful-callable)
          ("C-h C" . helpful-command)))
 
-;; execute actions based on text patterns
-(use-package wand
+;; vertico
+(use-package vertico
   :straight t
-  :bind (("<M-return>" . wand:execute))
-  :config
-  (setq wand:*rules*
-        (list (wand:create-rule :match "\\$ "
-                                :capture :after
-                                :action #'shell-command)
-              (wand:create-rule :match "https?://"
-                                :capture :whole
-                                :action #'browse-url-default-browser)
-              (wand:create-rule :match "/\\(Users\\|home\\)/.*"
-                                :capture :whole
-                                :action #'find-file))))
+  :init
+  (vertico-mode))
+
+;; orderless completion style
+(use-package orderless
+  :straight t
+  :init
+  (setq completion-styles '(orderless)))
+
+;; consult completing-read
+(use-package consult
+  :straight t
+  :bind (;; C-x bindings (ctl-x-map)
+         ("C-x b" . consult-buffer)
+         ;; Other custom bindings
+         ("M-y" . consult-yank-pop)
+         ;; M-g bindings (goto-map)
+         ("M-g g" . consult-goto-line)
+         ("M-g M-g" . consult-goto-line)
+         ("M-g i" . consult-imenu)
+         ("M-g I" . consult-imenu-multi)
+         ;; M-s bindings (search-map)
+         ("s-s f" . consult-find)
+         ("s-s r" . consult-ripgrep)
+         ("s-s l" . consult-line)
+         ("s-s L" . consult-line-multi)
+         :map isearch-mode-map
+         ("M-e" . consult-isearch-history)))
+
+;; marginalia in the minibuffer
+(use-package marginalia
+  :straight t
+  :init
+  (marginalia-mode)
+  :bind (:map minibuffer-local-map
+              ("M-A" . marginalia-cycle)))
+
+;; embark: Emacs Mini-Buffer Actions Rooted in Keymaps
+(use-package embark
+  :straight t
+  :bind (("C-'" . embark-act)))
+
+(use-package embark-consult
+  :straight t
+  :after (embark consult))
 
 ;; highlight thing
 (use-package highlight-thing
@@ -291,37 +324,6 @@
   :config
   (add-hook 'xref-backend-functions #'dumb-jump-xref-activate))
 
-;; ivy-mode
-(use-package ivy
-  :straight t
-  :after smex
-  :diminish
-  :bind (("C-s" . swiper)
-         ("C-r" . swiper)
-         ("C-c C-r" . ivy-resume)
-         ("M-x" . counsel-M-x)
-         ("M-y" . counsel-yank-pop)
-         ("C-x C-f" . counsel-find-file)
-         ("C-c f" . counsel-describe-function)
-         ("C-c v" . counsel-describe-variable)
-         ("C-c l" . counsel-find-library)
-         ("C-c i" . counsel-info-lookup-symbol)
-         ("C-c u" . counsel-unicode-char)
-         ("C-c k" . counsel-ag)
-         ("C-c d" . counsel-descbinds)
-         ("C-x l" . counsel-locate)
-         :map read-expression-map
-         ("C-r" . counsel-expression-history)
-         :map ivy-minibuffer-map
-         ("C-c o" . ivy-occur))
-  :config
-  (ivy-mode 1)
-  (setq ivy-use-virtual-buffers nil)
-  (setq enable-recursive-minibuffers t))
-
-(use-package counsel
-  :straight t)
-
 ;; avy
 (use-package avy
   :straight t
@@ -370,16 +372,13 @@
   :diminish
   :bind-keymap ("C-c p" . projectile-command-map)
   :config
-  (projectile-mode)
-  (setq projectile-completion-system 'ivy))
+  (projectile-mode))
 
 ;; magit
 (use-package magit
   :straight t
   :bind (("C-x g" . magit-status)
-         ("C-c b" . magit-blame))
-  :config
-  (setq magit-completing-read-function 'ivy-completing-read))
+         ("C-c b" . magit-blame)))
 
 ;; forge
 (use-package forge
