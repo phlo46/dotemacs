@@ -22,7 +22,6 @@ url/
 .org-id-locations
 .projectile
 bookmarks
-custom.el
 forge-database.sqlite
 history
 network-security.data
