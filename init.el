@@ -334,6 +334,13 @@
   :config
   (avy-setup-default))
 
+;; ace-link
+(use-package ace-link
+  :straight t
+  :after avy
+  :config
+  (ace-link-setup-default))
+
 ;; which-key
 (use-package which-key
   :straight t

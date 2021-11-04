@@ -1,5 +1,6 @@
 (("Emacs-wgrep" . "f0ef9bfa44db503cdb2f83fcfbd2fa4e2382ef1f")
  ("Highlight-Indentation-for-Emacs" . "d03803f2c06749c430443a3d24e039cbafc9c58f")
+ ("ace-link" . "e1b1c91b280d85fce2194fea861a9ae29e8b03dd")
  ("ace-window" . "c7cb315c14e36fded5ac4096e158497ae974bec9")
  ("ag.el" . "bd81d68466e44301505629454dfc689b6c17d94b")
  ("avy" . "e92cb37457b43336b765630dbfbea8ba4be601fa")
