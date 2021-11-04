@@ -277,10 +277,11 @@
 
 ;; wgrep
 (use-package wgrep
-  :defer t
+  :straight t
+  :commands wgrep-change-to-wgrep-mode
   :config
-  (setq wgrep-auto-save-buffer t)
-  (setq wgrep-change-readonly-file t))
+  (setq wgrep-auto-save-buffer t
+        wgrep-change-readonly-file t))
 
 ;; dumb-jump
 (use-package dumb-jump
