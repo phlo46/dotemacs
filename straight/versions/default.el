@@ -78,7 +78,6 @@
  ("sly" . "540a8c5b9a04af0a6907e07cb070f1fed8a76f48")
  ("sly-macrostep" . "5113e4e926cd752b1d0bcc1508b3ebad5def5fad")
  ("sly-repl-ansi-color" . "b9cd52d1cf927bf7e08582d46ab0bcf1d4fb5048")
- ("smex" . "55aaebe3d793c2c990b39a302eb26c184281c42c")
  ("spinner" . "34905eae12a236753fa88abc831eff1e41e8576e")
  ("straight.el" . "af5437f2afd00936c883124d6d3098721c2d306c")
  ("terraform-mode" . "e560caaa9d9a11b0868adf6d9dcae5ebb5055730")
