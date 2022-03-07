@@ -490,6 +490,11 @@
 ;; II, PROGRAMMING MODE
 ;; ####################
 
+;; eglot: A client for Language Server Protocol servers
+(use-package eglot
+  :straight t
+  :commands eglot)
+
 ;; emmet mode
 (use-package emmet-mode
   :straight t
@@ -665,16 +670,6 @@
   :diminish
   :mode ("\\.py\\'" . python-mode)
   :interpreter ("python" . python-mode))
-
-(use-package elpy
-  :straight t
-  :after python
-  :diminish
-  :config
-  (elpy-enable)
-  (setq python-shell-interpreter "python3"
-        elpy-rpc-python-command "python3"
-        elpy-rpc-backend "jedi"))
 
 ;; ruby
 (use-package ruby-mode
