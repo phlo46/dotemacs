@@ -513,6 +513,7 @@
 
 ;; dockerfile mode
 (use-package dockerfile-mode
+  :straight t
   :mode "Dockerfile.*\\'")
 
 ;; racket

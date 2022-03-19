@@ -13,6 +13,7 @@
  ("dash.el" . "da167c51e9fd167a48d06c7c0ee8e3ac7abd9718")
  ("deadgrep" . "0a3ba239c458ffc4f63a180b43d0e70b81742a3e")
  ("diminish.el" . "6b7e837b0cf0129e9d7d6abae48093cf599bb9e8")
+ ("dockerfile-mode" . "d31f7685ebc5832d957e25070a930aa42984327d")
  ("dumb-jump" . "dbb915441a2b66f2fbb954ff5de2723c5a4771d4")
  ("eglot" . "28092ba3af6041a44227b92397c148a902413d1c")
  ("el-get" . "9353309744e4f8a7c9b1adf22ec99536fb2146b0")
