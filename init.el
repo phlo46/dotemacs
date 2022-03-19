@@ -226,7 +226,8 @@
 ;; embark: Emacs Mini-Buffer Actions Rooted in Keymaps
 (use-package embark
   :straight t
-  :bind (("C-'" . embark-act)))
+  :bind (("C-'" . embark-act)
+         ("C-;" . embark-dwim)))
 
 (use-package embark-consult
   :straight t
