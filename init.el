@@ -58,9 +58,6 @@
 (electric-pair-mode 1)
 (show-paren-mode 1)
 
-;; emacs trailing whitespace
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
 ;; global keys
 (global-set-key (kbd "C-x j") 'eval-print-last-sexp)
 (global-set-key "\C-cy"'(lambda ()
@@ -430,6 +427,13 @@
          ("C-d" . smart-hungry-delete-forward-char))
   :config
   (smart-hungry-delete-add-default-hooks))
+
+;; cleanup whitespace on only touched lines
+(use-package ws-butler
+  :straight t
+  :diminish
+  :config
+  (ws-butler-global-mode))
 
 ;; paredit
 (use-package paredit

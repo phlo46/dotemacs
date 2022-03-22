@@ -85,6 +85,7 @@
  ("use-package" . "a7422fb8ab1baee19adb2717b5b47b9c3812a84c")
  ("vertico" . "75c7ec4e71a6723532723c63c1d9ac75adaf8882")
  ("with-editor" . "f514f23258af67a10fc8e1c431bfe94702b6e65b")
+ ("ws-butler" . "e3a38d93e01014cd47bf5af4924459bd145fd7c4")
  ("xref" . "415b5edc9fc14d3a6c83f2f583b79dfb7dfa91d1")
  ("yaml-mode" . "535273d5a1eb76999d20afbcf4d9f056d8ffd2da")
  ("yaml.el" . "84b88c9ed178af16da18b230c1f61c57cefedf28")
