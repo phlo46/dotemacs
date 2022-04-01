@@ -492,6 +492,11 @@
   :straight t
   :bind (("C-~" . dash-at-point)))
 
+;; browse-at-remote
+(use-package browse-at-remote
+  :straight t
+  :commands browse-at-remote)
+
 ;; II, PROGRAMMING MODE
 ;; ####################
 

@@ -3,6 +3,7 @@
  ("ace-window" . "0577c426a9833ab107bab46c60d1885c611b2fb9")
  ("ag.el" . "ed7e32064f92f1315cecbfc43f120bbc7508672c")
  ("avy" . "ba5f035be33693d1a136a5cbeedb24327f551a92")
+ ("browse-at-remote" . "fadf99d6d8e891f3b112e36c772e0eea0b9bc7f2")
  ("buffer-move" . "cb517ecf8409b5fdcda472d7190c6021f0c49751")
  ("closql" . "1ba85ce9f7094aeddce25044689278eda6739531")
  ("company-mode" . "adc387ab1c040c32a011630a31f852c87f54dba5")
