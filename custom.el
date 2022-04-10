@@ -11,6 +11,7 @@
  '(httpd-port 8100)
  '(js2-include-node-externs t)
  '(ledger-accounts-file "/Users/longg/Dropbox/ledger/notes.ledger")
+ '(ledger-report-use-native-highlighting nil)
  '(ledger-reports
    '(("" "")
      ("bal" "ledger [[ledger-mode-flags]] -f /Users/longg/Dropbox/ledger/notes.ledger bal Expenses --current --format \"\\
