@@ -31,7 +31,8 @@
        (ansi-term shell-pop-term-shell))))
  '(sly-net-coding-system 'utf-8-unix)
  '(straight-recipes-gnu-elpa-use-mirror t)
- '(tramp-default-method "ssh"))
+ '(tramp-default-method "ssh")
+ '(undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo"))))
 
 
 (custom-set-faces
