@@ -627,20 +627,6 @@
 (use-package es-mode
   :mode "\\.es$")
 
-;; tern-mode
-(use-package tern
-  :defer t
-  :init
-  (add-hook 'js-mode-hook (lambda () (tern-mode t)))
-  :config
-  (let* ((node-path (shell-command-to-string "echo $NODE_PATH"))
-         (path-list (split-string node-path ":")))
-    (dolist (p path-list)
-      (when p
-        (add-to-list 'load-path p))))
-
-  (autoload 'tern-mode "tern/emacs/tern.el" nil t))
-
 ;; js2-mode
 (use-package js2-mode
   :mode "\\.js\\'"
