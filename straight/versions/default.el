@@ -69,6 +69,7 @@
  ("project" . "4fe1eec8035969d59ab461eb1674343378182a0b")
  ("projectile" . "defce6e6bb504bdfab1e091550e2f709310327b9")
  ("psession" . "328c64804c4c9e15b373c7ba3bc82bfdfb27971a")
+ ("queue" . "52206c0f78afc0dfb9a287cb928c1e725103336d")
  ("restclient.el" . "9e2cfa86529133eba6c9ef53794be182f15e4c21")
  ("ruby-end.el" . "a136f75abb6d5577ce40d61dfeb778c2e9bb09c0")
  ("ruby-tools.el" . "6b97066b58a4f82eb2ecea6434a0a7e981aa4c18")
