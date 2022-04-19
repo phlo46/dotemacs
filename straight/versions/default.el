@@ -47,6 +47,7 @@
  ("helpful" . "67cdd1030b3022d3dc4da2297f55349da57cde01")
  ("highlight-thing.el" . "561d08a26f78f18d405d4f371f1c813db094e2f3")
  ("jq-mode" . "1af31ba701cf844f938f840ed78867c9a28174b6")
+ ("js2-mode" . "5049e543b52099e6ea3e9bc915fc023d5a9b2644")
  ("json-mode" . "eedb4560034f795a7950fa07016bd4347c368873")
  ("json-snatcher" . "b28d1c0670636da6db508d03872d96ffddbc10f2")
  ("jsonrpc" . "efb4187e43c6b845e9beb827684bba67fc82936f")
