@@ -225,7 +225,9 @@
 (use-package embark
   :straight t
   :bind (("C-'" . embark-act)
-         ("C-;" . embark-dwim)))
+         ("C-;" . embark-dwim))
+  :config
+  (add-to-list 'embark-target-finders 'my-short-jira-ticket-link))
 
 (use-package embark-consult
   :straight t
