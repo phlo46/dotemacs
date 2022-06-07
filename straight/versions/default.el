@@ -23,6 +23,7 @@
  ("elisp-refs" . "8f84280997d8b233d66fb9958a34b46078c58b03")
  ("emacs-async" . "c78bab7506a70a735d2c3deab13fa87bf44a83d3")
  ("emacs-hcl-mode" . "e4d9eef631e8a386341ae8f94f7c2579586e65b5")
+ ("emacs-libvterm" . "b44723552f86407d528c4a6c8057382c061b008e")
  ("emacs-smart-hungry-delete" . "e06525cc1841805ebe470c876d6b966de90bc275")
  ("emacs-which-key" . "1ab1d0cc88843c9a614ed3226c5a1070e32e4823")
  ("emacsmirror-mirror" . "378111b2b7846064679a063f4eec48ef6de39ce9")

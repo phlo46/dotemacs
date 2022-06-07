@@ -276,6 +276,10 @@
   :config
   (yas-global-mode 1))
 
+;; vterm
+(use-package vterm
+  :straight t)
+
 ;; shell-pop
 (use-package shell-pop
   :straight t

@@ -41,4 +41,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(embark-verbose-indicator-documentation ((t (:inherit completions-common-part))))
- '(marginalia-documentation ((t (:inherit completions-common-part)))))
+ '(marginalia-documentation ((t (:inherit completions-common-part))))
+ '(vterm-color-black ((t (:background "dark gray" :foreground "black")))))
