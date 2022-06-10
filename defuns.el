@@ -49,3 +49,14 @@
                      (getenv "EMACS_MY_JIRA_URL")
                      (match-string 0 str))
             ,beg . ,end))))))
+
+(defun my-visit-bitbucket-cloud-new-pull-request-url ()
+  "Go to Bitbucket Cloud to create a new Pull Request for current git repo"
+  (interactive)
+  (let* ((url (vc-git-repository-url "."))
+         (url-str (split-string url "[@.:/]+"))
+         (workspace (nth 3 url-str))
+         (repo (nth 4 url-str)))
+    (browse-url
+     (format "https://bitbucket.com/%s/%s/pull-requests/new"
+             workspace repo))))
