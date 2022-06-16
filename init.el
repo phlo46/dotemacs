@@ -504,6 +504,17 @@
   :straight t
   :commands browse-at-remote)
 
+;; tree-sitter for syntax highlight
+(use-package tree-sitter
+  :straight t
+  :diminish
+  :config
+  (global-tree-sitter-mode)
+  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
+
+(use-package tree-sitter-langs
+  :straight t
+  :after tree-sitter)
 ;; II, PROGRAMMING MODE
 ;; ####################
 
