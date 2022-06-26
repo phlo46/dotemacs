@@ -26,9 +26,9 @@
  '(mac-option-modifier 'meta)
  '(org-agenda-files '("~/Dropbox/org-mode/todo.org"))
  '(shell-pop-shell-type
-   '("ansi-term" "*ansi-term*"
+   '("vterm" "*vterm*"
      (lambda nil
-       (ansi-term shell-pop-term-shell))))
+       (vterm shell-pop-term-shell))))
  '(sly-net-coding-system 'utf-8-unix)
  '(straight-recipes-gnu-elpa-use-mirror t)
  '(tramp-default-method "ssh")
