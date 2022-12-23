@@ -535,10 +535,6 @@
   :config
   (electric-indent-mode 1))
 
-;; haml mode
-(use-package haml-mode
-  :mode "\\.haml\\'")
-
 ;; dockerfile mode
 (use-package dockerfile-mode
   :straight t
