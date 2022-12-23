@@ -72,7 +72,6 @@
  ("popwin" . "1e57430615b60bf33e85228f7cc625537f468241")
  ("pos-tip" . "bfe74204d1201a33ace81898e7c485382817510a")
  ("project" . "4e4ba367ecd05520fa1ba25a7a2dbcddd743af25")
- ("projectile" . "036d327b5ad9b970bd1ea3123692a80bc1015b4a")
  ("psession" . "328c64804c4c9e15b373c7ba3bc82bfdfb27971a")
  ("queue" . "130c2d656cd5d7376552272fab9e50a7c37d0c4a")
  ("restclient.el" . "0ba72816f92f3d5906cdf76f418fd0a3ee72809b")

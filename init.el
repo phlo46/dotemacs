@@ -367,14 +367,6 @@
   :config
   (popwin-mode 1))
 
-;; projectile-mode
-(use-package projectile
-  :straight t
-  :diminish
-  :bind-keymap ("C-c p" . projectile-command-map)
-  :config
-  (projectile-mode))
-
 ;; magit
 (use-package magit
   :straight t
@@ -570,9 +562,7 @@
   :diminish
   :bind (()
          :map sly-mode-map
-         ("C-c M-p" . sly-pprint-eval-last-expression)
-         ;; prevent this key-binding shadowing projectile prefix'
-         ("C-c p" . nil))
+         ("C-c M-p" . sly-pprint-eval-last-expression))
   :config
   (setq sly-lisp-implementations
         '((sbcl ("sbcl" "--dynamic-space-size" "2000"))
