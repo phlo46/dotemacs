@@ -461,16 +461,6 @@
   (company-quickhelp-mode)
   (setq company-quickhelp-delay nil))
 
-;; flycheck
-(use-package flycheck
-  :straight t
-  :defer 2
-  :diminish
-  :config
-  (global-flycheck-mode)
-  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc emacs-lisp))
-  (setq flycheck-check-syntax-automatically (list 'save)))
-
 ;; ledger
 (use-package ledger-mode
   :straight t
@@ -479,12 +469,6 @@
 ;; gitlab ci
 (use-package gitlab-ci-mode
   :mode "\\.gitlab-ci.yml\\'")
-
-(use-package gitlab-ci-mode-flycheck
-  :straight t
-  :after (flycheck gitlab-ci-mode)
-  :init
-  (gitlab-ci-mode-flycheck-enable))
 
 ;; dash-at-point
 (use-package dash-at-point
