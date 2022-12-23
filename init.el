@@ -151,14 +151,6 @@
   :config
   (load-theme 'zenburn t))
 
-;; undo tree
-(use-package undo-tree
-  :straight t
-  :defer 3
-  :diminish
-  :config
-  (global-undo-tree-mode))
-
 ;; ibuffer
 (use-package ibuffer
   :straight t
