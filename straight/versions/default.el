@@ -1,6 +1,5 @@
 (("Emacs-wgrep" . "f9687c28bbc2e84f87a479b6ce04407bb97cfb23")
  ("ace-link" . "06ab398df85e81d1dc763b3210732dd26cba60a1")
- ("ace-window" . "77115afc1b0b9f633084cf7479c767988106c196")
  ("ag.el" . "ed7e32064f92f1315cecbfc43f120bbc7508672c")
  ("avy" . "955c8dedd68c74f3cf692c1249513f048518c4c9")
  ("browse-at-remote" . "010639fc6bd6c710b56e0f095352da60c92473a3")

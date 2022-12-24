@@ -380,13 +380,6 @@
   :straight t
   :after magit)
 
-;; ace-window
-(use-package ace-window
-  :straight t
-  :bind ("C-." . ace-window)
-  :config
-  (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
-
 ;; multiple cursors
 (use-package multiple-cursors
   :straight t
