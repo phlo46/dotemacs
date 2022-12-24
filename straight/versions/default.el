@@ -4,7 +4,6 @@
  ("ag.el" . "ed7e32064f92f1315cecbfc43f120bbc7508672c")
  ("avy" . "955c8dedd68c74f3cf692c1249513f048518c4c9")
  ("browse-at-remote" . "010639fc6bd6c710b56e0f095352da60c92473a3")
- ("buffer-move" . "e7800b3ab1bd76ee475ef35507ec51ecd5a3f065")
  ("closql" . "820e95170acb79de0fb554577a0dc9b707e23aea")
  ("compat" . "7ca7d300d1d256f674f83932d2918d8e70cd28f6")
  ("consult" . "b404039f567ce296823425b641b2348482a1750e")
