@@ -162,14 +162,6 @@
   :straight t
   :bind ("C-x C-b" . ibuffer))
 
-;; mode icons
-(use-package mode-icons
-  :straight t
-  :defer 3
-  :config
-  (mode-icons-mode)
-  (setq mode-icons-change-mode-name nil))
-
 ;; helpful
 (use-package helpful
   :straight t
