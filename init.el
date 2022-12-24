@@ -66,10 +66,6 @@
 
 (global-set-key (kbd "C-c C-p m") 'pp-macroexpand-last-sexp)
 
-;; move forward/backward paragraph
-(global-set-key (kbd "M-]") 'forward-paragraph)
-(global-set-key (kbd "M-[") 'backward-paragraph)
-
 ;; disable keys
 (global-unset-key "\C-z")
 (global-unset-key "\C-x\C-z")
