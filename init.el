@@ -248,14 +248,6 @@
   (setq highlight-thing-exclude-thing-under-point t)
   (setq highlight-thing-limit-to-defun t))
 
-;; buffer move
-(use-package buffer-move
-  :straight t
-  :bind (("<M-s-up>" . buf-move-up)
-         ("<M-s-down>" . buf-move-down)
-         ("<M-s-left>" . buf-move-left)
-         ("<M-s-right>" . buf-move-right)))
-
 ;; eyebrowse
 (use-package eyebrowse
   :straight t
