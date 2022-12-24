@@ -7,7 +7,6 @@
  '(cljr-hotload-dependencies t)
  '(es-always-pretty-print t)
  '(exec-path-from-shell-check-startup-files nil)
- '(flycheck-python-flake8-executable "/usr/local/bin/python3")
  '(httpd-port 8100)
  '(js2-include-node-externs t)
  '(ledger-accounts-file "/Users/longg/Dropbox/ledger/notes.ledger")
