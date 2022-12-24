@@ -152,6 +152,11 @@
   :config
   (load-theme 'zenburn t))
 
+;; visual undo
+(use-package vundo
+  :straight t
+  :bind ("C-x u" . vundo))
+
 ;; ibuffer
 (use-package ibuffer
   :straight t
