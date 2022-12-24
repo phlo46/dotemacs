@@ -84,6 +84,7 @@
  ("treepy.el" . "7c4a0d21322506a4d4b2301b4274ec955b429b47")
  ("use-package" . "bcf0984cf55b70fe6896c6a15f61df92b24f8ffd")
  ("vertico" . "8b701f8b6d2cb9edeaab2064f4cb1288911c7701")
+ ("vundo" . "37e46ace40edf118a764e075634851992c4f5ac6")
  ("with-editor" . "4da109748da0828b79198701eb641d5b724153ce")
  ("ws-butler" . "e3a38d93e01014cd47bf5af4924459bd145fd7c4")
  ("xref" . "7f878254b71c0716b0b231a02efcca290021a3f7")
