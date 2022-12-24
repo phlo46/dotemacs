@@ -466,6 +466,7 @@
 (use-package tree-sitter-langs
   :straight t
   :after tree-sitter)
+
 ;; II, PROGRAMMING MODE
 ;; ####################
 
@@ -498,7 +499,6 @@
   (setq tab-always-indent 'complete))
 
 ;; scheme geiser
-
 (use-package scheme
   :mode ("\\.scm\\'" . scheme-mode))
 
