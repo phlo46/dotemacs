@@ -5,7 +5,6 @@
  ;; If there is more than one, they won't work right.
  '(browse-at-remote-prefer-symbolic nil)
  '(cljr-hotload-dependencies t)
- '(company-show-quick-access t)
  '(es-always-pretty-print t)
  '(exec-path-from-shell-check-startup-files nil)
  '(flycheck-python-flake8-executable "/usr/local/bin/python3")

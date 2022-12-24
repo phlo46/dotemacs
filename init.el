@@ -441,23 +441,6 @@
           clojure-mode cider-repl-mode
           tuareg-jbuild-mode) . enable-paredit-mode))
 
-;; company mode
-(use-package company
-  :straight t
-  :defer 3
-  :diminish
-  :config
-  (global-company-mode))
-
-(use-package company-quickhelp
-  :straight t
-  :after company
-  :bind (:map company-active-map
-              ("C-c h" . #'company-quickhelp-manual-begin))
-  :config
-  (company-quickhelp-mode)
-  (setq company-quickhelp-delay nil))
-
 ;; ledger
 (use-package ledger-mode
   :straight t
@@ -591,12 +574,6 @@
 (use-package restclient
   :mode ("\\.http\\'" . restclient-mode))
 
-(use-package company-restclient
-  :straight t
-  :after (company restclient)
-  :config
-  (add-to-list 'company-backends 'company-restclient))
-
 ;; yaml-mode
 (use-package yaml-mode
   :straight t
@@ -703,8 +680,6 @@
       ;; Register Merlin
       (add-to-list 'load-path (expand-file-name "emacs/site-lisp" opam-share))
       (autoload 'merlin-mode "merlin" "Merlin mode" t)
-      (with-eval-after-load 'company
-        (add-to-list 'company-backends 'merlin-company-backend))
 
       ;; Automatically start it in OCaml buffers
       (add-hook 'tuareg-mode-hook 'merlin-mode t)
