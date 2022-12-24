@@ -101,6 +101,11 @@
   :config
   (winner-mode 1))
 
+;; windmove-mode
+(use-package windmove
+  :config
+  (windmove-default-keybindings 'super))
+
 ;; term
 (use-package term
   :bind (:map term-raw-map
