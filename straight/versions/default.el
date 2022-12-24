@@ -8,6 +8,7 @@
  ("closql" . "820e95170acb79de0fb554577a0dc9b707e23aea")
  ("compat" . "7ca7d300d1d256f674f83932d2918d8e70cd28f6")
  ("consult" . "b404039f567ce296823425b641b2348482a1750e")
+ ("corfu" . "7bf3ec4622372ed23e83a0778ded53222c4e1187")
  ("dash-at-point" . "fba1a6f42ea51d05110e12c62bdced664059eb55")
  ("dash.el" . "3df46d7d9fe74f52a661565888e4d31fd760f0df")
  ("deadgrep" . "f687ca31f8d3bd8ebf05165b080b50ba724ce9bf")
