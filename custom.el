@@ -40,6 +40,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(corfu-current ((t (:background "black" :foreground "white"))))
+ '(corfu-default ((t (:background "gray31"))))
  '(embark-verbose-indicator-documentation ((t (:inherit completions-common-part))))
  '(marginalia-documentation ((t (:inherit completions-common-part))))
  '(vterm-color-black ((t (:background "dark gray" :foreground "black")))))

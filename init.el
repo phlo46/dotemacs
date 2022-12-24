@@ -218,6 +218,14 @@
   :bind (:map minibuffer-local-map
               ("M-A" . marginalia-cycle)))
 
+;; completion overlay region function
+(use-package corfu
+  :straight t
+  :custom
+  (corfu-auto t)
+  :init
+  (global-corfu-mode))
+
 ;; embark: Emacs Mini-Buffer Actions Rooted in Keymaps
 (use-package embark
   :straight t
