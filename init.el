@@ -363,7 +363,7 @@
 
 ;; magit
 (use-package magit
-  :straight t
+  :straight (:branch "main")
   :bind (("C-x g" . magit-status)
          ("C-c b" . magit-blame)))
 
