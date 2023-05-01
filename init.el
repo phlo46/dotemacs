@@ -375,7 +375,7 @@
 
 ;; forge
 (use-package forge
-  :straight t
+  :straight (:branch "main")
   :after magit)
 
 ;; multiple cursors
