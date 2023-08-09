@@ -477,13 +477,9 @@
 (use-package tree-sitter-langs
   :straight t
   :after tree-sitter)
+
 ;; II, PROGRAMMING MODE
 ;; ####################
-
-;; eglot: A client for Language Server Protocol servers
-(use-package eglot
-  :straight t
-  :commands eglot)
 
 ;; emmet mode
 (use-package emmet-mode
