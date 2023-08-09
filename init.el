@@ -204,7 +204,9 @@
 ;; consult completing-read
 (use-package consult
   :straight t
-  :bind (;; C-x bindings (ctl-x-map)
+  :bind (; C-c bindings in `mode-specific-map'
+         ("C-c h" . consult-history)
+         ;; C-x bindings (ctl-x-map)
          ("C-x b" . consult-buffer)
          ;; Other custom bindings
          ("M-y" . consult-yank-pop)
