@@ -370,13 +370,6 @@
   (psession-mode 1)
   (psession-autosave-mode 1))
 
-;; popup window manager
-(use-package popwin
-  :straight t
-  :bind-keymap ("C-z" . popwin:keymap)
-  :config
-  (popwin-mode 1))
-
 ;; magit
 (use-package magit
   :straight (:branch "main")

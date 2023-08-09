@@ -50,7 +50,6 @@
  ("orderless" . "6936fe46ef07df168a423f04efeda130b4e69753")
  ("paredit" . "9a2c4b37fc8c1c7bdbb1f86fdec874c0d0652e64")
  ("popup-el" . "707bb336c6eb25743f1516b6a2165b40659a9d02")
- ("popwin" . "0de53e12b5e5cd58ff29b68c1f9e7834fc3d471a")
  ("project" . "e1ab72eb4adb99ed8903015fbf0d51c27f6ae67c")
  ("psession" . "ca5bed69f803aab71851c46b0118b66f58455b8a")
  ("ruby-end.el" . "ba7d7230f9e3ed75c9982d32bb9fdff1dc10935d")
