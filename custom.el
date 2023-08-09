@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(browse-at-remote-prefer-symbolic nil)
  '(cljr-hotload-dependencies t)
+ '(comint-input-ring-size 10000)
  '(es-always-pretty-print t)
  '(exec-path-from-shell-check-startup-files nil)
  '(httpd-port 8100)

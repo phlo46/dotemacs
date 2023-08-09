@@ -106,6 +106,14 @@
   :config
   (windmove-default-keybindings 'super))
 
+;; shell
+(use-package shell
+  :hook (shell-mode . my-shell-mode-hook)
+  :config
+  (defun my-shell-mode-hook ()
+    (setq comint-input-ring-file-name "~/.zsh_history")
+    (comint-read-input-ring t)))
+
 ;; term
 (use-package term
   :bind (:map term-raw-map
