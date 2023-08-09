@@ -493,7 +493,6 @@
   (setq tab-always-indent 'complete))
 
 ;; scheme geiser
-
 (use-package scheme
   :mode ("\\.scm\\'" . scheme-mode))
 
@@ -591,18 +590,6 @@
       (beginning-of-line)
       (if (looking-at-p "^ +\/?> *$")
           (delete-char sgml-basic-offset)))))
-
-;; json-mode
-(use-package json-mode
-  :straight t
-  :mode "\\.json\\'")
-
-;; jq-mode
-(use-package jq-mode
-  :straight t
-  :mode "\\.jq$"
-  :bind (:map json-mode-map
-              ("C-c C-j" . jq-interactively)))
 
 ;; markdown mode
 (use-package markdown-mode
