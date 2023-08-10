@@ -41,8 +41,7 @@
 ;; ===========================
 ;; ==== * SYSTEM CONFIG * ====
 ;; ===========================
-(setq js-indent-level 8
-      tags-add-tables nil
+(setq tags-add-tables nil
       ansi-color-for-comint-mode t
       ring-bell-function 'ignore
       ;; place auto-save file to $TMPDIR

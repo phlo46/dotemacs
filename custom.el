@@ -9,6 +9,7 @@
  '(es-always-pretty-print t)
  '(exec-path-from-shell-check-startup-files nil)
  '(httpd-port 8100)
+ '(js-indent-level 4)
  '(js2-include-node-externs t)
  '(ledger-accounts-file "/Users/longg/Dropbox/ledger/notes.ledger")
  '(ledger-report-use-native-highlighting nil)
