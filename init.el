@@ -59,10 +59,6 @@
 
 ;; global keys
 (global-set-key (kbd "C-x j") 'eval-print-last-sexp)
-(global-set-key "\C-cy"'(lambda ()
-                          (interactive)
-                          (popup-menu 'yank-menu)))
-
 (global-set-key (kbd "C-c C-p m") 'pp-macroexpand-last-sexp)
 
 ;; move forward/backward paragraph
