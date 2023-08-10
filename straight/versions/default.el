@@ -52,6 +52,7 @@
  ("popup-el" . "707bb336c6eb25743f1516b6a2165b40659a9d02")
  ("project" . "e1ab72eb4adb99ed8903015fbf0d51c27f6ae67c")
  ("psession" . "ca5bed69f803aab71851c46b0118b66f58455b8a")
+ ("restclient.el" . "0ba72816f92f3d5906cdf76f418fd0a3ee72809b")
  ("ruby-end.el" . "ba7d7230f9e3ed75c9982d32bb9fdff1dc10935d")
  ("ruby-tools.el" . "6b97066b58a4f82eb2ecea6434a0a7e981aa4c18")
  ("s.el" . "dda84d38fffdaf0c9b12837b504b402af910d01d")

@@ -549,6 +549,7 @@
 
 ;; restclient
 (use-package restclient
+  :straight t
   :mode ("\\.http\\'" . restclient-mode))
 
 ;; yaml-mode
