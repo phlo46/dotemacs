@@ -101,6 +101,12 @@
   :config
   (windmove-default-keybindings 'super))
 
+(use-package comint
+  :hook (comint-mode . my-comint-init)
+  :config
+  (defun my-comint-init ()
+    (setq comint-process-echoes t)))
+
 ;; shell
 (use-package shell
   :hook (shell-mode . my-shell-mode-hook)
