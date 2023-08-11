@@ -200,7 +200,8 @@
 (use-package orderless
   :straight t
   :init
-  (setq completion-styles '(orderless)))
+  (setq completion-styles '(orderless basic)
+        completion-category-overrides '((file (styles basic partial-completion)))))
 
 ;; consult completing-read
 (use-package consult
