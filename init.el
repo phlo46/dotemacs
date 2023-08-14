@@ -98,8 +98,14 @@
 
 ;; windmove-mode
 (use-package windmove
+  :bind (:map windmove-mode-map
+              ("s-i" . windmove-up)
+              ("s-k" . windmove-down)
+              ("s-j" . windmove-left)
+              ("s-l" . windmove-right))
   :config
-  (windmove-default-keybindings 'super))
+  (windmove-default-keybindings 'super)
+  (windmove-swap-states-default-keybindings '(meta super)))
 
 (use-package comint
   :hook (comint-mode . my-comint-init)
