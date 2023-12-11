@@ -121,6 +121,18 @@
     (setq comint-input-ring-file-name "~/.zsh_history")
     (comint-read-input-ring t)))
 
+;; tramp
+(use-package tramp
+  :config
+  (add-to-list 'tramp-methods
+               '("gssh"
+                 (tramp-login-program        "gssh")
+                 (tramp-remote-shell         "/bin/bash")
+                 (tramp-remote-shell-args    ("-c"))
+                 (tramp-login-args           (("%h" "--tunnel-through-iap" "--ssh-flag='-o ServerAliveInterval=45'")))
+                 (tramp-async-args           (("-q")))
+                 (tramp-default-port         22))))
+
 ;; term
 (use-package term
   :bind (:map term-raw-map
