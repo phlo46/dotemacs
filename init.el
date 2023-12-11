@@ -158,6 +158,10 @@
               ("M-n" . flymake-goto-next-error)
               ("M-p" . flymake-goto-prev-error)))
 
+;; diff-mode
+(use-package diff-mode
+  :mode "\\.diff\\'")
+
 ;; ==============================
 ;; ==== * END SYSTEM CONFIG * ===
 ;; ==============================
