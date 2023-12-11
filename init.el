@@ -461,6 +461,10 @@
 (use-package gitlab-ci-mode
   :mode "\\.gitlab-ci.yml\\'")
 
+;; jenkins
+(use-package jenkinsfile-mode
+  :mode "Jenkinsfile.*\\'")
+
 ;; dash-at-point
 (use-package dash-at-point
   :straight t
