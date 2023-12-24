@@ -142,8 +142,7 @@
 (use-package midnight
   :config
   (midnight-mode 1)
-  (midnight-delay-set 'midnight-delay "6:00pm")
-  (setq clean-buffer-list-delay-general 7))
+  (midnight-delay-set 'midnight-delay "6:00pm"))
 
 ;; org-mode
 (use-package org
