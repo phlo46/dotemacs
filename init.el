@@ -86,6 +86,12 @@
 (use-package hi-lock
   :diminish)
 
+;; Dired mode
+(use-package dired
+  :config
+  (add-to-list 'dired-compress-file-suffixes
+               '("\\.mar\\'" "" "unzip -o -d %o %i")))
+
 ;; Dired mode with extra features
 (use-package dired-x
   :after dired)
