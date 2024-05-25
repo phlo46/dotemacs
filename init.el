@@ -477,10 +477,9 @@
 (use-package jenkinsfile-mode
   :mode "Jenkinsfile.*\\'")
 
-;; dash-at-point
-(use-package dash-at-point
-  :straight t
-  :bind (("C-~" . dash-at-point)))
+;; devdocs
+(use-package devdocs
+  :straight t)
 
 ;; browse-at-remote
 (use-package browse-at-remote
