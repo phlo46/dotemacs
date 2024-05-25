@@ -104,11 +104,10 @@
 
 ;; windmove-mode
 (use-package windmove
-  :bind (:map windmove-mode-map
-              ("s-i" . windmove-up)
-              ("s-k" . windmove-down)
-              ("s-j" . windmove-left)
-              ("s-l" . windmove-right))
+  :bind (("s-i" . windmove-up)
+         ("s-k" . windmove-down)
+         ("s-j" . windmove-left)
+         ("s-l" . windmove-right))
   :config
   (windmove-default-keybindings 'super)
   (windmove-swap-states-default-keybindings '(meta super)))
