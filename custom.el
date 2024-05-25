@@ -33,10 +33,7 @@
      (dockerfile-mode . dockerfile-ts-mode)
      (go-mode . go-ts-mode)))
  '(org-agenda-files '("~/Dropbox/org-mode/todo.org"))
- '(shell-pop-shell-type
-   '("vterm" "*vterm*"
-     (lambda nil
-       (vterm shell-pop-term-shell))))
+ '(shell-pop-shell-type '("shell" "*shell*" (lambda nil (shell))))
  '(sly-net-coding-system 'utf-8-unix)
  '(straight-recipes-gnu-elpa-use-mirror t)
  '(tramp-default-method "ssh")
