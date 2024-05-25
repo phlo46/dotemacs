@@ -113,17 +113,12 @@
   (windmove-default-keybindings 'super)
   (windmove-swap-states-default-keybindings '(meta super)))
 
-(use-package comint
-  :hook (comint-mode . my-comint-init)
-  :config
-  (defun my-comint-init ()
-    (setq comint-process-echoes t)))
-
 ;; shell
 (use-package shell
   :hook (shell-mode . my-shell-mode-hook)
   :config
   (defun my-shell-mode-hook ()
+    (setq comint-process-echoes t)
     (setq comint-input-ring-file-name "~/.zsh_history")
     (comint-read-input-ring t)))
 
