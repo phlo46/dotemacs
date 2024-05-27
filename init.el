@@ -56,6 +56,7 @@
 (menu-bar-mode -1)
 (electric-pair-mode 1)
 (show-paren-mode 1)
+(savehist-mode 1)
 
 ;; global keys
 (global-set-key (kbd "C-x j") 'eval-print-last-sexp)
