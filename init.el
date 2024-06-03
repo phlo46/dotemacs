@@ -119,7 +119,7 @@
   :config
   (defun my-shell-mode-hook ()
     (setq comint-process-echoes t)
-    (setq comint-input-ring-file-name "~/.zsh_history")
+    (setq comint-input-ring-file-name "~/.bash_history")
     (comint-read-input-ring t)))
 
 ;; tramp
