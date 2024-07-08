@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: shell
+# key: <sh
+# binding: C-c M-s
+# --
+#+begin_src shell :results output
+$0
+#+end_src
