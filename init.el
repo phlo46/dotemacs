@@ -73,8 +73,6 @@
 
 ;; register files
 (set-register ?i '(file . "~/.emacs.d/init.el"))
-(set-register ?z '(file . "~/.zshrc"))
-(set-register ?n '(file . "~/Dropbox/notes/notebook.org"))
 
 ;; Config emacs env
 (setenv "PYTHONUNBUFFERED" "x")
