@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: bash block
 # key: bash
-# binding: C-c b
+# binding: C-c s-s
 # --
 #+begin_src bash :results output
 $0
