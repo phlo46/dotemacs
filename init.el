@@ -490,7 +490,8 @@
 (use-package gptel
   :straight t
   :mode ("\\.org.gptel\\'" . org-mode)
-  :hook (org-mode . gptel-mode)
+  :hook ((org-mode . gptel-mode)
+         (gptel-mode . visual-line-mode))
   :config
   (gptel-make-gemini "Gemini" :key #'gptel-api-key-from-auth-source :stream t))
 
