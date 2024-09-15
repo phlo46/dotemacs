@@ -86,7 +86,7 @@
   :diminish)
 
 ;; Dired mode
-(use-package dired
+(use-package dired-aux
   :config
   (add-to-list 'dired-compress-file-suffixes
                '("\\.mar\\'" "" "unzip -o -d %o %i")))
