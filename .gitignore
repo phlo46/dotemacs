@@ -4,6 +4,7 @@
 
 .sx/
 auto-save-list/
+devdocs/
 elpa-*/
 elpa/
 elpy/
