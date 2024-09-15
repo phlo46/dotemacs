@@ -35,6 +35,7 @@
  ("gnu-elpa-mirror" . "4654b388ea470965f5e7c6c2e166b4c6b09855da")
  ("go-mode.el" . "602d73e22646b1b98b2eb97927fd426c0d1d2f92")
  ("goto-last-change.el" . "58b0928bc255b47aad318cd183a5dce8f62199cc")
+ ("gptel" . "88f066d829f11f53fdcb39d26ac34b0492f02687")
  ("hcl-mode" . "37f2cb1bf6fb51fbf99d4fac256298fcd6d1dd24")
  ("helpful" . "4ba24cac9fb14d5fdc32582cd947572040e82b2c")
  ("highlight-thing.el" . "ad788d7a7ee9eb287a8cca3adb21510b89270dca")

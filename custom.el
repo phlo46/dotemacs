@@ -9,6 +9,8 @@
  '(comint-input-ring-size 10000)
  '(es-always-pretty-print t)
  '(exec-path-from-shell-check-startup-files nil)
+ '(gptel-api-key 'gptel-api-key-from-auth-source)
+ '(gptel-default-mode 'org-mode)
  '(httpd-port 8100)
  '(js-indent-level 4)
  '(js2-include-node-externs t)

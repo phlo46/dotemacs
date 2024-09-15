@@ -484,6 +484,13 @@
   :straight t
   :commands browse-at-remote)
 
+(use-package gptel
+  :straight t
+  :mode ("\\.org.gptel\\'" . org-mode)
+  :hook (org-mode . gptel-mode)
+  :config
+  (gptel-make-gemini "Gemini" :key #'gptel-api-key-from-auth-source :stream t))
+
 ;; II, PROGRAMMING MODE
 ;; ####################
 
