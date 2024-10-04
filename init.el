@@ -495,6 +495,16 @@
   :config
   (gptel-make-gemini "Gemini" :key #'gptel-api-key-from-auth-source :stream t))
 
+;; github copilot
+(use-package copilot
+  :straight (:host github :repo "copilot-emacs/copilot.el" :files ("*.el"))
+  :bind (:map copilot-completion-map
+              ("<tab>" . copilot-accept-completion)
+              ("TAB" . copilot-accept-completion)
+              ("<backtab>" . copilot-accept-completion-by-word))
+  :config
+  (add-hook 'prog-mode-hook 'copilot-mode))
+
 ;; II, PROGRAMMING MODE
 ;; ####################
 
