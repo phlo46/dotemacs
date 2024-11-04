@@ -1,6 +1,5 @@
 (("Emacs-wgrep" . "208b9d01cfffa71037527e3a324684b3ce45ddc4")
  ("ace-link" . "d9bd4a25a02bdfde4ea56247daf3a9ff15632ea4")
- ("ag.el" . "ed7e32064f92f1315cecbfc43f120bbc7508672c")
  ("avy" . "933d1f36cca0f71e4acb5fac707e9ae26c536264")
  ("browse-at-remote" . "76aa27dfd469fcae75ed7031bb73830831aaccbf")
  ("closql" . "c1a346d56ecee16d1f0d7707f0d62c72604a8802")

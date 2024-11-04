@@ -329,12 +329,6 @@
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-envs (list "LANG" "GOPATH")))
 
-;; ag
-(use-package ag
-  :straight t
-  :config
-  (setq ag-highlight-search t))
-
 ;; rgrep
 (use-package deadgrep
   :straight t
