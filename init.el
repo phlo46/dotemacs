@@ -324,7 +324,6 @@
 (use-package exec-path-from-shell
   :straight t
   :defer 3
-  :if (memq window-system '(mac ns x))
   :config
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-envs (list "LANG" "GOPATH")))
