@@ -484,6 +484,7 @@
 (use-package gptel
   :straight t
   :hook ((gptel-mode . visual-line-mode))
+  :bind (("C-c s-r" . gptel-rewrite-menu))
   :config
   (gptel-make-gemini "Gemini" :key #'gptel-api-key-from-auth-source :stream t))
 
