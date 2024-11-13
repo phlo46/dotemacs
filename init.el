@@ -326,7 +326,7 @@
   :defer 3
   :config
   (exec-path-from-shell-initialize)
-  (exec-path-from-shell-copy-envs (list "LANG" "GOPATH")))
+  (exec-path-from-shell-copy-envs (list "LANG" "GOPATH" "SSH_AGENT_PID" "SSH_AUTH_SOCK")))
 
 ;; rgrep
 (use-package deadgrep
