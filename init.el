@@ -148,6 +148,8 @@
 
 ;; org-mode
 (use-package org
+  :bind (:map org-mode-map
+              ("C-'" . nil))
   :config
   (setq org-log-done 'time)
 
