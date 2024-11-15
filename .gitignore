@@ -8,6 +8,7 @@ devdocs/
 elpa-*/
 elpa/
 elpy/
+eln-cache/
 eshell/
 games/
 layouts/
