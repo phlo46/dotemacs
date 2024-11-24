@@ -134,12 +134,10 @@
 
 ;; shell
 (use-package shell
-  :hook (shell-mode . my-shell-mode-hook)
-  :config
-  (defun my-shell-mode-hook ()
-    (setq comint-process-echoes t)
-    (setq comint-input-ring-file-name "~/.bash_history")
-    (comint-read-input-ring t)))
+  :hook ((shell-mode . (lambda ()
+                         (setq comint-process-echoes t)
+                         (setq comint-input-ring-file-name "~/.bash_history")
+                         (comint-read-input-ring t)))))
 
 ;; tramp
 (use-package tramp
