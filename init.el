@@ -137,7 +137,8 @@
   :hook ((shell-mode . (lambda ()
                          (setq comint-process-echoes t)
                          (setq comint-input-ring-file-name "~/.bash_history")
-                         (comint-read-input-ring t)))))
+                         (comint-read-input-ring t)))
+         (shell-mode . ansi-color-for-comint-mode-on)))
 
 ;; tramp
 (use-package tramp
