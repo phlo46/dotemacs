@@ -514,8 +514,7 @@
               ("<tab>" . copilot-accept-completion)
               ("TAB" . copilot-accept-completion)
               ("<backtab>" . copilot-accept-completion-by-word))
-  :config
-  (add-hook 'prog-mode-hook 'copilot-mode))
+  :hook (prog-mode . copilot-mode))
 
 ;; II, PROGRAMMING MODE
 ;; ####################
