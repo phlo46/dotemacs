@@ -499,6 +499,7 @@
   :straight t
   :commands browse-at-remote)
 
+;; gptel
 (use-package gptel
   :straight t
   :hook ((gptel-mode . visual-line-mode))
