@@ -507,6 +507,18 @@
   (gptel-make-gemini "Gemini" :key #'gptel-api-key-from-auth-source :stream t)
   (gptel-make-anthropic "Claude" :key #'gptel-api-key-from-auth-source :stream t))
 
+;; chatgpt-shell
+(use-package chatgpt-shell
+  :straight t
+  :commands chatgpt-shell
+  :config
+  (setq chatgpt-shell-openai-key
+        (auth-source-pick-first-password :host "api.openai.com")
+        chatgpt-shell-google-key
+        (auth-source-pick-first-password :host "generativelanguage.googleapis.com")
+        chatgpt-shell-anthropic-key
+        (auth-source-pick-first-password :host "api.anthropic.com")))
+
 ;; github copilot
 (use-package copilot
   :straight (:host github :repo "copilot-emacs/copilot.el" :files ("*.el"))
