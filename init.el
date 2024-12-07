@@ -332,7 +332,10 @@
 
 ;; vterm
 (use-package vterm
-  :straight t)
+  :straight t
+  :bind (:map vterm-mode-map
+              ("M-p" . vterm-send-up)
+              ("M-n" . vterm-send-down)))
 
 ;; shell-pop
 (use-package shell-pop
