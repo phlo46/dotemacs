@@ -20,6 +20,7 @@ tree-sitter
 tutorial/
 url/
 
+.cache
 .emacs.desktop
 .mc-lists.el
 .org-id-locations
