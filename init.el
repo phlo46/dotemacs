@@ -64,10 +64,12 @@
 ;; global keys
 (global-set-key (kbd "C-x j") 'eval-print-last-sexp)
 (global-set-key (kbd "C-c C-p m") 'pp-macroexpand-last-sexp)
-
-;; move forward/backward paragraph
+;;; move forward/backward paragraph
 (global-set-key (kbd "M-]") 'forward-paragraph)
 (global-set-key (kbd "M-[") 'backward-paragraph)
+;;; window switch buffers
+(global-set-key (kbd "C-x M-j") 'previous-buffer)
+(global-set-key (kbd "C-x M-k") 'next-buffer)
 
 ;; disable keys
 (global-unset-key "\C-z")
