@@ -58,6 +58,9 @@
 (show-paren-mode 1)
 (savehist-mode 1)
 
+;; disable title bar
+(set-frame-parameter nil 'undecorated t)
+
 ;; global keys
 (global-set-key (kbd "C-x j") 'eval-print-last-sexp)
 (global-set-key (kbd "C-c C-p m") 'pp-macroexpand-last-sexp)
