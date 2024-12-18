@@ -352,8 +352,9 @@
   :straight t
   :defer 3
   :config
-  (exec-path-from-shell-initialize)
-  (exec-path-from-shell-copy-envs (list "LANG" "GOPATH" "SSH_AGENT_PID" "SSH_AUTH_SOCK")))
+  (dolist (var '("LANG" "GOPATH" "SSH_AGENT_PID" "SSH_AUTH_SOCK"))
+    (add-to-list 'exec-path-from-shell-variables var))
+  (exec-path-from-shell-initialize))
 
 ;; rgrep
 (use-package deadgrep
