@@ -11,7 +11,6 @@
  ("corfu" . "2050453a7ea5734fe85cdfd276e946ad59b1dd56")
  ("dash.el" . "1de9dcb83eacfb162b6d9a118a4770b1281bcd84")
  ("deadgrep" . "bb555790c6f404572d537e1e4adec8b4ff0515f5")
- ("devdocs.el" . "d2214d34cdeb4483a594dd6973fcd095cef4653f")
  ("diminish.el" . "fbd5d846611bad828e336b25d2e131d1bc06b83d")
  ("dockerfile-mode" . "4d893bd2da15833ce056332e6c972d5d93e78f04")
  ("dumb-jump" . "cd65a743370ac7b1a12e9ef0a7371b285a2597fb")

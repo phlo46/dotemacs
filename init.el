@@ -499,10 +499,6 @@
 (use-package jenkinsfile-mode
   :mode "Jenkinsfile.*\\'")
 
-;; devdocs
-(use-package devdocs
-  :straight t)
-
 ;; browse-at-remote
 (use-package browse-at-remote
   :straight t
