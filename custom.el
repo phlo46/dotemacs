@@ -15,6 +15,7 @@
  '(js-indent-level 4)
  '(js2-include-node-externs t)
  '(ledger-accounts-file "~/Dropbox/ledger/notes.ledger")
+ '(ledger-post-auto-align nil)
  '(ledger-report-use-native-highlighting nil)
  '(ledger-reports
    '(("bal" "ledger [[ledger-mode-flags]] -f ~/Dropbox/ledger/notes.ledger bal Expenses --current --format \"\\\12        %-17((depth_spacer)+(partial_account))\\\12        %10(percent(market(display_total), market(parent.total)))\\\12        %16(market(display_total))\\n%/\"\12")
