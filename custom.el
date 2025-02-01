@@ -7,6 +7,8 @@
  '(clean-buffer-list-delay-general 3)
  '(cljr-hotload-dependencies t)
  '(comint-input-ring-size 10000)
+ '(copilot-indent-offset-warning-disable t)
+ '(copilot-max-char-warning-disable t)
  '(es-always-pretty-print t)
  '(exec-path-from-shell-check-startup-files nil)
  '(gptel-api-key 'gptel-api-key-from-auth-source)
