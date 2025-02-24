@@ -4,6 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(browse-at-remote-prefer-symbolic nil)
+ '(chatgpt-shell-model-version "gpt-4o")
  '(clean-buffer-list-delay-general 3)
  '(cljr-hotload-dependencies t)
  '(comint-input-ring-size 10000)
