@@ -539,13 +539,6 @@
 ;; II, PROGRAMMING MODE
 ;; ####################
 
-;; web-mode
-(use-package web-mode
-  :mode ("\\.phtml\\'" "\\.mustache\\'" "\\.handlebars\\'" "\\.hbs\\'"
-         "\\.djhtml\\'" "\\.html?\\'" "\\.vue\\'")
-  :config
-  (electric-indent-mode 1))
-
 ;; dockerfile mode
 (use-package dockerfile-mode
   :straight t
