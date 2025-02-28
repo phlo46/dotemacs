@@ -617,11 +617,6 @@
                                  (yas-minor-mode 1)
                                  (cljr-add-keybindings-with-prefix "C-c C-m"))))
 
-;; restclient
-(use-package restclient
-  :straight t
-  :mode ("\\.http\\'" . restclient-mode))
-
 ;; yaml-mode
 (use-package yaml-mode
   :straight t
