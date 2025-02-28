@@ -38,7 +38,6 @@
  ("hcl-mode" . "1da895ed75d28d9f87cbf9b74f075d90ba31c0ed")
  ("helpful" . "34328c639ed7aad371a3f57209acad2a5bb66401")
  ("highlight-thing.el" . "ad788d7a7ee9eb287a8cca3adb21510b89270dca")
- ("js2-mode" . "e0c302872de4d26a9c1614fac8d6b94112b96307")
  ("jsonrpc" . "74268ee45494f40b3534164001b994e315490c27")
  ("ledger-mode" . "356d8049ede02c06db4f487d1d6076f74d6098c5")
  ("let-alist" . "35a1dae3c540705433a510c13c8af80206b29b5f")
