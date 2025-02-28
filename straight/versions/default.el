@@ -24,7 +24,6 @@
  ("emacsql" . "d6529f010a0573630122b826230e72157ab8fa88")
  ("embark" . "d5df0eff182b014ab49328a4dbb1d69eb7faafbd")
  ("embrace.el" . "c7e748603151d7d91c237fd2d9cdf56e9f3b1ea8")
- ("emmet-mode" . "322d3bb112fced57d63b44863357f7a0b7eee1e3")
  ("exec-path-from-shell" . "4896a797252fbfdac32fb77508500ac7d220f717")
  ("expand-region.el" . "351279272330cae6cecea941b0033a8dd8bcc4e8")
  ("eyebrowse" . "473381f4f9e847eb50a40ef2306c027432789754")

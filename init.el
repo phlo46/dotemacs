@@ -539,11 +539,6 @@
 ;; II, PROGRAMMING MODE
 ;; ####################
 
-;; emmet mode
-(use-package emmet-mode
-  :straight t
-  :hook ((sgml-mode css-mode web-mode nxml-mode) . emmet-mode))
-
 ;; web-mode
 (use-package web-mode
   :mode ("\\.phtml\\'" "\\.mustache\\'" "\\.handlebars\\'" "\\.hbs\\'"
