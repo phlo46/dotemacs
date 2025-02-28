@@ -627,10 +627,6 @@
   :straight t
   :mode "\\.tf\\'")
 
-;; elasticsearch mode
-(use-package es-mode
-  :mode "\\.es$")
-
 ;; markdown mode
 (use-package markdown-mode
   :commands (markdown-mode gfm-mode)
