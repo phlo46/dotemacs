@@ -20,7 +20,6 @@
  ("emacs-async" . "b99658e831bc7e7d20ed4bb0a85bdb5c7dd74142")
  ("emacs-libvterm" . "056ad74653704bc353d8ec8ab52ac75267b7d373")
  ("emacs-smart-hungry-delete" . "e06525cc1841805ebe470c876d6b966de90bc275")
- ("emacs-which-key" . "38d4308d1143b61e4004b6e7a940686784e51500")
  ("emacsmirror-mirror" . "ec1458a105d92fb4a2a99171c649c262406f4086")
  ("emacsql" . "d6529f010a0573630122b826230e72157ab8fa88")
  ("embark" . "d5df0eff182b014ab49328a4dbb1d69eb7faafbd")

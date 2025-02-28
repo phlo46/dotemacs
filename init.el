@@ -199,6 +199,13 @@
 (use-package diff-mode
   :mode "\\.diff\\'")
 
+;; which-key
+(use-package which-key
+  :diminish
+  :bind ("C-c M-=" . which-key-show-major-mode)
+  :config
+  (which-key-mode))
+
 ;; ==============================
 ;; ==== * END SYSTEM CONFIG * ===
 ;; ==============================
@@ -399,14 +406,6 @@
   :after avy
   :config
   (ace-link-setup-default))
-
-;; which-key
-(use-package which-key
-  :straight t
-  :diminish
-  :bind ("C-c M-=" . which-key-show-major-mode)
-  :config
-  (which-key-mode))
 
 ;; psession
 (use-package psession
