@@ -380,14 +380,6 @@
   (setq wgrep-auto-save-buffer t
         wgrep-change-readonly-file t))
 
-;; dumb-jump
-(use-package dumb-jump
-  :straight t
-  :bind (("M-g o" . dumb-jump-go-other-window)
-         ("M-g j" . dumb-jump-go))
-  :config
-  (add-hook 'xref-backend-functions #'dumb-jump-xref-activate))
-
 ;; avy
 (use-package avy
   :straight t
