@@ -518,15 +518,10 @@
 
 ;; github copilot
 (use-package copilot
-  :straight (:host github :repo "copilot-emacs/copilot.el" :files ("*.el"))
   :bind (:map copilot-completion-map
               ("<tab>" . copilot-accept-completion)
               ("TAB" . copilot-accept-completion)
-              ("<backtab>" . copilot-accept-completion-by-word))
-  :hook (prog-mode . copilot-mode)
-  :config
-  (add-to-list 'copilot-major-mode-alist '(("makefile-gmake" . "makefile")
-                                           ("yaml-ts". "yaml"))))
+              ("<backtab>" . copilot-accept-completion-by-word)))
 
 ;; II, PROGRAMMING MODE
 ;; ####################
