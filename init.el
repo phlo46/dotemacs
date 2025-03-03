@@ -488,7 +488,8 @@
 
 ;; jenkins
 (use-package jenkinsfile-mode
-  :mode "Jenkinsfile.*\\'")
+  :straight t
+  :mode (("Jenkinsfile\\(?:[._].*\\)?\\'" . jenkinsfile-mode)))
 
 ;; browse-at-remote
 (use-package browse-at-remote
