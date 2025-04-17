@@ -17,7 +17,7 @@
  '(httpd-port 8100)
  '(js-indent-level 4)
  '(js2-include-node-externs t)
- '(ledger-accounts-file "~/Dropbox/ledger/notes.ledger")
+ '(ledger-accounts-file "~/Dropbox/ledger/Accounts.dat")
  '(ledger-post-auto-align nil)
  '(ledger-report-use-native-highlighting nil)
  '(ledger-reports
