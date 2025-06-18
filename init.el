@@ -557,8 +557,7 @@
          ("C-c M-p" . sly-pprint-eval-last-expression))
   :config
   (setq sly-lisp-implementations
-        '((sbcl ("sbcl" "--dynamic-space-size" "2000"))
-          (ccl ("ros -L ccl-bin -Q run")))
+        '((sbcl ("sbcl") :coding-system utf-8-unix))
         sly-contribs
         '(sly-fancy sly-mrepl))
 
