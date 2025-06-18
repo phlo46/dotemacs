@@ -82,24 +82,6 @@
 ;; Config emacs env
 (setenv "PYTHONUNBUFFERED" "x")
 
-;; Copy/paste on Wayland
-(when (getenv "WAYLAND_DISPLAY")
-  (setq wl-copy-process nil
-        interprogram-cut-function
-        (lambda (text)
-          (setq wl-copy-process (make-process :name "wl-copy"
-                                              :buffer nil
-                                              :command '("wl-copy" "-f" "-n")
-                                              :connection-type 'pipe
-                                              :noquery t))
-          (process-send-string wl-copy-process text)
-          (process-send-eof wl-copy-process))
-        interprogram-paste-function
-        (lambda ()
-          (if (and wl-copy-process (process-live-p wl-copy-process))
-              nil ; should return nil if we're the current paste owner
-            (shell-command-to-string "wl-paste -n | tr -d '\r'")))))
-
 ;; expand abbreviations
 (use-package abbrev
   :diminish abbrev-mode)
