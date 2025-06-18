@@ -454,7 +454,8 @@
 
 ;; cleanup whitespace on only touched lines
 (use-package ws-butler
-  :straight t
+  :straight (ws-butler :type git :host github
+                       :repo "lewang/ws-butler" :branch "master")
   :diminish
   :config
   (ws-butler-global-mode))
