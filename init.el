@@ -632,16 +632,6 @@
   :config
   (setq ruby-insert-encoding-magic-comment nil))
 
-(use-package ruby-tools
-  :straight t
-  :after ruby-mode
-  :diminish ruby-tools-mode)
-
-(use-package ruby-end
-  :straight t
-  :diminish ruby-end-mode
-  :after ruby-mode)
-
 ;; perl
 (use-package cperl-mode
   :mode "\\.\\([pP][Llm]\\|al\\)\\'"

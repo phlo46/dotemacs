@@ -53,8 +53,6 @@
  ("paredit" . "af075775af91f2dbc63b915d762b4aec092946c4")
  ("project" . "de0deb8dbfb65eae6eaaf45aea77f12aa9a25f89")
  ("psession" . "371e23c9cc1ad5d8ccb149ccdaf6500935f27da1")
- ("ruby-end.el" . "ba7d7230f9e3ed75c9982d32bb9fdff1dc10935d")
- ("ruby-tools.el" . "6b97066b58a4f82eb2ecea6434a0a7e981aa4c18")
  ("s.el" . "dda84d38fffdaf0c9b12837b504b402af910d01d")
  ("seq" . "da86da9bf111f68fb81efd466d76d53af5aebc00")
  ("shell-maker" . "b55e2e8d28f1c0ecac1d45b4a299ddddc42f479f")
