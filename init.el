@@ -406,6 +406,10 @@
   :straight (:branch "main")
   :after magit)
 
+;; sqlite3
+(use-package sqlite3
+  :straight t)
+
 ;; multiple cursors
 (use-package multiple-cursors
   :straight t
