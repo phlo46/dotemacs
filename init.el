@@ -552,8 +552,7 @@
   :straight t
   :defer t
   :diminish
-  :bind (()
-         :map sly-mode-map
+  :bind (:map sly-mode-map
          ("C-c M-p" . sly-pprint-eval-last-expression))
   :config
   (setq sly-lisp-implementations
