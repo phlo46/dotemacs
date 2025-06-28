@@ -537,6 +537,13 @@
   :diminish
   :bind (:map sly-mode-map
          ("C-c M-p" . sly-pprint-eval-last-expression))
+  :hook (sly-mrepl-mode . (lambda ()
+                            (advice-add 'paredit-RET
+                                        :after
+                                        (lambda ()
+                                          (when (string-prefix-p "*sly-mrepl for"
+                                                                 (buffer-name (current-buffer)))
+                                            (sly-mrepl-return))))))
   :config
   (setq sly-lisp-implementations
         '((sbcl ("sbcl") :coding-system utf-8-unix))
