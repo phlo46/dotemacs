@@ -481,12 +481,6 @@
   (gptel-make-gemini "Gemini" :key #'gptel-api-key-from-auth-source :stream t)
   (gptel-make-anthropic "Claude" :key #'gptel-api-key-from-auth-source :stream t))
 
-;; github copilot
-(use-package copilot
-  :bind (:map copilot-completion-map
-              ("<tab>" . copilot-accept-completion)
-              ("TAB" . copilot-accept-completion)
-              ("<backtab>" . copilot-accept-completion-by-word)))
 
 ;; II, PROGRAMMING MODE
 ;; ####################
