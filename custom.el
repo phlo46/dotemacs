@@ -29,11 +29,9 @@
  '(mac-option-modifier 'meta)
  '(magit-list-refs-sortby "-committerdate")
  '(major-mode-remap-alist
-   '((python-mode . python-ts-mode)
-     (yaml-mode . yaml-ts-mode)
+   '((python-mode . python-ts-mode) (yaml-mode . yaml-ts-mode)
      (js-json-mode . json-ts-mode)
-     (dockerfile-mode . dockerfile-ts-mode)
-     (go-mode . go-ts-mode)))
+     (dockerfile-mode . dockerfile-ts-mode) (go-mode . go-ts-mode)))
  '(org-agenda-files '("~/Dropbox/org-mode/todo.org"))
  '(shell-pop-shell-type '("shell" "*shell*" (lambda nil (shell))))
  '(sly-net-coding-system 'utf-8-unix)
