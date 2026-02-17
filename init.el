@@ -76,6 +76,13 @@
 (global-unset-key "\C-x\C-z")
 (global-unset-key "\C-x\C-c")
 
+;; switch modifier keys on macOS
+(when (eq system-type 'darwin)
+  (add-hook 'after-init-hook
+            (lambda ()
+              (setq mac-command-modifier 'meta)
+              (setq mac-option-modifier 'super))))
+
 ;; register files
 (set-register ?i '(file . "~/.emacs.d/init.el"))
 
