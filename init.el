@@ -59,7 +59,8 @@
 (savehist-mode 1)
 
 ;; disable title bar
-(set-frame-parameter nil 'undecorated t)
+(when (not (eq window-system 'mac))
+  (set-frame-parameter nil 'undecorated t))
 
 ;; global keys
 (global-set-key (kbd "C-x j") 'eval-print-last-sexp)
