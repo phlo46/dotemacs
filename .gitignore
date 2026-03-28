@@ -35,5 +35,6 @@ projectile.cache
 projects
 recentf
 tramp
+org-roam.db
 
 !straight/versions/default.el
