@@ -162,6 +162,21 @@
         (lambda (lang body)
           (not (member lang (list "sql" "shell" "bash"))))))
 
+;; org-roam
+(use-package org-roam
+  :straight t
+  :after org
+  :custom
+  (org-roam-directory "~/Documents/projects/org-roam")
+  :bind
+  (("C-c n l" . org-roam-buffer-toggle)
+   ("C-c n f" . org-roam-node-find)
+   ("C-c n i" . org-roam-node-insert)
+   ("C-c n g" . org-roam-graph)
+   ("C-c n c" . org-roam-capture))
+  :config
+  (org-roam-db-autosync-mode))
+
 ;; makefile
 (use-package makefile-mode
   :mode (("[Mm]akefile" . makefile-gmake-mode)
