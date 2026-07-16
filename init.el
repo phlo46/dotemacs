@@ -343,6 +343,21 @@
               ("M-p" . vterm-send-up)
               ("M-n" . vterm-send-down)))
 
+;; ghostel
+(use-package ghostel
+  :straight t
+  :bind (:map ghostel-semi-char-mode-map
+              ("C-s"  . consult-line)
+              ("C-k"  . my/ghostel-send-C-k-and-kill)
+              ("M-p" . (lambda () (interactive) (ghostel-send-key "p" "ctrl")))
+              ("M-n" . (lambda () (interactive) (ghostel-send-key "n" "ctrl"))))
+  :config
+  (defun my/ghostel-send-C-k-and-kill ()
+    "Send `C-k' to ghostel. Like normal Emacs `C-k'.  Kill to end of line and put content in kill-ring."
+    (interactive)
+    (kill-ring-save (point) (line-end-position))
+    (ghostel-send-key "k" "ctrl")))
+
 ;; shell-pop
 (use-package shell-pop
   :straight t

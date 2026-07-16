@@ -28,6 +28,7 @@
  ("f.el" . "931b6d0667fe03e7bf1c6c282d6d8d7006143c52")
  ("forge" . "9628f76740aec9270e9fb31457ff4cb38d9f3f16")
  ("geiser" . "84c25e9683a18d00387b6c16b0cee66269536c3c")
+ ("ghostel" . "f77efee9172854abc08652637d23adc26faa25a2")
  ("ghub" . "59d0b9b33e780d6cff5131886904ff26033dd2e6")
  ("gnu-elpa-mirror" . "1a75d552f3501e228e4390e71dc709d1b391dfdc")
  ("go-mode.el" . "3a71d28ab47df685e54ca6046a7a3dd3e28b682c")
