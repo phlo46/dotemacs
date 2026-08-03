@@ -59,7 +59,7 @@
 (savehist-mode 1)
 
 ;; disable title bar
-(when (not (eq window-system 'mac))
+(when (not (member window-system '(mac ns)))
   (set-frame-parameter nil 'undecorated t))
 
 ;; global keys
