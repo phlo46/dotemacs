@@ -58,6 +58,10 @@
 (show-paren-mode 1)
 (savehist-mode 1)
 
+;; fonts
+(when (eq system-type 'gnu/linux)
+  (add-to-list 'default-frame-alist '(font . "JetBrains Mono 10")))
+
 ;; disable title bar
 (when (not (member window-system '(mac ns)))
   (set-frame-parameter nil 'undecorated t))
