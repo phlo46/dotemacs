@@ -21,8 +21,10 @@
  '(ledger-post-auto-align nil)
  '(ledger-report-use-native-highlighting nil)
  '(ledger-reports
-   '(("bal" "ledger [[ledger-mode-flags]] -f ~/Dropbox/ledger/notes.ledger bal Expenses --current --format \"\\\12        %-17((depth_spacer)+(partial_account))\\\12        %10(percent(market(display_total), market(parent.total)))\\\12        %16(market(display_total))\\n%/\"\12")
-     ("reg" "%(binary) -f %(ledger-file) reg --monthly --period-sort \"(amount)\" ^Expenses")
+   '(("bal"
+      "ledger [[ledger-mode-flags]] -f ~/Dropbox/ledger/notes.ledger bal Expenses --current --format \"\\\12        %-17((depth_spacer)+(partial_account))\\\12        %10(percent(market(display_total), market(parent.total)))\\\12        %16(market(display_total))\\n%/\"\12")
+     ("reg"
+      "%(binary) -f %(ledger-file) reg --monthly --period-sort \"(amount)\" ^Expenses")
      ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
      ("account" "%(binary) -f %(ledger-file) reg %(account)")))
  '(mac-command-modifier 'super)
