@@ -12,7 +12,7 @@
  '(copilot-max-char-warning-disable t)
  '(es-always-pretty-print t)
  '(exec-path-from-shell-check-startup-files nil)
- '(ghostel-buffer-name-function 'ghostel-buffer-name-by-directory)
+ '(ghostel-buffer-name-function nil)
  '(gptel-api-key 'gptel-api-key-from-auth-source)
  '(gptel-default-mode 'org-mode)
  '(httpd-port 8100)
