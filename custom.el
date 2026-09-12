@@ -25,8 +25,6 @@
       "%(binary) -f %(ledger-file) reg --monthly --period-sort \"(amount)\" ^Expenses")
      ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
      ("account" "%(binary) -f %(ledger-file) reg %(account)")))
- '(mac-command-modifier 'super)
- '(mac-option-modifier 'meta)
  '(magit-list-refs-sortby "-committerdate")
  '(major-mode-remap-alist
    '((python-mode . python-ts-mode) (yaml-mode . yaml-ts-mode)
