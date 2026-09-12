@@ -27,6 +27,7 @@
  ("exec-path-from-shell" . "7552abf032a383ff761e7d90e6b5cbb4658a728a")
  ("expand-region.el" . "351279272330cae6cecea941b0033a8dd8bcc4e8")
  ("eyebrowse" . "473381f4f9e847eb50a40ef2306c027432789754")
+ ("eyebrowse-restore" . "abb3877e12b41740305741deec37ca681b896e82")
  ("f.el" . "931b6d0667fe03e7bf1c6c282d6d8d7006143c52")
  ("forge" . "7dc4855437315cb932cbc1d6a903f7d2de03ec5f")
  ("geiser" . "584f78b103037e8bc6f4b22a6fae23e09f619d6d")

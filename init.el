@@ -331,6 +331,12 @@
   :config
   (eyebrowse-mode t))
 
+(use-package eyebrowse-restore
+  :straight t
+  :after eyebrowse
+  :config
+  (eyebrowse-restore-mode))
+
 ;; yasnippet
 (use-package yasnippet-snippets
   :straight t
