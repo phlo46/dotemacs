@@ -7,7 +7,6 @@
  '(clean-buffer-list-delay-general 3)
  '(cljr-hotload-dependencies t)
  '(comint-input-ring-size 10000)
- '(es-always-pretty-print t)
  '(exec-path-from-shell-check-startup-files nil)
  '(ghostel-buffer-name-function nil)
  '(gptel-api-key 'gptel-api-key-from-auth-source)
