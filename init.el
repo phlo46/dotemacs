@@ -487,7 +487,7 @@
 
 ;; paredit
 (use-package paredit
-  :straight t
+  :straight (:type git :host github :repo "emacsmirror/paredit")
   :diminish
   :hook ((emacs-lisp-mode eval-expression-minibuffer-setup ielm-mode
           lisp-mode lisp-interaction-mode sly-mode
