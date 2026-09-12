@@ -521,6 +521,7 @@
   :bind (("C-c s-r" . gptel-rewrite)
          ("C-c s-g" . gptel-menu))
   :config
+  (gptel-make-openai "ChatGPT" :key #'gptel-api-key-from-auth-source :stream t)
   (gptel-make-gemini "Gemini" :key #'gptel-api-key-from-auth-source :stream t)
   (gptel-make-anthropic "Claude" :key #'gptel-api-key-from-auth-source :stream t))
 
