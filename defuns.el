@@ -15,11 +15,6 @@
 
 (global-set-key (kbd "C-x |") 'toggle-frame-split)
 
-(defun occur-non-ascii ()
-  "Find any non-ascii characters in the current buffer."
-  (interactive)
-  (occur "[^[:ascii:]]"))
-
 (defun my-short-jira-ticket-link ()
   "Target a link at point of the Jira ticket form. e.g: VB-888
 
