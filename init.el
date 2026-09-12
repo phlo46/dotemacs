@@ -525,6 +525,18 @@
   (gptel-make-gemini "Gemini" :key #'gptel-api-key-from-auth-source :stream t)
   (gptel-make-anthropic "Claude" :key #'gptel-api-key-from-auth-source :stream t))
 
+;; agent-shell
+(use-package agent-shell
+  :straight t
+  :config
+  (add-to-list 'display-buffer-alist
+               '("\\*agent-shell-diff\\*"
+                 (display-buffer-reuse-window
+                  display-buffer-in-direction)
+                 (direction . below)
+                 (dedicated . t)
+                 (inhibit-same-window . t))))
+
 
 ;; II, PROGRAMMING MODE
 ;; ####################
