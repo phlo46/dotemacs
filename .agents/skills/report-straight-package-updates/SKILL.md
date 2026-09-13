@@ -1,6 +1,6 @@
 ---
 name: report-straight-package-updates
-description: Report the commit-level changes represented by updated straight.el package revisions and commit the lockfile with those summaries. Use after a straight package update has changed the lockfile.
+description: Inspect and summarize the content-level changes represented by updated straight.el package revisions, then commit the lockfile with those summaries. Use after a straight package update has changed the lockfile.
 compatibility: Requires Git and local straight repository checkouts under straight/repos.
 ---
 
@@ -19,8 +19,15 @@ Edit these settings when the local layout changes.
 
 1. Start in the Emacs configuration directory. Inspect `git status --short` and compare `HEAD:straight/versions/default.el` with the working-tree lockfile. The old version is the lockfile from the previous update commit; the new version is the lockfile written after the user's package update.
 2. Identify every package whose revision changed, including its old and new revision. If there is no lockfile change, report that and stop.
-3. For each changed package, inspect the corresponding repository under `straight/repos/<package>` and compare its revisions with `git log --oneline <old>..<new>`.
-4. Produce a short report formatted as a ready-to-copy commit message. Use the fixed, capitalized subject line `Scheduled update package versions` with no final period, followed by a blank line. Then write one package summary per line in `package: Summary.` form. Capitalize each summary and end it with a period. Include only those summaries; use the commit ranges only as evidence.
+3. For each changed package, inspect the corresponding repository under `straight/repos/<package>` across the old-to-new revision range:
+
+   - Read the commit subjects with `git log --oneline <old>..<new>`.
+   - Inspect the changed-file list and diff statistics with `git diff --name-status <old>..<new>` and `git diff --stat <old>..<new>`.
+   - Read the substantive file diffs. Give particular attention to user-visible code, documentation, and changed release-note files such as `NEWS`, `CHANGELOG`, or `CHANGES`.
+   - Treat newly added historical release notes as context. Verify against the old revision whether a documented feature is actually new in the selected range.
+   - When commit subjects are generic, derive the summary from the changed content.
+
+4. Produce a short report formatted as a ready-to-copy commit message. Use the fixed, capitalized subject line `Scheduled update package versions` with no final period, followed by a blank line. Then write one package summary per line in `package: Summary.` form. Capitalize each summary and end it with a period. Include only those summaries; use the inspected commit ranges and content as evidence.
 
    ```text
    Scheduled update package versions
@@ -28,6 +35,8 @@ Edit these settings when the local layout changes.
    eyebrowse: Do X.
    vundo: Do Y.
    zenburn-emacs: Do Z.
+
+   Reported and summarized by {{Agent}} ({{Model}}).
    ```
 5. If a local package checkout or either revision is unavailable, use a brief line such as `package: Update could not be summarized from local history.`
 6. Stage `straight/versions/default.el` by its explicit path. Verify that the staged changes contain exactly that lockfile, then create one Git commit using the generated report as its complete commit message.
