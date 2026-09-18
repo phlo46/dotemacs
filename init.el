@@ -530,6 +530,10 @@
 ;; agent-shell
 (use-package agent-shell
   :straight t
+  :bind (("C-c a r" . agent-shell-send-region)
+         ("C-c a R" . agent-shell-send-region-to)
+         ("C-c a f" . agent-shell-send-file)
+         ("C-c a d" . agent-shell-send-dwim))
   :config
   (add-to-list 'display-buffer-alist
                '("\\*agent-shell-diff\\*"
