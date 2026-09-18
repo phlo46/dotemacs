@@ -62,10 +62,6 @@
 (when (eq system-type 'gnu/linux)
   (add-to-list 'default-frame-alist '(font . "JetBrains Mono 10")))
 
-;; disable title bar
-(when (not (member window-system '(mac ns)))
-  (set-frame-parameter nil 'undecorated t))
-
 ;; global keys
 (global-set-key (kbd "C-x j") 'eval-print-last-sexp)
 (global-set-key (kbd "C-c C-p m") 'pp-macroexpand-last-sexp)
