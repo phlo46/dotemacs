@@ -59,8 +59,11 @@
 (savehist-mode 1)
 
 ;; fonts
-(when (eq system-type 'gnu/linux)
+(cond
+ ((eq system-type 'gnu/linux)
   (add-to-list 'default-frame-alist '(font . "JetBrains Mono 10")))
+ ((eq system-type 'darwin)
+  (add-to-list 'default-frame-alist '(font . "JetBrains Mono 12"))))
 
 ;; global keys
 (global-set-key (kbd "C-x j") 'eval-print-last-sexp)
