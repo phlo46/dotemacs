@@ -89,6 +89,7 @@
 
 ;; register files
 (set-register ?i '(file . "~/.emacs.d/init.el"))
+(set-register ?n '(file . "~/Dropbox/ledger/notes.ledger"))
 
 ;; Config emacs env
 (setenv "PYTHONUNBUFFERED" "x")
