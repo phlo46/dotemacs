@@ -276,9 +276,8 @@
          ("M-g M-g" . consult-goto-line)
          ("M-g i" . consult-imenu)
          ("M-g I" . consult-imenu-multi)
-         ;; M-s bindings (search-map)
-         ("s-s l" . consult-line)
-         ("s-s L" . consult-line-multi)
+         ("M-g l" . consult-line)
+         ("M-g L" . consult-line-multi)
          :map isearch-mode-map
          ("M-e" . consult-isearch-history)))
 
@@ -411,7 +410,7 @@
          ("M-g f" . avy-goto-char-2-below)
          ("M-g b" . avy-goto-char-2-above)
          ("C-c C-j" . avy-resume)
-         ("M-g l" . avy-goto-line)
+         ("M-g M-l" . avy-goto-line)
          ("M-g C-l" . avy-goto-char-in-line))
   :config
   (avy-setup-default))
