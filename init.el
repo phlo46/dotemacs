@@ -277,8 +277,6 @@
          ("M-g i" . consult-imenu)
          ("M-g I" . consult-imenu-multi)
          ;; M-s bindings (search-map)
-         ("s-s f" . consult-find)
-         ("s-s r" . consult-ripgrep)
          ("s-s l" . consult-line)
          ("s-s L" . consult-line-multi)
          :map isearch-mode-map
