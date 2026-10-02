@@ -182,6 +182,11 @@
   :config
   (org-roam-db-autosync-mode)
 
+  (setq org-cite-global-bibliography
+        (list
+         (expand-file-name "bibliography/library.bib"
+                           org-roam-directory)))
+
   (when (eq system-type 'darwin)
     (setq org-roam-graph-viewer
           (lambda (file)
