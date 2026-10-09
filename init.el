@@ -718,6 +718,69 @@
       (autoload 'utop-minor-mode "utop" "Minor mode for utop" t)
       (add-hook 'tuareg-mode-hook 'utop-minor-mode))))
 
+;; III, EXTERNAL SYSTEMS
+;; #####################
+
+;; jira
+(use-package jira-issues
+  :straight (jira :host github :repo "unmonoqueteclea/jira.el")
+  :commands (jira-issues)
+  :config
+  (setq jira-base-url
+        (if-let* ((host (getenv "EMACS_MY_JIRA_URL")))
+            (concat "https://" host)
+          (display-warning 'jira "EMACS_MY_JIRA_URL is not set; Jira URLs will not work")
+          ""))
+  (setq jira-token-is-personal-access-token nil
+        jira-api-version 3
+        jira-issues-table-fields
+        '(:key :issue-type-name :status-name :assignee-name :summary))
+
+  ;; One window for all issue details: reuse whichever window already shows a
+  ;; jira-detail-mode buffer instead of splitting.
+  (add-to-list 'display-buffer-alist
+               '("\\`\\*Jira Issue Detail: "
+                 (display-buffer-reuse-window
+                  display-buffer-reuse-mode-window
+                  display-buffer-in-direction)
+                 (mode . jira-detail-mode)
+                 (direction . below)
+                 (window-height . fit-window-to-buffer)))
+
+  ;; Dedicated window for edit/comment buffers: killing the buffer on submit
+  ;; then deletes it, instead of leaving a second window on the detail buffer.
+  (add-to-list 'display-buffer-alist
+               '("\\`\\*Jira \\(?:Description\\|Comment\\)"
+                 (display-buffer-reuse-window
+                  display-buffer-in-direction)
+                 (direction . below)
+                 (dedicated . t)))
+
+  ;; Summary in the buffer name, so completion matches keywords, not just the key
+  (advice-add 'jira-detail--get-issue-buffer :around
+              (lambda (orig key)
+                (let ((prefix (concat "*Jira Issue Detail: [" key "]")))
+                  (or (seq-find (lambda (b) (string-prefix-p prefix (buffer-name b)))
+                                (buffer-list))
+                      (funcall orig key)))))
+
+  (advice-add 'jira-detail--issue :after
+              (lambda (key issue)
+                (when-let* ((summary (alist-get 'summary (alist-get 'fields issue))))
+                  (with-current-buffer (jira-detail--get-issue-buffer key)
+                    (rename-buffer
+                     (format "*Jira Issue Detail: [%s] %s*" key summary) t)))))
+
+  ;; jira.el reads -text- as strikethrough and _text_ as italic with no
+  ;; word-boundary guard, so kebab-case and snake_case get mangled on submit.
+  ;; Drop "-" and "_" as delimiters; accept losing those two marks.
+  (with-eval-after-load 'jira-doc
+    (let ((drop '("-" "_")))
+      (setq jira-doc--marks-delimiters
+            (seq-remove (lambda (d) (member (car d) drop)) jira-doc--marks-delimiters))
+      (setq jira-doc--markup-marks
+            (seq-remove (lambda (m) (member (cadr m) drop)) jira-doc--markup-marks)))))
+
 ;; =================================
 ;; ==== * END DECLARE PACKAGE * ====
 ;; =================================
