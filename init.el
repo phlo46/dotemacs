@@ -546,7 +546,8 @@
   :bind (("C-c a r" . agent-shell-send-region)
          ("C-c a R" . agent-shell-send-region-to)
          ("C-c a f" . agent-shell-send-file)
-         ("C-c a d" . agent-shell-send-dwim))
+         ("C-c a d" . agent-shell-send-dwim)
+         ("C-c a b" . agent-shell-switch-buffer))
   :config
   (add-to-list 'display-buffer-alist
                '("\\*agent-shell-diff\\*"
