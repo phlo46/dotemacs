@@ -644,6 +644,11 @@
                                  (yas-minor-mode 1)
                                  (cljr-add-keybindings-with-prefix "C-c C-m"))))
 
+;; kotlin
+(use-package kotlin-ts-mode
+  :straight (:host gitlab :repo "bricka/emacs-kotlin-ts-mode")
+  :mode "\\.kts?\\'")
+
 ;; yaml-mode
 (use-package yaml-mode
   :straight t

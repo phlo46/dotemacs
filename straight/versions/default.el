@@ -17,6 +17,7 @@
  ("el-get" . "5c1e9c10860f35a1ee6e56b8d19505913b1c2ff2")
  ("elisp-refs" . "541a064c3ce27867872cf708354a65d83baf2a6d")
  ("emacs-async" . "4fdcb061a166e0d6ccc27d3829a28e04415ae825")
+ ("emacs-kotlin-ts-mode" . "292c9a05ff2243c39a48201b277840b1d25e1ea0")
  ("emacs-libvterm" . "6d715a93fa0e5182bc137d4db09f376e06938aa5")
  ("emacs-request" . "c22e3c23a6dd90f64be536e176ea0ed6113a5ba6")
  ("emacs-smart-hungry-delete" . "e06525cc1841805ebe470c876d6b966de90bc275")
