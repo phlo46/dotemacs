@@ -50,8 +50,6 @@
 
 (setq-default indent-tabs-mode nil)
 
-(prefer-coding-system 'utf-8)
-
 (electric-pair-mode 1)
 (show-paren-mode 1)
 (savehist-mode 1)
