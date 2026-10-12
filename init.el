@@ -166,6 +166,11 @@
   :after org
   :custom
   (org-roam-directory "~/Documents/projects/org-roam")
+  (org-roam-capture-templates
+   '(("d" "default" plain "%?"
+      :target (file+head "nodes/%<%Y%m%d%H%M%S>-${slug}.org"
+                         "#+title: ${title}\n")
+      :unnarrowed t)))
   :bind
   (("C-c n l" . org-roam-buffer-toggle)
    ("C-c n f" . org-roam-node-find)
