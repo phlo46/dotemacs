@@ -45,7 +45,7 @@ Edit these settings when the local layout changes.
    Reported and summarized by {{Agent}} ({{Model}}).
    ```
 5. If a local package checkout or either revision is unavailable, use a brief line such as `package: Update could not be summarized from local history.`
-6. Stage `straight/versions/default.el` by its explicit path. Verify that the staged changes contain exactly that lockfile, then create one Git commit using the generated report as its complete commit message.
+6. Stage `straight/versions/default.el` using `-u` (or `-f`, since `.gitignore` covers `straight/` with a negation rule). Verify that the staged changes contain exactly that lockfile, then create one Git commit using the generated report as its complete commit message.
 7. Report the new commit hash and the final `git status --short` output.
 
 ## Safety boundaries
