@@ -1,6 +1,12 @@
 (setq package-enable-at-startup nil)
 
 (menu-bar-mode -1)
+(when (eq system-type 'darwin)
+  ;; ns-win re-enables `menu-bar-mode' during `window-system-initialization'
+  ;; (which runs after `early-init.el' and before `before-init-hook') unless
+  ;; the macOS "Menus" default is explicitly NO.
+  (add-hook 'before-init-hook (lambda () (menu-bar-mode -1))))
+
 (tool-bar-mode -1)
 
 ;; Guard against builds compiled without toolkit scroll bars
