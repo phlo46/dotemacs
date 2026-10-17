@@ -178,19 +178,19 @@
    ("C-c n g" . org-roam-graph)
    ("C-c n c" . org-roam-capture))
   :config
-  (org-roam-db-autosync-mode)
+  (when (eq system-type 'darwin)
+    (setq org-roam-graph-viewer
+          (lambda (file)
+            (start-process "org-roam-graph-firefox" nil
+                           "open" "-a" "Firefox"
+                           (expand-file-name file)))))
 
   (setq org-cite-global-bibliography
         (list
          (expand-file-name "bibliography/library.bib"
                            org-roam-directory)))
 
-  (when (eq system-type 'darwin)
-    (setq org-roam-graph-viewer
-          (lambda (file)
-            (start-process "org-roam-graph-firefox" nil
-                           "open" "-a" "Firefox"
-                           (expand-file-name file))))))
+  (org-roam-db-autosync-mode))
 
 ;; makefile
 (use-package makefile-mode
