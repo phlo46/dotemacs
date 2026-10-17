@@ -29,6 +29,12 @@ Edit these settings when the local layout changes.
 
 4. Produce a short report formatted as a ready-to-copy commit message. Use the fixed, capitalized subject line `Scheduled update package versions` with no final period, followed by a blank line. Then write one package summary per line in `package: Summary.` form. Capitalize each summary and end it with a period. Include only those summaries; use the inspected commit ranges and content as evidence.
 
+   At the end of the commit message, include an attribution line formatted as:
+   `Reported and summarized by {{Agent}} ({{Model}}).`
+   - Use the agent's display name for `{{Agent}}` (e.g. `Claude`, `Codex`, `Antigravity`).
+   - Use the full, canonical model name for `{{Model}}` (e.g. `Claude Sonnet 4.5`, `GPT-6`, `Gemini 4 Argon`).
+   - **Do not include** thought/reasoning level qualifiers (e.g., omit `High`, `Low`, or `-high`).
+
    ```text
    Scheduled update package versions
 
