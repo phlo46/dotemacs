@@ -382,11 +382,11 @@
   :straight t
   :bind (:map ghostel-semi-char-mode-map
               ("C-s"  . consult-line)
-              ("C-k"  . my/ghostel-send-C-k-and-kill)
+              ("C-k"  . phlo/ghostel-send-C-k-and-kill)
               ("M-p" . (lambda () (interactive) (ghostel-send-key "p" "ctrl")))
               ("M-n" . (lambda () (interactive) (ghostel-send-key "n" "ctrl"))))
   :config
-  (defun my/ghostel-send-C-k-and-kill ()
+  (defun phlo/ghostel-send-C-k-and-kill ()
     "Send `C-k' to ghostel. Like normal Emacs `C-k'.  Kill to end of line and put content in kill-ring."
     (interactive)
     (kill-ring-save (point) (line-end-position))
@@ -632,12 +632,12 @@
       (when (load clhs-local t)
 
         ;;; look up Hyperspec inside emacs
-        (defun sly-hyperspec-lookup-eww ()
+        (defun phlo/sly-hyperspec-lookup-eww ()
           (interactive)
           (let ((browse-url-browser-function 'eww-browse-url))
             (call-interactively sly-documentation-lookup-function)))
 
-        (define-key sly-doc-map (kbd "l") 'sly-hyperspec-lookup-eww)))))
+        (define-key sly-doc-map (kbd "l") 'phlo/sly-hyperspec-lookup-eww)))))
 
 (use-package sly-repl-ansi-color
   :straight t
