@@ -7,10 +7,6 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
-;; Load my custom functions
-(setq defuns-file (expand-file-name "defuns.el" user-emacs-directory))
-(load defuns-file)
-
 ;; ===========================
 ;; ==== * SYSTEM CONFIG * ====
 ;; ===========================
