@@ -540,7 +540,7 @@
 ;; browse-at-remote
 (use-package browse-at-remote
   :straight t
-  :commands browse-at-remote)
+  :defer t)
 
 ;; gptel
 (use-package gptel
