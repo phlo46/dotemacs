@@ -306,7 +306,24 @@
   :bind (("C-'" . embark-act)
          ("C-;" . embark-dwim))
   :config
-  (add-to-list 'embark-target-finders 'my-short-jira-ticket-link))
+  (defun phlo/jira-ticket-short-link ()
+    "Target a link at point of the Jira ticket form. e.g: VB-888
+
+   Env var EMACS_MY_JIRA_URL needs to be set with a
+   domain (without https://) such as: my-url.atlassian.net"
+    (save-excursion
+      (let* ((beg (progn (skip-chars-backward "[:alnum:]-") (point)))
+             (end (progn (skip-chars-forward "[:alnum:]-") (point)))
+             (str (buffer-substring-no-properties beg end)))
+        (save-match-data
+          (when (string-match "[[:upper:]]+-[[:digit:]]+" str)
+            `(url
+              ,(format "https://%s/browse/%s"
+                       (getenv "EMACS_MY_JIRA_URL")
+                       (match-string 0 str))
+              ,beg . ,end))))))
+
+  (add-to-list 'embark-target-finders 'phlo/jira-ticket-short-link))
 
 (use-package embark-consult
   :straight t
