@@ -511,8 +511,7 @@
   :straight (ws-butler :type git :host github
                        :repo "lewang/ws-butler" :branch "master")
   :diminish
-  :config
-  (ws-butler-global-mode))
+  :hook (prog-mode . ws-butler-mode))
 
 ;; paredit
 (use-package paredit
