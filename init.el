@@ -500,12 +500,11 @@
 ;; smart-hungry-delete
 (use-package smart-hungry-delete
   :straight t
-  :defer nil ;; dont defer so we can add our functions to hooks
+  :init
+  (smart-hungry-delete-add-default-hooks)
   :bind (:map prog-mode-map
          ("<s-backspace>" . smart-hungry-delete-backward-char)
-         ("C-d" . smart-hungry-delete-forward-char))
-  :config
-  (smart-hungry-delete-add-default-hooks))
+         ("C-d" . smart-hungry-delete-forward-char)))
 
 ;; cleanup whitespace on only touched lines
 (use-package ws-butler
