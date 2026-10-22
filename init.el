@@ -410,14 +410,6 @@
   (setq deadgrep-executable "rg")
   (setq deadgrep-max-buffers 20))
 
-;; wgrep
-(use-package wgrep
-  :straight t
-  :commands wgrep-change-to-wgrep-mode
-  :config
-  (setq wgrep-auto-save-buffer t
-        wgrep-change-readonly-file t))
-
 ;; avy
 (use-package avy
   :straight t

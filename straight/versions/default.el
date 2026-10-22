@@ -1,5 +1,4 @@
-(("Emacs-wgrep" . "49f09ab9b706d2312cab1199e1eeb1bcd3f27f6f")
- ("ace-link" . "d9bd4a25a02bdfde4ea56247daf3a9ff15632ea4")
+(("ace-link" . "d9bd4a25a02bdfde4ea56247daf3a9ff15632ea4")
  ("acp.el" . "5b3abb2956d16f39ed76bc53fe31d3c2ee7fecfd")
  ("agent-shell" . "63401768b28d956157c4d78dc2be0e2136cc81ce")
  ("avy" . "933d1f36cca0f71e4acb5fac707e9ae26c536264")
