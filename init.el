@@ -142,7 +142,6 @@
 
 ;; org-mode
 (use-package org
-  :straight t
   :bind (:map org-mode-map
               ("C-'" . nil))
   :config

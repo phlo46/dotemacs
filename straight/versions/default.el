@@ -54,7 +54,6 @@
  ("multiple-cursors.el" . "6086e34e86cc9c305c693f440e648588335669c9")
  ("nongnu-elpa" . "9b4684a9e33df2aabcbee85bd23e7386ca3f4273")
  ("orderless" . "e271a8ec938929b726331236cf56d1c44571122e")
- ("org" . "4f76140aad43a23d8bb07fc6192887861f4844ed")
  ("org-roam" . "903bd4ec56d29247990d005ed9052c201e18b812")
  ("paredit" . "af075775af91f2dbc63b915d762b4aec092946c4")
  ("project" . "ffb38d7798d86c7fa6623db0f64b461abb6572c2")
