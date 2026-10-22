@@ -17,9 +17,6 @@
 ;; ===========================
 ;; ======== * INIT * =========
 ;; ===========================
-(use-package bind-key
-  :straight t)
-
 (use-package diminish
   :straight t)
 

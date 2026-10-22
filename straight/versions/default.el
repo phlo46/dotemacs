@@ -3,7 +3,6 @@
  ("acp.el" . "5b3abb2956d16f39ed76bc53fe31d3c2ee7fecfd")
  ("agent-shell" . "63401768b28d956157c4d78dc2be0e2136cc81ce")
  ("avy" . "933d1f36cca0f71e4acb5fac707e9ae26c536264")
- ("bind-key" . "6ff8788e347ce31b5c3c4647c2e22e7ee2c5ab7c")
  ("browse-at-remote" . "38e5ffd77493c17c821fd88f938dbf42705a5158")
  ("closql" . "48955ae02cfc7dad93b6bdc9ffd8d4b760dfb62b")
  ("compat" . "9f8a565ad8c9617a6f006115f50f4cf63286ec83")
