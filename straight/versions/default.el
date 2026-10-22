@@ -19,7 +19,6 @@
  ("emacs-libvterm" . "6d715a93fa0e5182bc137d4db09f376e06938aa5")
  ("emacs-request" . "c22e3c23a6dd90f64be536e176ea0ed6113a5ba6")
  ("emacs-smart-hungry-delete" . "e06525cc1841805ebe470c876d6b966de90bc275")
- ("emacs-sqlite3-api" . "615cc1cb021384291cec39a2048a3a36859e8cb9")
  ("emacsmirror-mirror" . "e938d9d807d3ba13496b592a52f0721529e45481")
  ("emacsql" . "7a4c607912c8fdd1fca4def4915d68f43b12d4da")
  ("embark" . "87e53827cf6659dcc4ac4e54be9af34aeca44f6e")
