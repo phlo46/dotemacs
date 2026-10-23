@@ -1,24 +1,12 @@
 ;;; package manager
-(defvar bootstrap-version)
-(let ((bootstrap-file
-       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
-      (bootstrap-version 5))
-  (unless (file-exists-p bootstrap-file)
-    (with-current-buffer
-        (url-retrieve-synchronously
-         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
-         'silent 'inhibit-cookies)
-      (goto-char (point-max))
-      (eval-print-last-sexp)))
-  (load bootstrap-file nil 'nomessage))
-
-(straight-use-package '(use-package :type built-in))
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
 ;; ===========================
 ;; ======== * INIT * =========
 ;; ===========================
 (use-package diminish
-  :straight t)
+  :vc (:rev "0.47"))
 
 ;; Keep emacs custom-settings in a separate file
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Customizations.html
@@ -158,7 +146,7 @@
 
 ;; org-roam
 (use-package org-roam
-  :straight t
+  :vc (:rev "v2.3.1")
   :after org
   :custom
   (org-roam-directory "~/Documents/projects/org-roam")
@@ -225,13 +213,13 @@
 
 ;; zenburn theme
 (use-package zenburn-theme
-  :straight t
+  :vc (:rev "v2.11.0")
   :config
   (load-theme 'zenburn t))
 
 ;; visual undo
 (use-package vundo
-  :straight t
+  :vc (:rev "v2.5.0")
   :bind ("C-x u" . vundo))
 
 ;; ibuffer
@@ -240,7 +228,7 @@
 
 ;; helpful
 (use-package helpful
-  :straight t
+  :vc (:rev "03756fa6ad4dcca5e0920622b1ee3f70abfc4e39")
   :bind (("C-c C-d" . helpful-at-point)
          ("C-h v" . helpful-variable)
          ("C-h k" . helpful-key)
@@ -249,20 +237,20 @@
 
 ;; vertico
 (use-package vertico
-  :straight t
+  :vc (:rev "2.15")
   :init
   (vertico-mode))
 
 ;; orderless completion style
 (use-package orderless
-  :straight t
+  :vc (:rev "1.8")
   :init
   (setq completion-styles '(orderless basic)
         completion-category-overrides '((file (styles basic partial-completion)))))
 
 ;; consult completing-read
 (use-package consult
-  :straight t
+  :vc (:rev "3.10")
   :bind (; C-c bindings in `mode-specific-map'
          ("C-c h" . consult-history)
          ;; C-x bindings (ctl-x-map)
@@ -281,7 +269,7 @@
 
 ;; marginalia in the minibuffer
 (use-package marginalia
-  :straight t
+  :vc (:rev "2.13")
   :init
   (marginalia-mode)
   :bind (:map minibuffer-local-map
@@ -289,15 +277,19 @@
 
 ;; completion overlay region function
 (use-package corfu
-  :straight t
+  :vc (:rev "2.16")
   :custom
   (corfu-auto t)
   :init
+  (when-let* ((dir (locate-library "corfu"))
+              (ext (expand-file-name "extensions" (file-name-directory dir))))
+    (when (file-directory-p ext)
+      (add-to-list 'load-path ext)))
   (global-corfu-mode))
 
 ;; embark: Emacs Mini-Buffer Actions Rooted in Keymaps
 (use-package embark
-  :straight t
+  :vc (:rev "1.2")
   :bind (("C-'" . embark-act)
          ("C-;" . embark-dwim))
   :config
@@ -321,12 +313,12 @@
   (add-to-list 'embark-target-finders 'phlo/jira-ticket-short-link))
 
 (use-package embark-consult
-  :straight t
+  :vc (:rev "1.2")
   :after (embark consult))
 
 ;; highlight thing
 (use-package highlight-thing
-  :straight t
+  :vc (:rev "fd0309e72727e5332be3397e15edb035b426dd0b")
   :diminish
   :config
   (global-highlight-thing-mode)
@@ -336,7 +328,7 @@
 
 ;; eyebrowse
 (use-package eyebrowse
-  :straight t
+  :vc (:rev "473381f4f9e847eb50a40ef2306c027432789754")
   :bind (("s-1" . eyebrowse-switch-to-window-config-1)
          ("s-2" . eyebrowse-switch-to-window-config-2)
          ("s-3" . eyebrowse-switch-to-window-config-3)
@@ -351,14 +343,14 @@
   (eyebrowse-mode t))
 
 (use-package eyebrowse-restore
-  :straight t
+  :vc (:rev "abb3877e12b41740305741deec37ca681b896e82")
   :after eyebrowse
   :config
   (eyebrowse-restore-mode))
 
 ;; yasnippet
 (use-package yasnippet-snippets
-  :straight t
+  :vc (:rev "1.1")
   :defer 3
   :diminish yasnippet-snippets-mode
   :diminish yas-minor-mode
@@ -367,14 +359,14 @@
 
 ;; vterm
 (use-package vterm
-  :straight t
+  :vc (:rev "6d715a93fa0e5182bc137d4db09f376e06938aa5")
   :bind (:map vterm-mode-map
               ("M-p" . vterm-send-up)
               ("M-n" . vterm-send-down)))
 
 ;; ghostel
 (use-package ghostel
-  :straight t
+  :vc (:rev "v0.58.0")
   :bind (:map ghostel-semi-char-mode-map
               ("C-s"  . consult-line)
               ("C-k"  . phlo/ghostel-send-C-k-and-kill)
@@ -389,12 +381,12 @@
 
 ;; shell-pop
 (use-package shell-pop
-  :straight t
+  :vc (:rev "0.70")
   :bind ("C-s-t" . shell-pop))
 
 ;; exec-path-from-file mac os x
 (use-package exec-path-from-shell
-  :straight t
+  :vc (:rev "2.3")
   :defer 3
   :config
   (dolist (var '("LANG" "GOPATH" "SSH_AGENT_PID" "SSH_AUTH_SOCK"))
@@ -403,7 +395,7 @@
 
 ;; rgrep
 (use-package deadgrep
-  :straight t
+  :vc (:rev "0.13")
   :bind (("<f5>" . deadgrep)
          ("M-s-s" . deadgrep))
   :config
@@ -412,7 +404,7 @@
 
 ;; avy
 (use-package avy
-  :straight t
+  :vc (:rev "0.5.0")
   :bind (("M-g a" . avy-goto-char)
          ("M-g f" . avy-goto-char-2-below)
          ("M-g b" . avy-goto-char-2-above)
@@ -424,14 +416,14 @@
 
 ;; ace-link
 (use-package ace-link
-  :straight t
+  :vc (:rev "d9bd4a25a02bdfde4ea56247daf3a9ff15632ea4")
   :after avy
   :config
   (ace-link-setup-default))
 
 ;; psession
 (use-package psession
-  :straight t
+  :vc (:rev "ebe81c18f94bb74e0b795bbe6d4fa9284ccbbf5e")
   :diminish
   :config
   (psession-mode 1)
@@ -439,18 +431,18 @@
 
 ;; magit
 (use-package magit
-  :straight (:branch "main")
+  :vc (:rev "v4.7.1")
   :bind (("C-x g" . magit-status)
          ("C-c b" . magit-blame)))
 
 ;; forge
 (use-package forge
-  :straight (:branch "main")
+  :vc (:rev "v0.6.9")
   :after magit)
 
 ;; multiple cursors
 (use-package multiple-cursors
-  :straight t
+  :vc (:rev "94b8b07a4bab87f803123723b68227565429dfa1")
   :bind (("C-S-c C-S-c" . mc/edit-lines)
          ("C->" . mc/mark-next-like-this)
          ("C-<" . mc/mark-previous-like-this)
@@ -459,12 +451,12 @@
 
 ;; go to last change
 (use-package goto-last-change
-  :straight t
+  :vc (:rev "v1.2.1")
   :bind ("C-c s-\\" . goto-last-change))
 
 ;; expand-region
 (use-package expand-region
-  :straight t
+  :vc (:rev "351279272330cae6cecea941b0033a8dd8bcc4e8")
   :bind (("C-= r" . er/expand-region)
          ("C-= d" . er/mark-defun)
          ("C-= s" . er/mark-symbol)
@@ -476,13 +468,13 @@
 
 ;; add/change/delete pairs based on expand-region
 (use-package embrace
-  :straight t
+  :vc (:rev "0.1.4")
   :after expand-region
   :bind ("C-," . embrace-commander))
 
 ;; smart-hungry-delete
 (use-package smart-hungry-delete
-  :straight t
+  :vc (:rev "e06525cc1841805ebe470c876d6b966de90bc275")
   :init
   (smart-hungry-delete-add-default-hooks)
   :bind (:map prog-mode-map
@@ -491,14 +483,14 @@
 
 ;; cleanup whitespace on only touched lines
 (use-package ws-butler
-  :straight (ws-butler :type git :host github
-                       :repo "lewang/ws-butler" :branch "master")
+  :vc (:url "https://github.com/lewang/ws-butler.git"
+       :rev "v1.3")
   :diminish
   :hook (prog-mode . ws-butler-mode))
 
 ;; paredit
 (use-package paredit
-  :straight (:type git :host github :repo "emacsmirror/paredit")
+  :vc (:rev "v26")
   :diminish
   :hook ((emacs-lisp-mode eval-expression-minibuffer-setup ielm-mode
           lisp-mode lisp-interaction-mode sly-mode
@@ -508,7 +500,7 @@
 
 ;; ledger
 (use-package ledger-mode
-  :straight t
+  :vc (:rev "9539ff67a9ac491be4b382530bdbba9558379700")
   :mode "\\.ledger\\'")
 
 ;; gitlab ci
@@ -521,12 +513,12 @@
 
 ;; browse-at-remote
 (use-package browse-at-remote
-  :straight t
+  :vc (:rev "38e5ffd77493c17c821fd88f938dbf42705a5158")
   :defer t)
 
 ;; gptel
 (use-package gptel
-  :straight t
+  :vc (:rev "v0.9.9.6")
   :hook ((gptel-mode . visual-line-mode))
   :bind (("C-c s-r" . gptel-rewrite)
          ("C-c s-g" . gptel-menu))
@@ -537,7 +529,7 @@
 
 ;; agent-shell
 (use-package agent-shell
-  :straight t
+  :vc (:rev "v0.89.1")
   :bind (("C-c a r" . agent-shell-send-region)
          ("C-c a R" . agent-shell-send-region-to)
          ("C-c a f" . agent-shell-send-file)
@@ -558,7 +550,7 @@
 
 ;; dockerfile mode
 (use-package dockerfile-mode
-  :straight t
+  :vc (:rev "97733ce074b1252c1270fd5e8a53d178b66668ed")
   :mode "Dockerfile.*\\'")
 
 ;; racket
@@ -584,7 +576,7 @@
 
 ;; common Lisp
 (use-package sly
-  :straight t
+  :vc (:rev "9b3477a5dc6c9a4496d4fbb6804349961e861835")
   :defer t
   :diminish
   :bind (:map sly-mode-map
@@ -638,17 +630,17 @@
 
 ;; kotlin
 (use-package kotlin-ts-mode
-  :straight (:host gitlab :repo "bricka/emacs-kotlin-ts-mode")
+  :vc (:rev "292c9a05ff2243c39a48201b277840b1d25e1ea0")
   :mode "\\.kts?\\'")
 
 ;; yaml-mode
 (use-package yaml-mode
-  :straight t
+  :vc (:rev "93dba98c050e9abfc623ec66aa499dbbb46b2fe1")
   :mode "\\.yml\\'")
 
 ;; terraform
 (use-package terraform-mode
-  :straight t
+  :vc (:rev "1.1.0")
   :mode "\\.tf\\'")
 
 ;; markdown mode
@@ -682,7 +674,7 @@
 
 ;; go
 (use-package go-mode
-  :straight t
+  :vc (:rev "8aaaa9d2574d7862ecbbe1ff369e88fe3796c8be")
   :mode "\\*\\.go")
 
 ;; C/C++
@@ -720,7 +712,7 @@
 
 ;; jira
 (use-package jira-issues
-  :straight (jira :host github :repo "unmonoqueteclea/jira.el")
+  :vc (jira :rev "v2.23.0")
   :commands (jira-issues)
   :config
   (setq jira-base-url

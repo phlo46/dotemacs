@@ -30,13 +30,22 @@
      (js-json-mode . json-ts-mode)
      (dockerfile-mode . dockerfile-ts-mode) (go-mode . go-ts-mode)))
  '(org-agenda-files '("~/Dropbox/org-mode/todo.org"))
+ '(package-selected-packages
+   '(ace-link agent-shell avy browse-at-remote consult corfu deadgrep
+              diminish dockerfile-mode embark embark-consult embrace
+              exec-path-from-shell expand-region eyebrowse
+              eyebrowse-restore forge ghostel go-mode goto-last-change
+              gptel helpful highlight-thing jira-issues kotlin-ts-mode
+              ledger-mode magit marginalia multiple-cursors orderless
+              org-roam paredit psession shell-pop sly
+              smart-hungry-delete terraform-mode vertico vterm vundo
+              ws-butler yaml-mode yasnippet-snippets zenburn-theme))
  '(shell-pop-shell-type
    '("ghostel" "*ghostel*"
      (lambda nil
        (when (fboundp 'ghostel)
          (let ((ghostel-shell shell-pop-term-shell)) (ghostel))))))
  '(sly-net-coding-system 'utf-8-unix)
- '(straight-recipes-gnu-elpa-use-mirror t)
  '(tramp-default-method "ssh")
  '(undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo"))))
 
