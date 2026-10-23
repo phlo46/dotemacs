@@ -619,7 +619,6 @@
         (define-key sly-doc-map (kbd "l") 'phlo/sly-hyperspec-lookup-eww)))))
 
 (use-package sly-repl-ansi-color
-  :straight t
   :after sly
   :config
   (add-to-list 'sly-contribs 'sly-repl-ansi-color))

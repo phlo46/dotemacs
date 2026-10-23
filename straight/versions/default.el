@@ -58,7 +58,6 @@
  ("shell-pop-el" . "446b1691454e65be648dcb7e316639aa7dd73be2")
  ("sly" . "9b3477a5dc6c9a4496d4fbb6804349961e861835")
  ("sly-macrostep" . "5113e4e926cd752b1d0bcc1508b3ebad5def5fad")
- ("sly-repl-ansi-color" . "b9cd52d1cf927bf7e08582d46ab0bcf1d4fb5048")
  ("spinner" . "fa117f0893788f3fe24673715a6b83bb34d238dd")
  ("straight.el" . "a784c61d88c7ed1eb58fc4d325954db44a2e98de")
  ("tablist" . "01f065e387ffe6b7a41f180f257cd12551c7a9c2")
