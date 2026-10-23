@@ -572,7 +572,6 @@
   :mode ("\\.scm\\'" . scheme-mode))
 
 (use-package geiser
-  :straight t
   :after scheme
   :commands (run-geiser run-racket run-guile run-chicken)
   :hook (scheme-mode . geiser-mode)
