@@ -624,7 +624,6 @@
   (add-to-list 'sly-contribs 'sly-repl-ansi-color))
 
 (use-package sly-macrostep
-  :straight t
   :after sly)
 
 ;; clojure cider
