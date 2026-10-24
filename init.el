@@ -318,11 +318,12 @@
 (use-package highlight-thing
   :vc (:rev "fd0309e72727e5332be3397e15edb035b426dd0b")
   :diminish
+  :custom
+  (highlight-thing-case-sensitive-p t)
+  (highlight-thing-exclude-thing-under-point t)
+  (highlight-thing-limit-to-defun t)
   :config
-  (global-highlight-thing-mode)
-  (setq highlight-thing-case-sensitive-p t)
-  (setq highlight-thing-exclude-thing-under-point t)
-  (setq highlight-thing-limit-to-defun t))
+  (global-highlight-thing-mode))
 
 ;; eyebrowse
 (use-package eyebrowse
