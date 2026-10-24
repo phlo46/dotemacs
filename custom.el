@@ -5,7 +5,6 @@
  ;; If there is more than one, they won't work right.
  '(browse-at-remote-prefer-symbolic nil)
  '(clean-buffer-list-delay-general 3)
- '(cljr-hotload-dependencies t)
  '(comint-input-ring-size 10000)
  '(exec-path-from-shell-check-startup-files nil)
  '(ghostel-buffer-name-function nil)
@@ -13,7 +12,6 @@
  '(gptel-default-mode 'org-mode)
  '(httpd-port 8100)
  '(js-indent-level 4)
- '(js2-include-node-externs t)
  '(ledger-accounts-file "~/Dropbox/ledger/Accounts.dat")
  '(ledger-post-auto-align nil)
  '(ledger-report-use-native-highlighting nil)
@@ -46,8 +44,7 @@
        (when (fboundp 'ghostel)
          (let ((ghostel-shell shell-pop-term-shell)) (ghostel))))))
  '(sly-net-coding-system 'utf-8-unix)
- '(tramp-default-method "ssh")
- '(undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo"))))
+ '(tramp-default-method "ssh"))
 
 
 (custom-set-faces
