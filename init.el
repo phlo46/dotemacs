@@ -59,7 +59,7 @@
    ((eq system-type 'gnu/linux)
     (add-to-list 'default-frame-alist '(font . "JetBrains Mono 10")))
    ((eq system-type 'darwin)
-    (add-to-list 'default-frame-alist '(font . "JetBrains Mono 12"))))
+    (add-to-list 'default-frame-alist '(font . "JetBrains Mono 13"))))
 
   ;; switch modifier keys on macOS
   (when (eq system-type 'darwin)
