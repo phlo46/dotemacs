@@ -606,15 +606,9 @@
 (use-package sly-macrostep
   :after sly)
 
-;; clojure cider
-(use-package clj-refactor
-  :defer t
-  :diminish
-  :init
-  (add-hook 'clojure-mode-hook (lambda ()
-                                 (clj-refactor-mode 1)
-                                 (yas-minor-mode 1)
-                                 (cljr-add-keybindings-with-prefix "C-c C-m"))))
+;; clojure
+(use-package clojure-mode
+  :defer t)
 
 ;; kotlin
 (use-package kotlin-ts-mode
