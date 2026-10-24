@@ -34,7 +34,7 @@
    '(ace-link agent-shell avy browse-at-remote consult consult-ghostel corfu deadgrep
               diminish dockerfile-mode embark embark-consult embrace
               exec-path-from-shell expand-region eyebrowse
-              eyebrowse-restore forge ghostel go-mode goto-last-change
+              eyebrowse-restore forge ghostel goto-last-change
               gptel helpful highlight-thing jira-issues kotlin-ts-mode
               ledger-mode magit marginalia multiple-cursors orderless
               org-roam paredit shell-pop sly

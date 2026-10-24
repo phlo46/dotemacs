@@ -640,11 +640,6 @@
   :custom
   (ruby-insert-encoding-magic-comment nil))
 
-;; go
-(use-package go-mode
-  :vc (:rev "8aaaa9d2574d7862ecbbe1ff369e88fe3796c8be")
-  :mode "\\*\\.go")
-
 ;; C/C++
 (use-package cmake-mode
   :mode ("CMakeLists\\.txt\\'" "\\.cmake\\'"))
