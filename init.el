@@ -385,6 +385,14 @@
   (add-to-list 'project-switch-commands '(ghostel-project "Ghostel") t)
   (add-to-list 'project-switch-commands '(ghostel-project-list-buffers "Ghostel buffers") t))
 
+(use-package consult-ghostel
+  :hook (after-init . consult-ghostel-mode)
+  :bind (("C-x m" . consult-ghostel)
+         :map project-prefix-map
+         ("m" . consult-ghostel-project)
+         :map ghostel-semi-char-mode-map
+         ("C-c h" . consult-ghostel-history)))
+
 ;; shell-pop
 (use-package shell-pop
   :vc (:rev "0.70")

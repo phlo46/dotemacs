@@ -29,7 +29,7 @@
      (dockerfile-mode . dockerfile-ts-mode) (go-mode . go-ts-mode)))
  '(org-agenda-files '("~/Dropbox/org-mode/todo.org"))
  '(package-selected-packages
-   '(ace-link agent-shell avy browse-at-remote consult corfu deadgrep
+   '(ace-link agent-shell avy browse-at-remote consult consult-ghostel corfu deadgrep
               diminish dockerfile-mode embark embark-consult embrace
               exec-path-from-shell expand-region eyebrowse
               eyebrowse-restore forge ghostel go-mode goto-last-change
