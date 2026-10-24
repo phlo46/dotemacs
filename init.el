@@ -364,7 +364,7 @@
 
 ;; ghostel
 (use-package ghostel
-  :vc (:rev "v0.58.0")
+  :vc (:rev "v0.59.0")
   :bind (:map ghostel-semi-char-mode-map
               ("C-s"  . consult-line)
               ("C-k"  . phlo/ghostel-send-C-k-and-kill)
@@ -376,6 +376,14 @@
     (interactive)
     (kill-ring-save (point) (line-end-position))
     (ghostel-send-key "k" "ctrl")))
+
+(use-package ghostel-project
+  :bind (:map project-prefix-map
+         ("m" . ghostel-project)
+         ("M" . ghostel-project-list-buffers))
+  :config
+  (add-to-list 'project-switch-commands '(ghostel-project "Ghostel") t)
+  (add-to-list 'project-switch-commands '(ghostel-project-list-buffers "Ghostel buffers") t))
 
 ;; shell-pop
 (use-package shell-pop
