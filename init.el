@@ -546,11 +546,6 @@
 ;; II, PROGRAMMING MODE
 ;; ####################
 
-;; dockerfile mode
-(use-package dockerfile-mode
-  :vc (:rev "97733ce074b1252c1270fd5e8a53d178b66668ed")
-  :mode "Dockerfile.*\\'")
-
 ;; racket
 (use-package racket-mode
   :mode "\\.rkt\\'"
