@@ -634,12 +634,6 @@
   :vc (:rev "1.1.0"))
 
 
-;; python
-(use-package python
-  :diminish
-  :mode ("\\.py\\'" . python-mode)
-  :interpreter ("python" . python-mode))
-
 ;; ruby
 (use-package ruby-mode
   :defer t
