@@ -14,7 +14,6 @@
 ;; ===========================
 (use-package emacs
   :custom
-  (tags-add-tables nil)
   (ring-bell-function 'ignore)
   ;; place auto-save file to $TMPDIR
   (backup-directory-alist `((".*" . ,temporary-file-directory)))
