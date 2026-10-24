@@ -634,10 +634,9 @@
 
 ;; ruby
 (use-package ruby-mode
-  :mode "\\.rb\\'"
-  :interpreter "ruby"
-  :config
-  (setq ruby-insert-encoding-magic-comment nil))
+  :defer t
+  :custom
+  (ruby-insert-encoding-magic-comment nil))
 
 ;; go
 (use-package go-mode
