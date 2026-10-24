@@ -443,11 +443,8 @@
 ;; multiple cursors
 (use-package multiple-cursors
   :vc (:rev "94b8b07a4bab87f803123723b68227565429dfa1")
-  :bind (("C-S-c C-S-c" . mc/edit-lines)
-         ("C->" . mc/mark-next-like-this)
-         ("C-<" . mc/mark-previous-like-this)
-         ("C-c s-<" . mc/mark-all-like-this)
-         ("C-c s-s" . mc/mark-all-symbols-like-this-in-defun)))
+  :bind (("C->" . mc/mark-next-like-this)
+         ("C-<" . mc/mark-previous-like-this)))
 
 ;; go to last change
 (use-package goto-last-change
