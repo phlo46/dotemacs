@@ -175,9 +175,10 @@
   (org-roam-db-autosync-mode))
 
 ;; makefile
-(use-package makefile-mode
-  :mode (("[Mm]akefile" . makefile-gmake-mode)
-         ("\\.mk$" . makefile-gmake-mode)))
+(use-package make-mode
+  ;; default to GNU Make on macOS instead of makefile-bsdmake-mode
+  :mode (("[Mm]akefile\\'" . makefile-gmake-mode)
+         ("\\.mk\\'" . makefile-gmake-mode)))
 
 ;; flymake - universal on-the-fly syntax checker
 (use-package flymake
