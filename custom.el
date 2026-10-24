@@ -39,7 +39,7 @@
               ledger-mode magit marginalia multiple-cursors orderless
               org-roam paredit shell-pop sly
               smart-hungry-delete terraform-mode vertico vterm vundo
-              ws-butler yaml-mode yasnippet-snippets zenburn-theme))
+              ws-butler yasnippet-snippets zenburn-theme))
  '(shell-pop-shell-type
    '("ghostel" "*ghostel*"
      (lambda nil

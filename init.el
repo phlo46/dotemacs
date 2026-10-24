@@ -624,11 +624,6 @@
   :vc (:rev "292c9a05ff2243c39a48201b277840b1d25e1ea0")
   :mode "\\.kts?\\'")
 
-;; yaml-mode
-(use-package yaml-mode
-  :vc (:rev "93dba98c050e9abfc623ec66aa499dbbb46b2fe1")
-  :mode "\\.yml\\'")
-
 ;; terraform
 (use-package terraform-mode
   :vc (:rev "1.1.0"))
