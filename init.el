@@ -148,6 +148,12 @@
   :after org
   :custom
   (org-roam-directory "~/Documents/projects/org-roam")
+  (org-roam-graph-viewer
+   (when (eq system-type 'darwin)
+     (lambda (file)
+       (start-process "org-roam-graph-firefox" nil
+                      "open" "-a" "Firefox"
+                      (expand-file-name file)))))
   (org-roam-capture-templates
    '(("d" "default" plain "%?"
       :target (file+head "nodes/%<%Y%m%d%H%M%S>-${slug}.org"
@@ -160,13 +166,6 @@
    ("C-c n g" . org-roam-graph)
    ("C-c n c" . org-roam-capture))
   :config
-  (when (eq system-type 'darwin)
-    (setq org-roam-graph-viewer
-          (lambda (file)
-            (start-process "org-roam-graph-firefox" nil
-                           "open" "-a" "Firefox"
-                           (expand-file-name file)))))
-
   (setq org-cite-global-bibliography
         (list
          (expand-file-name "bibliography/library.bib"
