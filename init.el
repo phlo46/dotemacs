@@ -622,8 +622,7 @@
 
 ;; terraform
 (use-package terraform-mode
-  :vc (:rev "1.1.0")
-  :mode "\\.tf\\'")
+  :vc (:rev "1.1.0"))
 
 
 ;; python
