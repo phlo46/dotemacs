@@ -29,7 +29,6 @@
 (use-package emacs
   :custom
   (tags-add-tables nil)
-  (ansi-color-for-comint-mode t)
   (ring-bell-function 'ignore)
   ;; place auto-save file to $TMPDIR
   (backup-directory-alist `((".*" . ,temporary-file-directory)))
@@ -111,11 +110,10 @@
 
 ;; shell
 (use-package shell
-  :hook ((shell-mode . (lambda ()
-                         (setq comint-process-echoes t)
-                         (setq comint-input-ring-file-name "~/.bash_history")
-                         (comint-read-input-ring t)))
-         (shell-mode . ansi-color-for-comint-mode-on)))
+  :hook (shell-mode . (lambda ()
+                        (setq comint-process-echoes t)
+                        (setq comint-input-ring-file-name "~/.bash_history")
+                        (comint-read-input-ring t))))
 
 ;; term
 (use-package term
