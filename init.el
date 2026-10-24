@@ -26,51 +26,51 @@
 ;; ===========================
 ;; ==== * SYSTEM CONFIG * ====
 ;; ===========================
-(setq tags-add-tables nil
-      ansi-color-for-comint-mode t
-      ring-bell-function 'ignore
-      ;; place auto-save file to $TMPDIR
-      backup-directory-alist `((".*" . ,temporary-file-directory))
-      auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+(use-package emacs
+  :custom
+  (tags-add-tables nil)
+  (ansi-color-for-comint-mode t)
+  (ring-bell-function 'ignore)
+  ;; place auto-save file to $TMPDIR
+  (backup-directory-alist `((".*" . ,temporary-file-directory)))
+  (auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+  :bind
+  (("C-x j" . eval-print-last-sexp)
+   ("C-c C-p m" . pp-macroexpand-last-sexp)
+   ;; move forward/backward paragraph
+   ("M-]" . forward-paragraph)
+   ("M-[" . backward-paragraph)
+   ;; window switch buffers
+   ("C-x M-j" . previous-buffer)
+   ("C-x M-k" . next-buffer)
+   ;; disable keys
+   ("C-z" . nil)
+   ("C-x C-z" . nil)
+   ("C-x C-c" . nil))
+  :init
+  (setq-default indent-tabs-mode nil)
 
-(setq-default indent-tabs-mode nil)
+  (electric-pair-mode 1)
+  (show-paren-mode 1)
+  (savehist-mode 1)
 
-(electric-pair-mode 1)
-(show-paren-mode 1)
-(savehist-mode 1)
+  ;; fonts
+  (cond
+   ((eq system-type 'gnu/linux)
+    (add-to-list 'default-frame-alist '(font . "JetBrains Mono 10")))
+   ((eq system-type 'darwin)
+    (add-to-list 'default-frame-alist '(font . "JetBrains Mono 12"))))
 
-;; fonts
-(cond
- ((eq system-type 'gnu/linux)
-  (add-to-list 'default-frame-alist '(font . "JetBrains Mono 10")))
- ((eq system-type 'darwin)
-  (add-to-list 'default-frame-alist '(font . "JetBrains Mono 12"))))
+  ;; switch modifier keys on macOS
+  (when (eq system-type 'darwin)
+    (add-hook 'after-init-hook
+              (lambda ()
+                (setq mac-command-modifier 'meta)
+                (setq mac-option-modifier 'super))))
 
-;; global keys
-(global-set-key (kbd "C-x j") 'eval-print-last-sexp)
-(global-set-key (kbd "C-c C-p m") 'pp-macroexpand-last-sexp)
-;;; move forward/backward paragraph
-(global-set-key (kbd "M-]") 'forward-paragraph)
-(global-set-key (kbd "M-[") 'backward-paragraph)
-;;; window switch buffers
-(global-set-key (kbd "C-x M-j") 'previous-buffer)
-(global-set-key (kbd "C-x M-k") 'next-buffer)
-
-;; disable keys
-(global-unset-key "\C-z")
-(global-unset-key "\C-x\C-z")
-(global-unset-key "\C-x\C-c")
-
-;; switch modifier keys on macOS
-(when (eq system-type 'darwin)
-  (add-hook 'after-init-hook
-            (lambda ()
-              (setq mac-command-modifier 'meta)
-              (setq mac-option-modifier 'super))))
-
-;; register files
-(set-register ?i '(file . "~/.emacs.d/init.el"))
-(set-register ?n '(file . "~/Dropbox/ledger/notes.ledger"))
+  ;; register files
+  (set-register ?i '(file . "~/.emacs.d/init.el"))
+  (set-register ?n '(file . "~/Dropbox/ledger/notes.ledger")))
 
 ;; expand abbreviations
 (use-package abbrev
