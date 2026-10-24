@@ -59,6 +59,15 @@
   (set-register ?i '(file . "~/.emacs.d/init.el"))
   (set-register ?n '(file . "~/Dropbox/ledger/notes.ledger")))
 
+;; desktop
+(use-package desktop
+  :custom
+  (desktop-save t)
+  (desktop-load-locked-desktop t)
+  (desktop-restore-eager 10)
+  :init
+  (desktop-save-mode 1))
+
 ;; expand abbreviations
 (use-package abbrev
   :diminish abbrev-mode)
@@ -407,14 +416,6 @@
   :after avy
   :config
   (ace-link-setup-default))
-
-;; psession
-(use-package psession
-  :vc (:rev "ebe81c18f94bb74e0b795bbe6d4fa9284ccbbf5e")
-  :diminish
-  :config
-  (psession-mode 1)
-  (psession-autosave-mode 1))
 
 ;; magit
 (use-package magit

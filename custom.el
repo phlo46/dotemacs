@@ -35,7 +35,7 @@
               eyebrowse-restore forge ghostel go-mode goto-last-change
               gptel helpful highlight-thing jira-issues kotlin-ts-mode
               ledger-mode magit marginalia multiple-cursors orderless
-              org-roam paredit psession shell-pop sly
+              org-roam paredit shell-pop sly
               smart-hungry-delete terraform-mode vertico vterm vundo
               ws-butler yaml-mode yasnippet-snippets zenburn-theme))
  '(shell-pop-shell-type
