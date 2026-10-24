@@ -2,12 +2,6 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
-;; ===========================
-;; ======== * INIT * =========
-;; ===========================
-(use-package diminish
-  :vc (:rev "0.47"))
-
 ;; Keep emacs custom-settings in a separate file
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Customizations.html
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
@@ -16,12 +10,6 @@
 ;; Load my custom functions
 (setq defuns-file (expand-file-name "defuns.el" user-emacs-directory))
 (load defuns-file)
-
-;; ===========================
-;; ====== * END INIT * =======
-;; ===========================
-
-
 
 ;; ===========================
 ;; ==== * SYSTEM CONFIG * ====
@@ -204,6 +192,13 @@
 
 ;; I, EDIT HELPERS
 ;; ###############
+
+;; diminish
+(use-package diminish
+  :vc (:rev "0.47")
+  :config
+  (diminish 'abbrev-mode)
+  (diminish 'hi-lock-mode))
 
 ;; zenburn theme
 (use-package zenburn-theme
