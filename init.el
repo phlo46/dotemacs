@@ -640,10 +640,6 @@
   :custom
   (ruby-insert-encoding-magic-comment nil))
 
-;; C/C++
-(use-package cmake-mode
-  :mode ("CMakeLists\\.txt\\'" "\\.cmake\\'"))
-
 ;; ocaml
 (use-package tuareg
   :defer t
