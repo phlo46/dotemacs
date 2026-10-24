@@ -1,3 +1,5 @@
+;;; init.el --- Emacs configuration -*- lexical-binding: t -*-
+
 ;;; package manager
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)

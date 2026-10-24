@@ -1,3 +1,5 @@
+;;; early-init.el --- Early configuration -*- lexical-binding: t -*-
+
 (menu-bar-mode -1)
 (when (eq system-type 'darwin)
   ;; ns-win re-enables `menu-bar-mode' during `window-system-initialization'
