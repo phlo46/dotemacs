@@ -89,6 +89,10 @@
 (use-package dired-x
   :after dired)
 
+;; ibuffer
+(use-package ibuffer
+  :bind ("C-x C-b" . ibuffer))
+
 ;; winner-mode
 (use-package winner
   :defer 5
@@ -219,10 +223,6 @@
 (use-package vundo
   :vc (:rev "v2.5.0")
   :bind ("C-x u" . vundo))
-
-;; ibuffer
-(use-package ibuffer
-  :bind ("C-x C-b" . ibuffer))
 
 ;; helpful
 (use-package helpful
