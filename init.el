@@ -656,11 +656,6 @@
   :config
   (setq ruby-insert-encoding-magic-comment nil))
 
-;; perl
-(use-package cperl-mode
-  :mode "\\.\\([pP][Llm]\\|al\\)\\'"
-  :interpreter "perl")
-
 ;; go
 (use-package go-mode
   :vc (:rev "8aaaa9d2574d7862ecbbe1ff369e88fe3796c8be")
