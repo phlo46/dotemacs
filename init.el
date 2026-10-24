@@ -648,29 +648,15 @@
 
 ;; ocaml
 (use-package tuareg
-  :mode ("\\.ml[ip]?\\'" . tuareg-mode)
-  :config
-  (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
-    (when (and opam-share (file-directory-p opam-share))
-      ;; Register Merlin
-      (add-to-list 'load-path (expand-file-name "emacs/site-lisp" opam-share))
-      (autoload 'merlin-mode "merlin" "Merlin mode" t)
+  :defer t
+  :hook (tuareg-mode . (lambda ()
+                         (when (fboundp 'utop-minor-mode)
+                           (utop-minor-mode 1)))))
 
-      ;; Automatically start it in OCaml buffers
-      (add-hook 'tuareg-mode-hook 'merlin-mode t)
-      (add-hook 'caml-mode-hook 'merlin-mode t)
-
-      ;; Use opam switch to lookup ocamlmerlin binary
-      (setq merlin-command 'opam)
-
-      ;; ocp-indent
-      (load "ocp-indent")
-
-      ;; utop
-      (autoload 'utop "utop" "Toplevel for OCaml" t)
-      (setq utop-command "opam config exec -- utop -emacs")
-      (autoload 'utop-minor-mode "utop" "Minor mode for utop" t)
-      (add-hook 'tuareg-mode-hook 'utop-minor-mode))))
+(use-package utop
+  :commands (utop utop-minor-mode)
+  :custom
+  (utop-command "opam exec -- utop -emacs"))
 
 ;; III, EXTERNAL SYSTEMS
 ;; #####################
