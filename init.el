@@ -494,7 +494,7 @@
 
 ;; gitlab ci
 (use-package gitlab-ci-mode
-  :mode "\\.gitlab-ci.yml\\'")
+  :defer t)
 
 ;; jenkins
 (use-package jenkinsfile-mode
