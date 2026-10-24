@@ -553,13 +553,15 @@
 (use-package geiser
   :after scheme
   :commands (run-geiser run-racket run-guile run-chicken)
-  :hook (scheme-mode . geiser-mode)
-  :config
-  (setq geiser-mode-smart-tab-p t)
-  (with-eval-after-load 'geiser-mode
-    (define-key geiser-mode-map (kbd "C-.") nil))
-  (with-eval-after-load 'geiser-repl
-    (define-key geiser-repl-mode-map (kbd "C-.") nil)))
+  :hook (scheme-mode . (lambda ()
+                         (when (fboundp 'geiser-mode)
+                           (geiser-mode 1))))
+  :custom
+  (geiser-mode-smart-tab-p t)
+  :bind ((:map geiser-mode-map
+          ("C-." . nil))
+         (:map geiser-repl-mode-map
+          ("C-." . nil))))
 
 ;; common Lisp
 (use-package sly
