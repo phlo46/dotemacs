@@ -548,10 +548,7 @@
   :config
   (setq tab-always-indent 'complete))
 
-;; scheme geiser
-(use-package scheme
-  :mode ("\\.scm\\'" . scheme-mode))
-
+;; geiser
 (use-package geiser
   :after scheme
   :commands (run-geiser run-racket run-guile run-chicken)
