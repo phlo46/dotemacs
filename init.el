@@ -187,10 +187,6 @@
               ("M-n" . flymake-goto-next-error)
               ("M-p" . flymake-goto-prev-error)))
 
-;; diff-mode
-(use-package diff-mode
-  :mode "\\.diff\\'")
-
 ;; which-key
 (use-package which-key
   :diminish
