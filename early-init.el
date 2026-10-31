@@ -13,6 +13,8 @@
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
 
+(add-to-list 'default-frame-alist '(vertical-scroll-bars . nil))
+
 ;; Disable title bar
 ;; On KDE, use ~/.config/kwinrulesrc to hide the title bar; KDE/Wayland
 ;; may not honor this frame parameter.
