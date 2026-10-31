@@ -623,7 +623,6 @@
 (use-package terraform-mode
   :vc (:rev "1.1.0"))
 
-
 ;; ruby
 (use-package ruby-mode
   :defer t
