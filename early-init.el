@@ -16,6 +16,7 @@
 (add-to-list 'default-frame-alist '(vertical-scroll-bars . nil))
 
 ;; Disable title bar
+;; On Mac, this breaks macOS window manager behaviors.
 ;; On KDE, use ~/.config/kwinrulesrc to hide the title bar; KDE/Wayland
 ;; may not honor this frame parameter.
 (unless (eq system-type 'darwin)
