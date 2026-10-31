@@ -548,9 +548,7 @@
 
 ;; racket
 (use-package racket-mode
-  :mode "\\.rkt\\'"
-  :config
-  (setq tab-always-indent 'complete))
+  :mode "\\.rkt\\'")
 
 ;; geiser
 (use-package geiser
