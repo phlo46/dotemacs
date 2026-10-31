@@ -65,6 +65,14 @@
   :init
   (desktop-save-mode 1))
 
+;; diminish
+(use-package diminish
+  :vc (:rev "0.47"))
+
+;; auto-revert
+(use-package autorevert
+  :diminish auto-revert-mode)
+
 ;; expand abbreviations
 (use-package abbrev
   :diminish abbrev-mode)
@@ -202,13 +210,6 @@
 
 ;; I, EDIT HELPERS
 ;; ###############
-
-;; diminish
-(use-package diminish
-  :vc (:rev "0.47")
-  :config
-  (diminish 'abbrev-mode)
-  (diminish 'hi-lock-mode))
 
 ;; zenburn theme
 (use-package zenburn-theme
