@@ -362,7 +362,7 @@
 
 ;; ghostel
 (use-package ghostel
-  :vc (:rev "v0.59.0")
+  :vc (:rev "v0.61.0")
   :bind (:map ghostel-semi-char-mode-map
               ("C-s"  . consult-line)
               ("C-k"  . phlo/ghostel-send-C-k-and-kill)
@@ -444,13 +444,13 @@
 
 ;; multiple cursors
 (use-package multiple-cursors
-  :vc (:rev "94b8b07a4bab87f803123723b68227565429dfa1")
+  :vc (:rev "6086e34e86cc9c305c693f440e648588335669c9")
   :bind (("C->" . mc/mark-next-like-this)
          ("C-<" . mc/mark-previous-like-this)))
 
 ;; go to last change
 (use-package goto-last-change
-  :vc (:rev "v1.2.1")
+  :vc (:rev "v1.3.0")
   :bind ("C-c s-\\" . goto-last-change))
 
 ;; expand-region
@@ -528,7 +528,7 @@
 
 ;; agent-shell
 (use-package agent-shell
-  :vc (:rev "v0.89.1")
+  :vc (:rev "v0.91.1")
   :bind (("C-c a r" . agent-shell-send-region)
          ("C-c a R" . agent-shell-send-region-to)
          ("C-c a f" . agent-shell-send-file)
@@ -567,7 +567,7 @@
 
 ;; common Lisp
 (use-package sly
-  :vc (:rev "9b3477a5dc6c9a4496d4fbb6804349961e861835")
+  :vc (:rev "70350623eecd1f41837c9e57cbb6d5c06678a60d")
   :defer t
   :diminish
   :bind (:map sly-mode-map
