@@ -28,8 +28,7 @@
  '(major-mode-remap-alist
    '((python-mode . python-ts-mode) (yaml-mode . yaml-ts-mode)
      (js-json-mode . json-ts-mode)
-     (dockerfile-mode . dockerfile-ts-mode) (go-mode . go-ts-mode)
-     (markdown-mode . markdown-ts-mode)))
+     (dockerfile-mode . dockerfile-ts-mode) (go-mode . go-ts-mode)))
  '(org-agenda-files '("~/Dropbox/org-mode/todo.org"))
  '(package-selected-packages
    '(ace-link agent-shell avy browse-at-remote consult consult-ghostel corfu deadgrep
