@@ -15,7 +15,6 @@ games/
 layouts/
 persp-confs/
 request/
-straight/
 transient/
 tree-sitter
 tutorial/
@@ -38,5 +37,3 @@ projects
 recentf
 tramp
 org-roam.db
-
-!straight/versions/default.el
