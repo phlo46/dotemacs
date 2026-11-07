@@ -31,15 +31,15 @@
      (dockerfile-mode . dockerfile-ts-mode) (go-mode . go-ts-mode)))
  '(org-agenda-files '("~/Dropbox/org-mode/todo.org"))
  '(package-selected-packages
-   '(ace-link agent-shell avy browse-at-remote consult consult-ghostel corfu deadgrep
-              diminish embark embark-consult embrace
+   '(ace-link agent-shell avy browse-at-remote consult consult-ghostel
+              corfu deadgrep diminish embark embark-consult embrace
               exec-path-from-shell expand-region eyebrowse
-              eyebrowse-restore forge ghostel goto-last-change
-              gptel helpful highlight-thing jira-issues kotlin-ts-mode
+              eyebrowse-restore forge ghostel goto-last-change gptel
+              helpful highlight-thing jira jira-issues kotlin-ts-mode
               ledger-mode magit marginalia multiple-cursors orderless
-              org-roam paredit shell-pop sly
-              smart-hungry-delete terraform-mode vertico vterm vundo
-              ws-butler yasnippet-snippets zenburn-theme))
+              org-roam paredit shell-pop sly smart-hungry-delete
+              terraform-mode valign vertico vterm vundo ws-butler
+              yasnippet-snippets zenburn-theme))
  '(shell-pop-shell-type
    '("ghostel" "*ghostel*"
      (lambda nil
