@@ -543,6 +543,11 @@
                  (dedicated . t)
                  (inhibit-same-window . t))))
 
+;; valign: aligns Markdown/Org table columns for display without modifying the file on disk
+(use-package valign
+  :vc (:rev "v3.1.1")
+  :diminish
+  :hook (markdown-mode . valign-mode))
 
 ;; II, PROGRAMMING MODE
 ;; ####################
