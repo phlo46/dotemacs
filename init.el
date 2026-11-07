@@ -388,6 +388,7 @@
   (add-to-list 'project-switch-commands '(ghostel-project-list-buffers "Ghostel buffers") t))
 
 (use-package consult-ghostel
+  :if (package-installed-p 'consult-ghostel)
   :hook (after-init . consult-ghostel-mode)
   :bind (("C-x m" . consult-ghostel)
          :map project-prefix-map
