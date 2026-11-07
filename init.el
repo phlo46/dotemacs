@@ -607,11 +607,13 @@
         (define-key sly-doc-map (kbd "l") 'phlo/sly-hyperspec-lookup-eww)))))
 
 (use-package sly-repl-ansi-color
+  :if (package-installed-p 'sly-repl-ansi-color)
   :after sly
   :config
   (add-to-list 'sly-contribs 'sly-repl-ansi-color))
 
 (use-package sly-macrostep
+  :if (package-installed-p 'sly-macrostep)
   :after sly)
 
 ;; clojure
