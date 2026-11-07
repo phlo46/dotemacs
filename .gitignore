@@ -24,6 +24,7 @@ url/
 .cache
 .emacs.desktop
 .mc-lists.el
+local.el
 .org-id-locations
 .projectile
 bookmarks

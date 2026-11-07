@@ -713,3 +713,16 @@
 ;; =================================
 ;; ==== * END DECLARE PACKAGE * ====
 ;; =================================
+
+;; ==========================
+;; ==== * LOCAL CONFIG * ====
+;; ==========================
+
+;; local.el holds Elisp code that belongs to one machine. It is listed in
+;; .gitignore so those settings stay out of the shared configuration,
+;; and each computer can keep its own code here.
+(load (locate-user-emacs-file "local") t)
+
+;; ==============================
+;; ==== * END LOCAL CONFIG * ====
+;; ==============================
