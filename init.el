@@ -81,6 +81,10 @@
 (use-package hi-lock
   :diminish)
 
+;; visual-line
+(use-package simple
+  :diminish visual-line-mode)
+
 ;; Dired mode
 (use-package dired
   :config
