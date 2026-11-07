@@ -202,6 +202,13 @@
   :config
   (which-key-mode))
 
+;; eglot: A client for Language Server Protocol servers
+(use-package eglot
+  :config
+  ;; JetBrains Kotlin LSP defaults to TCP; Eglot needs standard I/O.
+  (add-to-list 'eglot-server-programs
+               '((kotlin-mode kotlin-ts-mode) "kotlin-lsp" "--stdio")))
+
 ;; ==============================
 ;; ==== * END SYSTEM CONFIG * ===
 ;; ==============================
