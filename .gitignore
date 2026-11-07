@@ -7,13 +7,11 @@ auto-save-list/
 devdocs/
 elpa-*/
 elpa/
-elpy/
 eln-cache/
 eshell/
 eyebrowse-restore/
 games/
 layouts/
-persp-confs/
 request/
 transient/
 tree-sitter
@@ -30,7 +28,6 @@ bookmarks
 forge-database.sqlite
 history
 network-security.data
-nov-places
 projectile-bookmarks.eld
 projectile.cache
 projects
