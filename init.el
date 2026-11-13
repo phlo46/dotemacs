@@ -373,7 +373,7 @@
 
 ;; ghostel
 (use-package ghostel
-  :vc (:rev "v0.61.0")
+  :vc (:rev "v0.64.0")
   :bind (:map ghostel-semi-char-mode-map
               ("C-s"  . consult-line)
               ("C-k"  . phlo/ghostel-send-C-k-and-kill)
@@ -445,7 +445,7 @@
 
 ;; magit
 (use-package magit
-  :vc (:rev "v4.7.1")
+  :vc (:rev "v4.7.2")
   :bind (("C-x g" . magit-status)
          ("C-c b" . magit-blame)))
 
@@ -540,7 +540,7 @@
 
 ;; agent-shell
 (use-package agent-shell
-  :vc (:rev "v0.91.1")
+  :vc (:rev "v0.96.1")
   :bind (("C-c a r" . agent-shell-send-region)
          ("C-c a R" . agent-shell-send-region-to)
          ("C-c a f" . agent-shell-send-file)
