@@ -85,6 +85,11 @@
 (use-package simple
   :diminish visual-line-mode)
 
+;; eldoc
+(use-package eldoc
+  :custom
+  (eldoc-minor-mode-string nil))
+
 ;; Dired mode
 (use-package dired
   :config
